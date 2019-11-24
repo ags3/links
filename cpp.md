@@ -7,4 +7,5 @@ https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content
 
 ## Templates
 https://codebuddy.pl/c11-typelists-for-beginners/  
-https://foonathan.net/2017/03/tuple-iterator/#content  
+https://www.fluentcpp.com/2019/03/08/stl-algorithms-on-tuples/  
+
