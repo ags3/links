@@ -8,6 +8,7 @@ https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content
 ## Templates
 https://github.com/sbabbi/tinympl  
 https://github.com/MCGallaspy/dr_strangetemplate  
+https://eli.thegreenplace.net/2014/variadic-templates-in-c/  
 https://codebuddy.pl/c11-typelists-for-beginners/  
 https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/  
 https://www.fluentcpp.com/2018/05/15/make-sfinae-pretty-1-what-value-sfinae-brings-to-code/  
