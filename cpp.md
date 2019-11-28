@@ -13,6 +13,7 @@ https://github.com/sbabbi/tinympl
 https://github.com/MCGallaspy/dr_strangetemplate  
 https://eli.thegreenplace.net/2014/variadic-templates-in-c/  
 https://codebuddy.pl/c11-typelists-for-beginners/  
+http://aherrmann.github.io/programming/2016/02/28/unpacking-tuples-in-cpp14/  
 https://www.fluentcpp.com/2017/06/02/write-template-metaprogramming-expressively/  
 https://www.fluentcpp.com/2018/05/15/make-sfinae-pretty-1-what-value-sfinae-brings-to-code/  
 https://www.fluentcpp.com/2018/05/18/make-sfinae-pretty-2-hidden-beauty-sfinae/  
