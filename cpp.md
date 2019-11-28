@@ -8,6 +8,7 @@ https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content
 
 
 ## Templates
+http://www.jot.fm/issues/issue_2008_02/article2/  
 https://github.com/sbabbi/tinympl  
 https://github.com/MCGallaspy/dr_strangetemplate  
 https://eli.thegreenplace.net/2014/variadic-templates-in-c/  
