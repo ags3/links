@@ -9,6 +9,7 @@ https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content
 
 ## Templates
 http://www.jot.fm/issues/issue_2008_02/article2/  
+https://arne-mertz.de/2016/11/more-variadic-templates/  
 https://github.com/sbabbi/tinympl  
 https://github.com/MCGallaspy/dr_strangetemplate  
 https://eli.thegreenplace.net/2014/variadic-templates-in-c/  
