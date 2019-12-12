@@ -8,6 +8,8 @@ https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content
 
 
 ## Templates
+http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming.html  
+http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming_2.html  
 http://www.jot.fm/issues/issue_2008_02/article2/  
 https://arne-mertz.de/2016/11/more-variadic-templates/  
 https://github.com/sbabbi/tinympl  
@@ -20,6 +22,5 @@ https://www.fluentcpp.com/2018/05/15/make-sfinae-pretty-1-what-value-sfinae-brin
 https://www.fluentcpp.com/2018/05/18/make-sfinae-pretty-2-hidden-beauty-sfinae/  
 https://www.fluentcpp.com/2019/03/08/stl-algorithms-on-tuples/  
 https://www.boost.org/doc/libs/1_71_0/libs/hana/doc/html/index.html  
-http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming.html  
-http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming_2.html  
+
 
