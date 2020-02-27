@@ -1,4 +1,5 @@
 ## General  
+https://www.youtube.com/watch?v=Y6Ev8GIlbxc  
 https://github.com/ongardie/dissertation/blob/master/stanford.pdf  
 https://raft.github.io/raft.pdf  
 https://eli.thegreenplace.net/2020/implementing-raft-part-0-introduction  
