@@ -2,6 +2,7 @@
 https://medium.com/plus-minus/big-oh-for-algorithms-7fdb1d2f35d  
 
 ## Free books
+http://jeffe.cs.illinois.edu/teaching/algorithms/  
 https://github.com/liuxinyu95/AlgoXY/  
 https://goalkicker.com/AlgorithmsBook/  
 http://opendatastructures.org/  
