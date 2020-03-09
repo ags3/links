@@ -25,7 +25,7 @@ https://github.com/fbaptiste/python-primer
 ## Flask
 https://hackersandslackers.com/your-first-flask-application  
 http://www.patricksoftwareblog.com/flask-tutorial/  
-https://www.youtube.com/watch?v=MwZwr5Tvyxo  
+https://www.youtube.com/watch?v=MwZwr5Tvyxo  (https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)  
 
 ## Video
 https://www.youtube.com/user/schafer5/videos  
