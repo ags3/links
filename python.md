@@ -28,6 +28,11 @@ http://www.patricksoftwareblog.com/flask-tutorial/
 https://www.youtube.com/watch?v=MwZwr5Tvyxo  
 (https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)  
 
+## Scientific
+https://github.com/ageron/handson-ml2/blob/master/tools_numpy.ipynb  
+https://github.com/ageron/handson-ml2/blob/master/tools_matplotlib.ipynb  
+https://github.com/ageron/handson-ml2/blob/master/tools_pandas.ipynb  
+
 ## Video
 https://www.youtube.com/user/schafer5/videos  
 
