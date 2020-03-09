@@ -12,6 +12,12 @@ https://people.mpi-inf.mpg.de/~mehlhorn/Toolbox.html
 ## Slides
 https://www.cs.princeton.edu/~wayne/kleinberg-tardos/  
 
+## Implementations
+https://github.com/TheAlgorithms/Python  
+
+## Leetcode
+https://github.com/yangchi/LCPractice  
+
 
 
 
