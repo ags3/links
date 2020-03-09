@@ -39,4 +39,6 @@ https://www.youtube.com/user/schafer5/videos
 ## Code
 https://github.com/neuromation/platform-client-python  
 https://github.com/psf/black  
+https://github.com/tiangolo/fastapi  
+https://github.com/TheAlgorithms/Python  
 
