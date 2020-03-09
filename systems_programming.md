@@ -26,4 +26,5 @@ https://github.com/rxi/microtar
 https://github.com/rxi/dyad  
 https://github.com/rxi/log.c  
 https://github.com/rxi/microui  
+https://github.com/libgit2/libgit2  
 
