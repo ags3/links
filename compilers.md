@@ -4,8 +4,9 @@ http://compilerbook.org
 https://httpwg.org/specs/rfc7540.html  
 http://hjemmesider.diku.dk/~torbenm/Basics/basics_lulu2.pdf  
 
-## Flex&Bison
+## Tutorials
 http://www.cse.scu.edu/~mwang2/compiler/TutorialFlexBison.pdf  
+https://gnuu.org/2009/09/18/writing-your-own-toy-compiler/  
 
 ## Implementations
 https://github.com/benhoyt/littlelang  
