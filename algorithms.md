@@ -16,8 +16,10 @@ https://www.cs.princeton.edu/~wayne/kleinberg-tardos/
 https://github.com/TheAlgorithms/Python  
 
 ## Leetcode
+https://github.com/haoel/leetcode  
+https://github.com/RodneyShag/LeetCode_solutions  
+https://github.com/RodneyShag/Interview_solutions  
 https://github.com/yangchi/LCPractice  
-
 
 
 
