@@ -1,6 +1,7 @@
 ## Books  
 https://craftinginterpreters.com/contents.html  
 http://compilerbook.org  
+https://httpwg.org/specs/rfc7540.html  
 http://hjemmesider.diku.dk/~torbenm/Basics/basics_lulu2.pdf  
 
 ## Implementations
