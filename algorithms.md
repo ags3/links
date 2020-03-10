@@ -9,6 +9,9 @@ https://goalkicker.com/AlgorithmsBook/
 http://opendatastructures.org/  
 https://people.mpi-inf.mpg.de/~mehlhorn/Toolbox.html  
 
+## Tutorials
+https://github.com/amolnayak311/algorithms-illuminated  
+
 ## Slides
 https://www.cs.princeton.edu/~wayne/kleinberg-tardos/  
 
