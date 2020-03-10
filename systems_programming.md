@@ -16,6 +16,11 @@ https://jamesgolick.com/2013/5/15/memory-allocators-101.html
 
 ## Software
 https://github.com/kozross/awesome-c  
+https://github.com/aleksandar-todorovic/awesome-c  
+https://github.com/uhub/awesome-c  
+https://github.com/davidar/c-hashtable  
+https://github.com/fmela/libdict  
+https://github.com/fmela/weecrypt  
 https://github.com/nothings/single_file_libs  
 https://github.com/rustyrussell/ccan  
 https://github.com/troglobit/libuev  
@@ -36,5 +41,7 @@ https://github.com/rxi/log.c
 https://github.com/rxi/microui  
 https://github.com/libgit2/libgit2  
 https://github.com/lighttpd/lighttpd1.4  
+https://github.com/fragglet/c-algorithms  
+https://github.com/erimatnor/libckit  
 
 
