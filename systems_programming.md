@@ -14,6 +14,8 @@ https://sourceware.org/glibc/wiki/MallocInternals
 https://jamesgolick.com/2013/5/15/memory-allocators-101.html  
 
 ## Software
+https://github.com/kozross/awesome-c  
+https://github.com/nothings/single_file_libs  
 https://github.com/rustyrussell/ccan  
 https://github.com/troglobit/libuev  
 https://github.com/troglobit/merecat  
