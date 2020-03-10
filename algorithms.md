@@ -11,6 +11,7 @@ https://people.mpi-inf.mpg.de/~mehlhorn/Toolbox.html
 
 ## Tutorials
 https://github.com/amolnayak311/algorithms-illuminated  
+https://louridas.github.io/rwa/  
 
 ## Slides
 https://www.cs.princeton.edu/~wayne/kleinberg-tardos/  
