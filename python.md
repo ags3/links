@@ -13,6 +13,7 @@ https://realpython.com/cpython-source-code-guide/
 https://realpython.com/python-type-checking/  
 https://realpython.com/python-metaclasses/  
 https://realpython.com/python-testing/  
+https://realpython.com/test-driven-development-of-a-django-restful-api/  
 https://realpython.com/python-mock-library/  
 https://realpython.com/logistic-regression-python/  
 https://realpython.com/python-https/  
