@@ -10,6 +10,8 @@ https://gto76.github.io/python-cheatsheet/
 ## RealPython
 https://realpython.com/  
 https://realpython.com/cpython-source-code-guide/  
+https://realpython.com/python-type-checking/  
+https://realpython.com/python-metaclasses/  
 https://realpython.com/python-mock-library/  
 https://realpython.com/logistic-regression-python/  
 https://realpython.com/python-https/  
