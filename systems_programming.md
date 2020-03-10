@@ -15,6 +15,9 @@ https://jamesgolick.com/2013/5/15/memory-allocators-101.html
 
 ## Software
 https://github.com/rustyrussell/ccan  
+https://github.com/troglobit/libuev  
+https://github.com/troglobit/merecat  
+https://github.com/ryanmjacobs/darkhttpd  
 https://github.com/attractivechaos/klib  
 https://github.com/troydhanson  
 https://github.com/mruby/mruby  
