@@ -13,6 +13,7 @@ https://legacy.gitbook.com/book/codegangsta/building-web-apps-with-go/details
 https://www.openmymind.net/The-Little-Go-Book/  
 
 ## Tutorials
+https://scene-si.org/  
 https://www.sohamkamani.com/golang/arrays-vs-slices/  
 https://medium.com/learning-the-go-programming-language/streaming-io-in-go-d93507931185  
 https://medium.com/learning-the-go-programming-language/comparing-values-in-go-8f7b002e767a  
