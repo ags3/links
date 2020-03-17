@@ -51,3 +51,4 @@ https://www.sohamkamani.com/golang/options-pattern/
 ## Source code
 https://github.com/digitalocean/godo  
 https://github.com/mccutchen/go-httpbin  
+https://github.com/gojek/heimdall  
