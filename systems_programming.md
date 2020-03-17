@@ -22,6 +22,7 @@ https://github.com/aleksandar-todorovic/awesome-c
 https://github.com/uhub/awesome-c  
 https://github.com/jbuchbinder/statsd-c  
 https://github.com/statsite/statsite  
+https://github.com/romanbsd/statsd-c-client  
 http://www.interdb.jp/pg/index.html  
 https://github.com/mreiferson/libevbuffsock  
 https://github.com/nsqio/libnsq  
