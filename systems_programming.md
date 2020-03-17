@@ -20,11 +20,14 @@ https://jamesgolick.com/2013/5/15/memory-allocators-101.html
 https://github.com/kozross/awesome-c  
 https://github.com/aleksandar-todorovic/awesome-c  
 https://github.com/uhub/awesome-c  
+https://github.com/statsite/statsite  
 http://www.interdb.jp/pg/index.html  
 https://github.com/mreiferson/libevbuffsock  
 https://github.com/nsqio/libnsq  
 https://github.com/aisk/libae  
+https://github.com/armon/bloomd  
 https://github.com/dhess/echoev  
+https://github.com/sleepybishop/nanorq  
 https://github.com/LMDB/lmdb/tree/mdb.master/libraries/liblmdb  
 https://github.com/davidar/c-hashtable  
 https://github.com/fmela/libdict  
