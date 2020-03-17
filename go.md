@@ -29,6 +29,7 @@ https://www.alexedwards.net/blog/working-with-redis
 
 ## SQL
 https://www.sohamkamani.com/blog/2017/10/18/golang-adding-database-to-web-application/  
+https://www.sohamkamani.com/golang/sql-transactions/  
 https://www.alexedwards.net/blog/practical-persistence-sql  
 https://www.alexedwards.net/blog/organising-database-access  
 
