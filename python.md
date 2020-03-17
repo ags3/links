@@ -31,6 +31,8 @@ https://realpython.com/python-async-features/
 https://realpython.com/prevent-python-sql-injection/  
 https://realpython.com/flask-google-login/  
 https://realpython.com/python-redis/   
+https://realpython.com/oop-in-python-vs-java/  
+https://realpython.com/flask-blueprint/  
 
 # Fred Baptiste's courses
 https://github.com/fbaptiste/python-deepdive  
