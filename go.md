@@ -52,3 +52,5 @@ https://www.sohamkamani.com/golang/options-pattern/
 https://github.com/digitalocean/godo  
 https://github.com/mccutchen/go-httpbin  
 https://github.com/gojek/heimdall  
+https://github.com/soniakeys/avl  
+https://github.com/gyuho/goraph  
