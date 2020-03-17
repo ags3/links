@@ -23,6 +23,7 @@ https://github.com/uhub/awesome-c
 http://www.interdb.jp/pg/index.html  
 https://github.com/mreiferson/libevbuffsock  
 https://github.com/nsqio/libnsq  
+https://github.com/aisk/libae  
 https://github.com/dhess/echoev  
 https://github.com/LMDB/lmdb/tree/mdb.master/libraries/liblmdb  
 https://github.com/davidar/c-hashtable  
