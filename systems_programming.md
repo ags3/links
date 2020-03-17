@@ -2,8 +2,10 @@
 http://suckless.org/  
 http://cs241.cs.illinois.edu/coursebook/index.html  
 https://github.com/angrave/SystemProgramming/wiki  
+https://eli.thegreenplace.net/2017/concurrent-servers-part-1-introduction/  
 https://www.akkadia.org/drepper/  
 https://pauladamsmith.com/articles/redis-under-the-hood.html  
+http://software.schmorp.de/pkg/libev.html  
 
 ## Memory
 http://troydhanson.github.io/virtual_memory.pdf  
