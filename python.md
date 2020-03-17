@@ -34,7 +34,10 @@ https://realpython.com/python-redis/
 https://realpython.com/oop-in-python-vs-java/  
 https://realpython.com/flask-blueprint/  
 
-# Fred Baptiste's courses
+## Zetcode
+http://zetcode.com/all/#python  
+
+## Fred Baptiste's courses
 https://github.com/fbaptiste/python-deepdive  
 https://github.com/fbaptiste/python-primer  
 
