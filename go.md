@@ -24,6 +24,7 @@ https://www.sohamkamani.com/blog/how-to-write-good-documentation/
 ## Web
 https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years  
 https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin  
+https://scene-si.org/2018/03/12/handling-http-requests-with-go-chi/  
 https://medium.com/@ciaranmcveigh5/understanding-http-requests-responses-in-golang-a13e5e92bc4f  
 https://www.alexedwards.net/blog/how-to-properly-parse-a-json-request-body  
 https://www.alexedwards.net/blog/how-to-hash-and-verify-passwords-with-argon2-in-go  
@@ -50,6 +51,7 @@ https://www.sohamkamani.com/golang/options-pattern/
 
 ## Source code
 https://github.com/gin-gonic/gin  
+https://github.com/go-chi/chi  
 https://github.com/digitalocean/godo  
 https://github.com/mccutchen/go-httpbin  
 https://github.com/gojek/heimdall  
