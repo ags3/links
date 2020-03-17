@@ -1,7 +1,7 @@
 ## General tutorials
 https://thomas-cokelaer.info/tutorials/python/index.html  
 
-## Pytho Sheets
+## Python Sheets
 https://www.pythonsheets.com/  
 
 ## Python cheatsheet
@@ -42,6 +42,9 @@ https://github.com/fbaptiste/python-deepdive
 https://github.com/fbaptiste/python-primer  
 
 ## Flask
+https://flask.palletsprojects.com/en/1.1.x/tutorial/  
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/  
+https://github.com/pallets/flask-sqlalchemy/tree/master/examples/flaskr  
 https://hackersandslackers.com/your-first-flask-application  
 http://www.patricksoftwareblog.com/flask-tutorial/  
 https://www.youtube.com/watch?v=MwZwr5Tvyxo  
