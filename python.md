@@ -15,6 +15,9 @@ https://realpython.com/python-metaclasses/
 https://realpython.com/python-testing/  
 https://realpython.com/test-driven-development-of-a-django-restful-api/  
 https://realpython.com/python-mock-library/  
+https://realpython.com/python-sockets/  
+https://realpython.com/testing-third-party-apis-with-mocks/  
+https://realpython.com/testing-third-party-apis-with-mock-servers/  
 https://realpython.com/logistic-regression-python/  
 https://realpython.com/python-https/  
 https://realpython.com/pandas-python-explore-dataset/  
