@@ -5,6 +5,7 @@ https://github.com/angrave/SystemProgramming/wiki
 https://eli.thegreenplace.net/2017/concurrent-servers-part-1-introduction/  
 https://www.akkadia.org/drepper/  
 https://pauladamsmith.com/articles/redis-under-the-hood.html  
+https://hellokangning.github.io/categories/redis/  
 http://software.schmorp.de/pkg/libev.html  
 
 ## Memory
