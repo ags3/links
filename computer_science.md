@@ -12,3 +12,7 @@ https://inst.eecs.berkeley.edu/~cs61a/fa18/
 https://sp19.datastructur.es/index.html  
 https://www.textbook.ds100.org/intro  
 
+## Peter Norvig tutorials  
+https://github.com/norvig/pytudes  
+
+
