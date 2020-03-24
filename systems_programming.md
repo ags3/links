@@ -61,5 +61,7 @@ https://github.com/fragglet/c-algorithms
 https://github.com/erimatnor/libckit  
 https://github.com/dcreager/libcork  
 https://github.com/recoilme/okdbc  
+https://github.com/fredrikwidlund/libdynamic  
+https://github.com/fredrikwidlund/libreactor  
 
 
