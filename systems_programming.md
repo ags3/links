@@ -25,6 +25,7 @@ https://github.com/the-benchmarker/web-frameworks
 https://github.com/ohler55/agoo-c  
 https://github.com/romanbsd/statsd-c-client  
 https://github.com/jonashaag/bjoern  
+https://github.com/libgit2/libgit2  
 https://github.com/vmprof/vmprof-python  
 https://github.com/kjn/lbzip2  
 https://github.com/jbuchbinder/statsd-c  
