@@ -51,6 +51,9 @@ https://www.sohamkamani.com/golang/command-pattern/
 https://www.sohamkamani.com/golang/2018-06-20-golang-factory-patterns/  
 https://www.sohamkamani.com/golang/options-pattern/  
 
+## Interview
+https://badu.github.io/post/  
+
 ## Source code
 https://github.com/recoilme/sniper  
 https://github.com/recoilme/pudge  
