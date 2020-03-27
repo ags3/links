@@ -6,6 +6,7 @@ https://teachyourselfcs.com/
 https://www.cs.yale.edu/homes/aspnes/classes/223/notes.html  
 
 ## Courses
+https://github.com/prakhar1989/awesome-courses  
 https://cs61a.org/  
 https://inst.eecs.berkeley.edu/~cs61a/fa18/ 
  http://composingprograms.com/  
