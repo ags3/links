@@ -26,3 +26,6 @@ https://www.fluentcpp.com/2019/03/08/stl-algorithms-on-tuples/
 https://www.boost.org/doc/libs/1_71_0/libs/hana/doc/html/index.html  
 
 
+## Threads
+https://www.acodersjourney.com/top-20-cplusplus-multithreading-mistakes/  
+
