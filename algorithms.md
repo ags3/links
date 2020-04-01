@@ -16,6 +16,10 @@ https://louridas.github.io/rwa/pages/book-chapters.html
 ## Slides
 https://www.cs.princeton.edu/~wayne/kleinberg-tardos/  
 
+## Solved problems
+### Dynamic programming
+https://www.techiedelight.com/dynamic-programming-interview-questions
+
 ## Implementations
 https://github.com/TheAlgorithms/Python  
 
