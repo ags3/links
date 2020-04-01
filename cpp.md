@@ -1,5 +1,5 @@
 ## Core guidelines
-http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines  
+https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md   
 
 ## General
 https://berthub.eu/articles/posts/cpp-intro/  
