@@ -17,7 +17,7 @@ https://louridas.github.io/rwa/pages/book-chapters.html
 https://www.cs.princeton.edu/~wayne/kleinberg-tardos/  
 
 ## Solved problems
-### Dynamic programming
+#### Dynamic programming
 https://www.techiedelight.com/dynamic-programming-interview-questions
 
 ## Implementations
