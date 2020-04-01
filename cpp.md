@@ -1,3 +1,6 @@
+## Core guidelines
+http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines  
+
 ## General
 https://berthub.eu/articles/posts/cpp-intro/  
 https://web.archive.org/web/20140113221447/http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/  
