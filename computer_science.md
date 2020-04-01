@@ -14,6 +14,7 @@ http://composingprograms.com/
 https://sp19.datastructur.es/index.html  
 https://www.textbook.ds100.org/intro  
 http://www.cs.cornell.edu/courses/cs4410/2014fa/lectures.php  
+https://uva-cs.github.io/pdr/slides/index.html  
 
 ## Peter Norvig tutorials  
 https://github.com/norvig/pytudes  
