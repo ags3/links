@@ -6,7 +6,8 @@ http://thbecker.net/articles/auto_and_decltype/section_01.html
 https://foonathan.net/2019/02/special-member-functions/#content  
 https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content  
 
-
+## Essential
+https://www.feabhas.com/sites/default/files/2016-06/Rule%20of%20the%20Big%20Five.pdf  
 
 ## Templates
 http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming.html  
@@ -24,7 +25,6 @@ https://www.fluentcpp.com/2018/05/15/make-sfinae-pretty-1-what-value-sfinae-brin
 https://www.fluentcpp.com/2018/05/18/make-sfinae-pretty-2-hidden-beauty-sfinae/  
 https://www.fluentcpp.com/2019/03/08/stl-algorithms-on-tuples/  
 https://www.boost.org/doc/libs/1_71_0/libs/hana/doc/html/index.html  
-
 
 ## Threads
 https://medium.com/hackernoon/learn-c-multi-threading-in-5-minutes-8b881c92941f  
