@@ -27,5 +27,6 @@ https://www.boost.org/doc/libs/1_71_0/libs/hana/doc/html/index.html
 
 
 ## Threads
+https://medium.com/hackernoon/learn-c-multi-threading-in-5-minutes-8b881c92941f  
 https://www.acodersjourney.com/top-20-cplusplus-multithreading-mistakes/  
 
