@@ -19,6 +19,8 @@ https://www.cs.princeton.edu/~wayne/kleinberg-tardos/
 ## Solved problems
 #### Dynamic programming
 https://www.techiedelight.com/dynamic-programming-interview-questions
+#### Backtracking
+https://www.techiedelight.com/backtracking-interview-questions
 
 ## Implementations
 https://github.com/TheAlgorithms/Python  
