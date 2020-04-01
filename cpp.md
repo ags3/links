@@ -30,3 +30,6 @@ https://www.boost.org/doc/libs/1_71_0/libs/hana/doc/html/index.html
 https://medium.com/hackernoon/learn-c-multi-threading-in-5-minutes-8b881c92941f  
 https://www.acodersjourney.com/top-20-cplusplus-multithreading-mistakes/  
 
+## Design patterns
+https://en.wikibooks.org/wiki/C%2B%2B_Programming/Code/Design_Patterns
+
