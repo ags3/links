@@ -21,6 +21,9 @@ https://www.cs.princeton.edu/~wayne/kleinberg-tardos/
 https://www.techiedelight.com/dynamic-programming-interview-questions
 #### Backtracking
 https://www.techiedelight.com/backtracking-interview-questions
+#### Geegsforgeeks
+https://www.geeksforgeeks.org/fundamentals-of-algorithms/  
+https://www.geeksforgeeks.org/data-structures/  
 
 ## Implementations
 https://github.com/TheAlgorithms/Python  
