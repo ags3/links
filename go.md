@@ -24,6 +24,7 @@ https://medium.com/learning-the-go-programming-language/bit-hacking-with-go-e0ac
 https://medium.com/learning-the-go-programming-language/lets-make-an-ntp-client-in-go-287c4b9a969f  
 https://www.sohamkamani.com/golang/telegram-bot/  
 https://www.sohamkamani.com/blog/how-to-write-good-documentation/  
+https://medium.com/capital-one-tech/buffered-channels-in-go-what-are-they-good-for-43703871828  
 
 ## Web
 https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years  
