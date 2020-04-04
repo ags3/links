@@ -14,4 +14,5 @@ https://github.com/wren-lang/wren
 https://github.com/benhoyt/littlelang  
 https://github.com/benhoyt/goawk  
 https://github.com/rui314/8cc  
+https://github.com/rui314/minilisp  
 https://github.com/LuaDist/tcc  
