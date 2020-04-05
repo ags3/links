@@ -17,6 +17,7 @@ https://golang.org/doc/articles/wiki/
 https://scene-si.org/  
 https://golangbot.com/learn-golang-series/  
 https://yourbasic.org/  
+https://medium.com/cloud-native-the-gathering/go-modules-with-private-git-repositories-dfe795068db4  
 https://www.sohamkamani.com/golang/arrays-vs-slices/  
 https://medium.com/learning-the-go-programming-language/streaming-io-in-go-d93507931185  
 https://medium.com/learning-the-go-programming-language/comparing-values-in-go-8f7b002e767a  
