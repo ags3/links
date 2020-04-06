@@ -7,9 +7,9 @@ https://www.freecodecamp.org/news/i-completed-the-entire-freecodecamp-curriculum
 ## Books
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction  
 https://github.com/thejsway/thejsway   
+http://domenlightenment.com/  
 https://eloquentjavascript.net/  
 http://bonsaiden.github.io/JavaScript-Garden/  
-http://domenlightenment.com/  
 https://exploringjs.com/impatient-js/toc.html   
 https://exploringjs.com/es6/  
 https://github.com/getify/You-Dont-Know-JS  
