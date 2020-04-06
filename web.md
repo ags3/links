@@ -4,7 +4,19 @@ https://developer.mozilla.org/en-US/docs/Learn
 ## FreeCodeCamp
 https://www.freecodecamp.org/news/i-completed-the-entire-freecodecamp-curriculum-in-a-month-while-recording-everything/
 
-## Turorials
+## Books
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction  
+https://github.com/thejsway/thejsway   
+https://eloquentjavascript.net/  
+http://bonsaiden.github.io/JavaScript-Garden/  
+http://domenlightenment.com/  
+https://exploringjs.com/impatient-js/toc.html   
+https://exploringjs.com/es6/  
+https://github.com/getify/You-Dont-Know-JS  
+https://jsbooks.revolunet.com/  
+https://exploringjs.com/es2016-es2017/index.html  
+
+## Tutorials
 #### Modern javascript
 https://javascript.info/  
 https://www.modernjs.com/  
