@@ -36,3 +36,10 @@ https://www.acodersjourney.com/top-20-cplusplus-multithreading-mistakes/
 ## Design patterns
 https://en.wikibooks.org/wiki/C%2B%2B_Programming/Code/Design_Patterns
 
+## Testing and mocking
+#### How to use catch2
+https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md#top  
+
+#### How to use trompeloiel
+https://speakerdeck.com/rollbear/using-trompeloeil-a-mocking-framework-for-modern-c-plus-plus  
+
