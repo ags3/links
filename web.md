@@ -13,6 +13,7 @@ https://www.freecodecamp.org/news/i-completed-the-entire-freecodecamp-curriculum
 ## Books
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction  
 https://github.com/thejsway/thejsway   
+https://frontendmasters.com/books/javascript-enlightenment/#1  
 http://domenlightenment.com/  
 https://eloquentjavascript.net/  
 https://leanpub.com/understandinges6/read/  
