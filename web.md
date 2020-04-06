@@ -47,6 +47,9 @@ https://www.sitepoint.com/getting-started-redux/
 #### Build a complete app with Go and vuejs
 https://www.sitepoint.com/build-a-single-page-app-with-go-and-vue/  
 
+#### Using async/await in node.js
+https://blog.risingstack.com/mastering-async-await-in-nodejs/  
+
 ## Examples
 #### Vanilla JS
 https://github.com/bradtraversy/modern_js_udemy_projects  
