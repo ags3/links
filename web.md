@@ -15,6 +15,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction
 https://github.com/thejsway/thejsway   
 http://domenlightenment.com/  
 https://eloquentjavascript.net/  
+https://leanpub.com/understandinges6/read/  
 http://bonsaiden.github.io/JavaScript-Garden/  
 https://exploringjs.com/impatient-js/toc.html   
 https://exploringjs.com/es6/  
