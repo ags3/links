@@ -55,3 +55,8 @@ https://blog.risingstack.com/mastering-async-await-in-nodejs/
 https://github.com/bradtraversy/modern_js_udemy_projects  
 https://github.com/bradtraversy/vanillawebprojects  
 https://github.com/bogadrian  
+
+## React
+#### React philosophy for web designers
+https://www.framer.com/blog/posts/react-for-web-designers/  
+
