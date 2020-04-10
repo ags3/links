@@ -32,6 +32,7 @@ http://hassansin.github.io/implementing-websocket-protocol-in-go
 https://thenotexpert.com/simple-server-binary-protocol-golang/  
 
 ## Modules tutorials
+https://blog.golang.org/using-go-modules  
 https://medium.com/@adiach3nko/package-management-with-go-modules-the-pragmatic-guide-c831b4eaaf31  
 
 ## Web
