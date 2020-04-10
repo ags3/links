@@ -31,6 +31,9 @@ https://medium.com/capital-one-tech/buffered-channels-in-go-what-are-they-good-f
 http://hassansin.github.io/implementing-websocket-protocol-in-go  
 https://thenotexpert.com/simple-server-binary-protocol-golang/  
 
+## Modules tutorials
+https://medium.com/@adiach3nko/package-management-with-go-modules-the-pragmatic-guide-c831b4eaaf31  
+
 ## Web
 https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years  
 https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin  
@@ -64,6 +67,7 @@ https://www.sohamkamani.com/golang/options-pattern/
 https://badu.github.io/post/  
 
 ## Source code
+https://github.com/githubnemo/CompileDaemon  
 https://github.com/nogoegst/reop  
 https://github.com/recoilme/sniper  
 https://github.com/recoilme/pudge  
