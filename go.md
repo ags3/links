@@ -1,3 +1,6 @@
+## Code review
+https://github.com/golang/go/wiki/CodeReviewComments  
+
 ## Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
