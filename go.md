@@ -82,13 +82,14 @@ https://github.com/google/inverting-proxy/blob/master/agent/websockets/connectio
 https://github.com/google/ko/blob/master/pkg/publish/future.go  
 
 ## Source code
+https://github.com/digitalocean/godo  
+https://github.com/google/go-github/  
 https://github.com/githubnemo/CompileDaemon  
 https://github.com/nogoegst/reop  
 https://github.com/recoilme/sniper  
 https://github.com/recoilme/pudge  
 https://github.com/gin-gonic/gin  
 https://github.com/go-chi/chi  
-https://github.com/digitalocean/godo  
 https://github.com/mccutchen/go-httpbin  
 https://github.com/gojek/heimdall  
 https://github.com/soniakeys/avl  
