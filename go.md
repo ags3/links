@@ -1,6 +1,10 @@
 ## Code review
 https://github.com/golang/go/wiki/CodeReviewComments  
 
+## Gotchas
+https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
+
+
 ## Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
