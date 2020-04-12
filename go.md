@@ -75,6 +75,9 @@ https://www.sohamkamani.com/golang/options-pattern/
 ## Interview
 https://badu.github.io/post/  
 
+## Context
+https://github.com/google/inverting-proxy/blob/master/agent/websockets/connection.go  
+
 ## Source code
 https://github.com/githubnemo/CompileDaemon  
 https://github.com/nogoegst/reop  
