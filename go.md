@@ -2,8 +2,8 @@
 https://github.com/golang/go/wiki/CodeReviewComments  
 
 ## Gotchas
+http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/  
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
-
 
 ## Books
 https://golang.org/doc/effective_go.html  
