@@ -78,6 +78,9 @@ https://badu.github.io/post/
 ## Context
 https://github.com/google/inverting-proxy/blob/master/agent/websockets/connection.go  
 
+## Promises
+https://github.com/google/ko/blob/master/pkg/publish/future.go  
+
 ## Source code
 https://github.com/githubnemo/CompileDaemon  
 https://github.com/nogoegst/reop  
