@@ -91,6 +91,7 @@ https://github.com/google/inverting-proxy/blob/master/agent/websockets/connectio
 https://github.com/google/ko/blob/master/pkg/publish/future.go  
 
 ## Go compiler
+https://github.com/teh-cmc/go-internals  
 https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-1/  
 https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-2/  
 https://getstream.io/blog/how-a-go-program-compiles-down-to-machine-code/  
