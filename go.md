@@ -91,6 +91,8 @@ https://github.com/google/inverting-proxy/blob/master/agent/websockets/connectio
 https://github.com/google/ko/blob/master/pkg/publish/future.go  
 
 ## Source code
+https://github.com/hoisie/redis  
+https://github.com/martinr92/goftp  
 https://github.com/golang/net  
 https://github.com/golang/go/tree/master/src/net/http/httptest  
 https://github.com/digitalocean/godo  
