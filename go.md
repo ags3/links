@@ -1,6 +1,15 @@
 ## Code review
 https://github.com/golang/go/wiki/CodeReviewComments  
 
+## Official articles
+https://blog.golang.org/slices  
+https://blog.golang.org/maps  
+https://blog.golang.org/errors-are-values  
+https://blog.golang.org/go1.13-errors  
+https://blog.golang.org/strings  
+https://blog.golang.org/package-names  
+https://blog.golang.org/constants  
+
 ## Gotchas
 http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/  
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
