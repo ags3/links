@@ -91,6 +91,7 @@ https://github.com/google/inverting-proxy/blob/master/agent/websockets/connectio
 https://github.com/google/ko/blob/master/pkg/publish/future.go  
 
 ## Source code
+https://github.com/golang/go/tree/master/src/net/http/httptest  
 https://github.com/digitalocean/godo  
 https://github.com/google/go-github/  
 https://github.com/githubnemo/CompileDaemon  
