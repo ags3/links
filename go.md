@@ -90,6 +90,9 @@ https://github.com/google/inverting-proxy/blob/master/agent/websockets/connectio
 ## Promises
 https://github.com/google/ko/blob/master/pkg/publish/future.go  
 
+## Go compiler
+https://getstream.io/blog/how-a-go-program-compiles-down-to-machine-code/  
+
 ## Source code
 https://github.com/hoisie/redis  
 https://github.com/martinr92/goftp  
