@@ -3,6 +3,7 @@ https://github.com/golang/go/wiki/CodeReviewComments
 
 ## Official articles
 https://github.com/golang/go/wiki/Articles  
+https://blog.golang.org/slices-intro  
 https://blog.golang.org/slices  
 https://github.com/golang/go/wiki/SliceTricks  
 https://blog.golang.org/maps  
