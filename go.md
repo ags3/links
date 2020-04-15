@@ -32,6 +32,8 @@ https://legacy.gitbook.com/book/codegangsta/building-web-apps-with-go/details
 https://www.openmymind.net/The-Little-Go-Book/  
 
 ## Tutorials
+#### Michal tutorials
+https://medium.com/golangspec  
 #### Go tutorial by Vladimir Vivien
 https://github.com/vladimirvivien/learning-go/tree/master/tutorial  
 https://tutorialedge.net/course/golang/
