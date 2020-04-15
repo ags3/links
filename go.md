@@ -2,6 +2,7 @@
 https://github.com/golang/go/wiki/CodeReviewComments  
 
 ## Official articles
+https://github.com/golang/go/wiki/Articles  
 https://blog.golang.org/slices  
 https://github.com/golang/go/wiki/SliceTricks  
 https://blog.golang.org/maps  
@@ -32,6 +33,7 @@ https://www.openmymind.net/The-Little-Go-Book/
 ## Tutorials
 #### Go tutorial by Vladimir Vivien
 https://github.com/vladimirvivien/learning-go/tree/master/tutorial  
+https://tutorialedge.net/course/golang/
 https://golang.org/doc/articles/wiki/  
 https://scene-si.org/  
 https://golangbot.com/learn-golang-series/  
