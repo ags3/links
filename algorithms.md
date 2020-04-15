@@ -1,3 +1,6 @@
+## Courses
+https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/
+
 ## General articles
 https://medium.com/plus-minus/big-oh-for-algorithms-7fdb1d2f35d  
 
