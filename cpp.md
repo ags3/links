@@ -62,6 +62,7 @@ https://github.com/facebookincubator/mvfst
 https://github.com/dropbox/json11  
 https://github.com/scylladb/seastar  
 https://github.com/scylladb/scylla  
+https://github.com/google/tink  
 https://github.com/google/lmctfy  
 https://github.com/google/marl  
 https://github.com/google/riegeli  
