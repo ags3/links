@@ -21,6 +21,9 @@ https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic
 https://github.com/hoanhan101/ultimate-go  
 https://github.com/hoanhan101/algo  
 
+## Errors 
+https://yourbasic.org/golang/create-error/  
+
 ## Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
