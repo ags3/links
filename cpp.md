@@ -49,3 +49,20 @@ https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md#top
 #### How to use trompeloiel
 https://speakerdeck.com/rollbear/using-trompeloeil-a-mocking-framework-for-modern-c-plus-plus  
 
+## Modules
+https://meetingcpp.com/mcpp/slides/2019/modules-the-beginners-guide-meetingcpp2019.pdf  
+
+## Code
+https://github.com/facebook/folly  
+https://github.com/osquery/osquery  
+https://github.com/facebook/fatal  
+https://github.com/facebook/rocksdb  
+https://github.com/google/leveldb  
+https://github.com/facebookincubator/mvfst  
+https://github.com/dropbox/json11  
+https://github.com/scylladb/seastar  
+https://github.com/scylladb/scylla  
+https://github.com/google/lmctfy  
+https://github.com/google/marl  
+https://github.com/google/riegeli  
+
