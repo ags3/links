@@ -17,6 +17,9 @@ https://blog.golang.org/constants
 http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/  
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
 
+## Study plans
+https://github.com/hoanhan101/ultimate-go  
+
 ## Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
