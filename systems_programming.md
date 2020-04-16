@@ -14,6 +14,7 @@ https://www.akkadia.org/drepper/cpumemory.pdf
 https://danluu.com/malloc-tutorial/  
 http://dmitrysoshnikov.com/compilers/writing-a-memory-allocator/  
 http://dmitrysoshnikov.com/compilers/writing-a-pool-allocator/  
+http://dmitrysoshnikov.com/compilers/writing-a-mark-sweep-garbage-collector/  
 https://sourceware.org/glibc/wiki/MallocInternals  
 https://jamesgolick.com/2013/5/15/memory-allocators-101.html  
 
