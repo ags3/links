@@ -19,6 +19,7 @@ https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic
 
 ## Study plans
 https://github.com/hoanhan101/ultimate-go  
+https://github.com/hoanhan101/algo  
 
 ## Books
 https://golang.org/doc/effective_go.html  
