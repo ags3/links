@@ -64,6 +64,6 @@ https://github.com/bogadrian
 
 ## React
 #### React philosophy for web designers
-https://www.framer.com/blog/posts/react-for-web-designers/  
-#### Very goo react from scratch tutorial  
+https://www.freecodecamp.org amer.com/blog/posts/react-for-web-designers/  
+#### Very good react from scratch tutorial  
 https://www.taniarascia.com/getting-started-with-react/  
