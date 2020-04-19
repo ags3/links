@@ -35,6 +35,9 @@ https://exploringjs.com/es2016-es2017/index.html
 https://javascript.info/  
 https://www.modernjs.com/  
 
+Tania's ES6 tutorial
+https://www.taniarascia.com/es6-syntax-and-feature-overview/  
+
 #### Writing a complete app without a framework
 https://www.sitepoint.com/single-page-app-without-framework/  
 
