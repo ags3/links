@@ -12,6 +12,7 @@ https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript
 
 ## Bootstrap
 https://websitesetup.org/bootstrap-tutorial-for-beginners/  
+https://www.taniarascia.com/what-is-bootstrap-and-how-do-i-use-it/  
 
 ## FreeCodeCamp
 https://www.freecodecamp.org/news/i-completed-the-entire-freecodecamp-curriculum-in-a-month-while-recording-everything/
