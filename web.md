@@ -7,6 +7,9 @@ https://developer.mozilla.org/en-US/docs/Learn
 ## HTML & CSS
 https://www.internetingishard.com/
 
+## Digitalocean vanilla javascript frontend series
+https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript  
+
 ## Bootstrap
 https://websitesetup.org/bootstrap-tutorial-for-beginners/  
 
