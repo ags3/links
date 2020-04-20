@@ -52,6 +52,12 @@ https://speakerdeck.com/rollbear/using-trompeloeil-a-mocking-framework-for-moder
 ## Modules
 https://meetingcpp.com/mcpp/slides/2019/modules-the-beginners-guide-meetingcpp2019.pdf  
 
+## Videos
+#### Template metaprogramming
+
+https://www.google.com/search?q=modern+template+metaprogramming+a+compendium&oq=modern+template+metaprogramming+a+compendium&aqs=chrome..69i57.20288j0j7&client=ms-android-huawei&sourceid=chrome-mobile&ie=UTF-8#  
+https://www.google.com/search?client=ms-android-huawei&sxsrf=ALeKk02EYpJBVzzKlnqRJI0Ob0pfmbdhuw%3A1587406726908&ei=huedXo36NtKUkgX5vq_YBw&q=walter+e+brown+template+metaprogramming&oq=walter+e+brown+template+metaprogramming&gs_lcp=ChNtb2JpbGUtZ3dzLXdpei1zZXJwEAM6BAgjECc6AggAOgYIABAWEB46BQghEKABOgQIIRAVOgcIIRAKEKABUMwLWPlVYJZZaABwAHgAgAHlAYgBlSaSAQYwLjE5LjeYAQCgAQE&sclient=mobile-gws-wiz-serp# 
+
 ## Code
 https://github.com/facebook/folly  
 https://github.com/osquery/osquery  
