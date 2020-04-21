@@ -5,6 +5,9 @@ https://m.youtube.com/watch?v=fqMOX6JJhGo
 #### Comprehensive tutorial
 https://docker-curriculum.com/  
 
+#### Docker course repo examples
+https://github.com/bretfisher/udemy-docker-mastery  
+
 ## Kubernetes
 
 #### Hello minikube
