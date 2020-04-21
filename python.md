@@ -62,6 +62,8 @@ https://github.com/ageron/handson-ml2/blob/master/tools_pandas.ipynb
 https://www.youtube.com/user/schafer5/videos  
 
 ## Code
+https://github.com/samuelcolvin/aioaws  
+https://github.com/samuelcolvin/pydantic  
 https://github.com/neuromation/platform-client-python  
 https://github.com/psf/black  
 https://github.com/tiangolo/fastapi  
