@@ -57,6 +57,9 @@ https://meetingcpp.com/mcpp/slides/2019/modules-the-beginners-guide-meetingcpp20
 https://terrainformatica.com/2015/04/19/moderntemplatemetaprogramming/  
 
 ## Code
+#### How to use sockets, threads, HTTP clients
+https://github.com/machinezone/IXWebSocket  
+
 https://github.com/facebook/folly  
 https://github.com/osquery/osquery  
 https://github.com/facebook/fatal  
