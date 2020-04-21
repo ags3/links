@@ -19,6 +19,9 @@ https://louridas.github.io/rwa/pages/book-chapters.html
 ## Slides
 https://www.cs.princeton.edu/~wayne/kleinberg-tardos/  
 
+## Interview problems
+http://www.ardendertat.com/2012/01/09/programming-interview-questions/  
+
 ## Solved problems
 #### Dynamic programming
 https://www.techiedelight.com/dynamic-programming-interview-questions
