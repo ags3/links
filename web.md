@@ -79,3 +79,6 @@ https://github.com/taniarascia/react-tutorial
 https://www.valentinog.com/blog/babel/  
 #### Very simple react app
 https://github.com/when-i-code/quiz?files=1  
+
+#### Excellent react application and course (12h)
+https://www.youtube.com/watch?v=m_u6P5k0vP0  
