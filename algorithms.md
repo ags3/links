@@ -40,5 +40,7 @@ https://github.com/RodneyShag/LeetCode_solutions
 https://github.com/RodneyShag/Interview_solutions  
 https://github.com/yangchi/LCPractice  
 
+## Cracking the coding interview solutions
+https://github.com/careercup/CtCI-6th-Edition-C  
 
 
