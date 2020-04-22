@@ -18,6 +18,9 @@ http://dmitrysoshnikov.com/compilers/writing-a-mark-sweep-garbage-collector/
 https://sourceware.org/glibc/wiki/MallocInternals  
 https://jamesgolick.com/2013/5/15/memory-allocators-101.html  
 
+## Producer-consumer in shared memory
+https://stackoverflow.com/questions/16283517/single-producer-consumer-ring-buffer-in-shared-memory  
+
 ## Software
 https://github.com/kozross/awesome-c  
 https://github.com/aleksandar-todorovic/awesome-c  
