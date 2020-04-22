@@ -109,6 +109,9 @@ https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-
 https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-2/  
 https://getstream.io/blog/how-a-go-program-compiles-down-to-machine-code/  
 
+## Cool go projects
+https://gary.cool/projects.html  
+
 ## Source code
 https://github.com/hoisie/redis  
 https://github.com/martinr92/goftp  
