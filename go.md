@@ -111,6 +111,8 @@ https://getstream.io/blog/how-a-go-program-compiles-down-to-machine-code/
 
 ## Cool go projects
 https://gary.cool/projects.html  
+https://github.com/fabiokung/cqueue  
+https://github.com/hidez8891/shm  
 
 ## Source code
 https://github.com/hoisie/redis  
