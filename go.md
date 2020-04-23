@@ -18,6 +18,7 @@ http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
 https://blog.cloudflare.com/exposing-go-on-the-internet/  
 https://nanxiao.gitbooks.io/golang-101-hacks/content/  
+https://medium.com/@betable/3-go-gotchas-590b8c014e0a  
 
 ## Study plans
 https://github.com/hoanhan101/ultimate-go  
