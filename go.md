@@ -17,6 +17,7 @@ https://blog.golang.org/constants
 http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/  
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
 https://blog.cloudflare.com/exposing-go-on-the-internet/  
+https://nanxiao.gitbooks.io/golang-101-hacks/content/  
 
 ## Study plans
 https://github.com/hoanhan101/ultimate-go  
@@ -90,6 +91,9 @@ https://www.alexedwards.net/blog/organising-database-access
 ## Tooling
 https://golang.org/doc/code.html  
 https://www.alexedwards.net/blog/an-overview-of-go-tooling  
+
+## Mocking
+https://techblog.fexcofts.com/2019/09/23/go-and-test-mocking/  
 
 ## Design patterns
 https://www.sohamkamani.com/golang/command-pattern/  
