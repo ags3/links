@@ -16,6 +16,7 @@ https://blog.golang.org/constants
 ## Gotchas
 http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/  
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
+https://blog.cloudflare.com/exposing-go-on-the-internet/  
 
 ## Study plans
 https://github.com/hoanhan101/ultimate-go  
@@ -41,6 +42,7 @@ https://www.openmymind.net/The-Little-Go-Book/
 ## Tutorials
 #### Michal tutorials
 https://medium.com/golangspec  
+
 #### Go tutorial by Vladimir Vivien
 https://github.com/vladimirvivien/learning-go/tree/master/tutorial  
 https://tutorialedge.net/course/golang/
