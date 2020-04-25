@@ -28,6 +28,9 @@ https://github.com/hoanhan101/algo
 ## Errors 
 https://yourbasic.org/golang/create-error/  
 
+## Concurrency patterns
+https://blog.golang.org/pipelines  
+
 ## Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
