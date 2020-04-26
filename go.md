@@ -132,6 +132,8 @@ https://github.com/tidwall/modern-server
 https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis  
 
 ## Source code
+https://github.com/ahmetb/go-httpbin  
+https://github.com/mccutchen/go-httpbin  
 https://github.com/hoisie/redis  
 https://github.com/martinr92/goftp  
 https://github.com/golang/net  
@@ -144,7 +146,6 @@ https://github.com/recoilme/sniper
 https://github.com/recoilme/pudge  
 https://github.com/gin-gonic/gin  
 https://github.com/go-chi/chi  
-https://github.com/mccutchen/go-httpbin  
 https://github.com/gojek/heimdall  
 https://github.com/soniakeys/avl  
 https://github.com/gyuho/goraph  
