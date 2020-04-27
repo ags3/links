@@ -13,6 +13,9 @@ https://blog.golang.org/strings
 https://blog.golang.org/package-names  
 https://blog.golang.org/constants  
 
+## Go for industrial apps
+https://peter.bourgon.org/go-for-industrial-programming/  
+
 ## Gotchas
 http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/  
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
@@ -135,6 +138,7 @@ https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
 https://github.com/ahmetb/go-httpbin  
 https://github.com/mccutchen/go-httpbin  
 https://github.com/hoisie/redis  
+https://github.com/restic/restic  
 https://github.com/martinr92/goftp  
 https://github.com/golang/net  
 https://github.com/golang/go/tree/master/src/net/http/httptest  
