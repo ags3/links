@@ -1,6 +1,9 @@
 ## General tutorials
 https://thomas-cokelaer.info/tutorials/python/index.html  
 
+## Variable annotations PEP (typing)
+https://www.python.org/dev/peps/pep-0526/  
+
 ## Python Sheets
 https://www.pythonsheets.com/  
 
