@@ -60,6 +60,7 @@ https://github.com/ageron/handson-ml2/blob/master/tools_pandas.ipynb
 
 ## Video
 https://www.youtube.com/user/schafer5/videos  
+https://www.youtube.com/user/schafer5/playlists  
 
 ## Code
 https://github.com/samuelcolvin/aioaws  
