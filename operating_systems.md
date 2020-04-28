@@ -12,3 +12,4 @@ https://wiki.osdev.org/Main_Page
 #### Writing an OS from scratch
 https://github.com/cfenollosa/os-tutorial  
 http://www.jamesmolloy.co.uk/tutorial_html/  
+http://www.osdever.net/bkerndev/index.php  
