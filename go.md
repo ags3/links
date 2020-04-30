@@ -37,6 +37,9 @@ https://blog.golang.org/pipelines
 ## Example of good style
 https://github.com/nats-io/nats.go/blob/master/nats.go  
 
+## Parsing the Redis protocol. 
+https://www.redisgreen.net/blog/reading-and-writing-redis-protocol/  
+
 ## Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
