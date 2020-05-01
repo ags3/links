@@ -39,6 +39,9 @@ https://www.modernjs.com/
 #### Tania's ES6 tutorial
 https://www.taniarascia.com/es6-syntax-and-feature-overview/  
 
+#### Writing a TODO app in vanilla javascript
+https://freshman.tech/todo-list/  
+
 #### Writing a complete app without a framework
 https://www.sitepoint.com/single-page-app-without-framework/  
 
