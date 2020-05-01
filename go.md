@@ -28,6 +28,9 @@ https://www.ardanlabs.com/blog/2013/09/iterating-over-slices-in-go.html
 https://github.com/hoanhan101/ultimate-go  
 https://github.com/hoanhan101/algo  
 
+## Writing go web applications
+https://freshman.tech/web-development-with-go/  
+
 ## Errors 
 https://yourbasic.org/golang/create-error/  
 
