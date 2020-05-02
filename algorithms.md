@@ -24,10 +24,13 @@ http://www.ardendertat.com/2012/01/09/programming-interview-questions/
 
 ## Solved problems
 #### Dynamic programming
-https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RM1BDv71V60  
+https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RM1BDv71V60 
+https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/3j64vRY6JnR  
 https://www.techiedelight.com/dynamic-programming-interview-questions
+
 #### Backtracking
 https://www.techiedelight.com/backtracking-interview-questions
+
 #### Geegsforgeeks
 https://www.geeksforgeeks.org/fundamentals-of-algorithms/  
 https://www.geeksforgeeks.org/data-structures/  
