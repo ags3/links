@@ -81,6 +81,9 @@ https://medium.com/capital-one-tech/buffered-channels-in-go-what-are-they-good-f
 http://hassansin.github.io/implementing-websocket-protocol-in-go  
 https://thenotexpert.com/simple-server-binary-protocol-golang/  
 
+## Multdimensional slices
+https://stackoverflow.com/questions/39804861/what-is-a-concise-way-to-create-a-2d-slice-in-go  
+
 ## Modules tutorials
 https://golang.org/doc/code.html  
 https://blog.golang.org/using-go-modules  
