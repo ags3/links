@@ -48,6 +48,9 @@ https://www.sitepoint.com/single-page-app-without-framework/
 #### Debugging js apps in VS code
 https://www.sitepoint.com/debugging-javascript-projects-vs-code-chrome-debugger/  
 
+#### Javascript for react (great, must read) 
+https://www.robinwieruch.de/javascript-fundamentals-react-requirements  
+
 #### Complete basic React tutorial
 https://www.modernjs.com/react-tutorial.html  
 
