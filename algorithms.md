@@ -47,5 +47,5 @@ https://github.com/yangchi/LCPractice
 ## Cracking the coding interview solutions
 https://github.com/careercup/CtCI-6th-Edition  
 https://github.com/careercup/CtCI-6th-Edition-JavaScript  
-
+https://github.com/alonsovidales/cracking_code_interview_1_6_python  
 
