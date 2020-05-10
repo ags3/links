@@ -44,6 +44,14 @@ https://github.com/nats-io/nats.go/blob/master/nats.go
 https://www.redisgreen.net/blog/beginners-guide-to-redis-protocol/  
 https://www.redisgreen.net/blog/reading-and-writing-redis-protocol/  
 
+## Capital One medium series
+https://medium.com/capital-one-tech/building-an-unbounded-channel-in-go-789e175cd2cd  
+https://medium.com/capital-one-tech/closures-are-the-generics-for-go-cb32021fb5b5  
+https://medium.com/capital-one-tech/buffered-channels-in-go-what-are-they-good-for-43703871828  
+https://medium.com/capital-one-tech/in-the-not-too-distant-future-e2d0ad28e91  
+https://medium.com/capital-one-tech/learning-to-use-go-reflection-822a0aed74b7  
+https://medium.com/capital-one-tech/learning-to-use-go-reflection-part-2-c91657395066  
+
 ## Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
