@@ -28,6 +28,9 @@ https://www.ardanlabs.com/blog/2013/09/iterating-over-slices-in-go.html
 https://github.com/hoanhan101/ultimate-go  
 https://github.com/hoanhan101/algo  
 
+## Ardan labs essential reading list
+https://github.com/ardanlabs/gotraining/tree/master/reading  
+
 ## Writing go web applications
 https://freshman.tech/web-development-with-go/  
 
