@@ -15,6 +15,7 @@ https://blog.golang.org/constants
 
 ## Practical go. Writing maintainable code
 https://dave.cheney.net/practical-go/presentations/gophercon-israel.html  
+https://dave.cheney.net/practical-go  
 
 ## Go for industrial apps
 https://peter.bourgon.org/go-for-industrial-programming/  
