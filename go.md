@@ -13,6 +13,9 @@ https://blog.golang.org/strings
 https://blog.golang.org/package-names  
 https://blog.golang.org/constants  
 
+## Practical go. Writing maintainable code
+https://dave.cheney.net/practical-go/presentations/gophercon-israel.html  
+
 ## Go for industrial apps
 https://peter.bourgon.org/go-for-industrial-programming/  
 
