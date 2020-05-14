@@ -7,6 +7,9 @@ https://developer.mozilla.org/en-US/docs/Learn
 ## HTML & CSS
 https://www.internetingishard.com/
 
+## Complete tutorial on ES6 features
+https://babeljs.io/docs/en/learn  
+
 ## Digitalocean vanilla javascript frontend series
 https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript  
 
