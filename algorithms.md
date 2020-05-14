@@ -40,6 +40,8 @@ https://github.com/TheAlgorithms/Python
 
 ## Graph theory
 https://github.com/alonsovidales/go_graph/blob/master/graph.go  
+https://flaviocopes.com/golang-data-structure-graph/  
+
 
 ## Leetcode
 https://github.com/haoel/leetcode  
