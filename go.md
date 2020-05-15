@@ -45,6 +45,7 @@ https://yourbasic.org/golang/create-error/
 https://blog.golang.org/pipelines  
 
 ## Example of good style
+https://github.com/mccutchen/go-httpbin/blob/master/httpbin/handlers.go  
 https://github.com/nats-io/nats.go/blob/master/nats.go  
 
 ## Parsing the Redis protocol
