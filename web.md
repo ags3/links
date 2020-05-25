@@ -90,7 +90,10 @@ https://www.valentinog.com/blog/babel/
 https://github.com/when-i-code/quiz?files=1  
 
 #### Excellent react application and course (12h)
-https://www.youtube.com/watch?v=m_u6P5k0vP0  
+https://www.youtube.com/watch?v=m_u6P5k0vP0
+
+#### Redux tutorial (very good explanations)  
+https://www.valentinog.com/blog/redux/  
 
 #### Svelte tutorial
 https://scotch.io/tutorials/building-my-first-svelte-app-thoughts-and-impressions  
