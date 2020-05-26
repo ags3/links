@@ -6,6 +6,7 @@ https://teachyourselfcs.com/
 https://www.cs.yale.edu/homes/aspnes/classes/223/notes.html  
 
 ## Courses
+http://web.stanford.edu/class/cs161/schedule.html  
 https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/  
 https://github.com/prakhar1989/awesome-courses  
 https://github.com/illinois-cs241/coursebook/wiki  
