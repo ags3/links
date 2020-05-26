@@ -1,4 +1,5 @@
 ## Courses
+http://web.stanford.edu/class/cs161/schedule.html  
 https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/
 
 ## General articles
