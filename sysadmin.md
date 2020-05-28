@@ -9,3 +9,6 @@ https://unix.stackexchange.com/questions/275429/creating-bootable-debian-image-w
 
 #### Configure networking in Ubuntu
 https://vitux.com/ubuntu-network-configuration/  
+
+#### Adding routes
+https://linoxide.com/how-tos/add-static-route-linux/amp/  
