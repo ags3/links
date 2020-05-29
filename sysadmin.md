@@ -7,7 +7,8 @@ https://diogogomes.com/2012/07/13/debootstrap-kvm-image/
 https://gist.github.com/jalsot/a24aa543021889ad0c70
 https://unix.stackexchange.com/questions/275429/creating-bootable-debian-image-with-debootstrap/473256#473256  
 
-#### Configure networking in Ubuntu
+#### Configure networking
+http://linux-ip.net/html/index.html
 https://vitux.com/ubuntu-network-configuration/  
 
 #### Adding routes
