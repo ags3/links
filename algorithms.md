@@ -1,3 +1,7 @@
+#### CLRS solutions
+https://sites.math.rutgers.edu/~ajl213/CLRS/CLRS.html  
+https://walkccc.github.io/CLRS/
+
 #### Courses
 http://web.stanford.edu/class/cs161/schedule.html  
 https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/
