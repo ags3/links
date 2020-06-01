@@ -278,11 +278,7 @@ func (g *Graph) GetRoutes(
 	return routes, nil
 }
 
-func (g *Graph) getRoute(
-	srcIntf *NodeInterface,
-	destIntf *NodeInterface,
-	device string,
-) (*networkapi.Route, error) {
+func (g *Graph) getRoute(srcIntf, destIntf *NodeInterface, device string) (*networkapi.Route, error) {
 	_, destNetAddr, err := parseIPAddress(destIntf.IPAddr, destIntf.IPPrefix)
 	if err != nil {
 		return nil, err
@@ -316,12 +312,7 @@ func parseIPAddress(ip string, ipPrefix int32) (net.IP, *net.IPNet, error) {
 	return ipAddr, netAddr, nil
 }
 
-func sameSubnet(
-	srcIP string,
-	srcIPPrefix int32,
-	destIP string,
-	destIPPrefix int32,
-) (bool, error) {
+func sameSubnet(srcIP string, srcIPPrefix int32, destIP string, destIPPrefix int32) (bool, error) {
 	_, srcNetAddr, err := parseIPAddress(srcIP, srcIPPrefix)
 	if err != nil {
 		return false, err
