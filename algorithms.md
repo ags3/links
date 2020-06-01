@@ -1,6 +1,7 @@
 #### CLRS solutions
 https://sites.math.rutgers.edu/~ajl213/CLRS/CLRS.html  
-https://walkccc.github.io/CLRS/
+https://walkccc.github.io/CLRS/  
+https://github.com/walkccc/CLRS-cpp  (C++ implementations)  
 
 #### Courses
 http://web.stanford.edu/class/cs161/schedule.html  
@@ -49,6 +50,7 @@ https://flaviocopes.com/golang-data-structure-graph/
 
 
 #### Leetcode
+https://github.com/walkccc/LeetCode  (thousands of problems)  
 https://github.com/haoel/leetcode  
 https://github.com/RodneyShag/LeetCode_solutions  
 https://github.com/RodneyShag/Interview_solutions  
