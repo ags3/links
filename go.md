@@ -47,6 +47,7 @@ https://blog.golang.org/pipelines
 ## Example of good style
 https://github.com/mccutchen/go-httpbin/blob/master/httpbin/handlers.go  
 https://github.com/nats-io/nats.go/blob/master/nats.go  
+https://github.com/rsc/letsencrypt/blob/v0.0.2/lets.go  
 
 ## Parsing the Redis protocol
 https://www.redisgreen.net/blog/beginners-guide-to-redis-protocol/  
