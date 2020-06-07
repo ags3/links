@@ -1,7 +1,10 @@
-## Code review
+#### Code review
 https://github.com/golang/go/wiki/CodeReviewComments  
 
-## Official articles
+#### Style guide
+https://github.com/uber-go/guide/blob/master/style.md  
+
+#### Official articles
 https://github.com/golang/go/wiki/Articles  
 https://blog.golang.org/slices-intro  
 https://blog.golang.org/slices  
@@ -13,14 +16,14 @@ https://blog.golang.org/strings
 https://blog.golang.org/package-names  
 https://blog.golang.org/constants  
 
-## Practical go. Writing maintainable code
+#### Practical go. Writing maintainable code
 https://dave.cheney.net/practical-go/presentations/gophercon-israel.html  
 https://dave.cheney.net/practical-go  
 
-## Go for industrial apps
+#### Go for industrial apps
 https://peter.bourgon.org/go-for-industrial-programming/  
 
-## Gotchas
+#### Gotchas
 http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/  
 https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic  
 https://blog.cloudflare.com/exposing-go-on-the-internet/  
@@ -28,32 +31,32 @@ https://nanxiao.gitbooks.io/golang-101-hacks/content/
 https://medium.com/@betable/3-go-gotchas-590b8c014e0a  
 https://www.ardanlabs.com/blog/2013/09/iterating-over-slices-in-go.html  
 
-## Study plans
+#### Study plans
 https://github.com/hoanhan101/ultimate-go  
 https://github.com/hoanhan101/algo  
 
-## Ardan labs essential reading list
+#### Ardan labs essential reading list
 https://github.com/ardanlabs/gotraining/tree/master/reading  
 
-## Writing go web applications
+#### Writing go web applications
 https://freshman.tech/web-development-with-go/  
 
-## Errors 
+#### Errors 
 https://yourbasic.org/golang/create-error/  
 
-## Concurrency patterns
+#### Concurrency patterns
 https://blog.golang.org/pipelines  
 
-## Example of good style
+#### Example of good style
 https://github.com/mccutchen/go-httpbin/blob/master/httpbin/handlers.go  
 https://github.com/nats-io/nats.go/blob/master/nats.go  
 https://github.com/rsc/letsencrypt/blob/v0.0.2/lets.go  
 
-## Parsing the Redis protocol
+#### Parsing the Redis protocol
 https://www.redisgreen.net/blog/beginners-guide-to-redis-protocol/  
 https://www.redisgreen.net/blog/reading-and-writing-redis-protocol/  
 
-## Capital One medium series
+#### Capital One medium series
 https://medium.com/capital-one-tech/building-an-unbounded-channel-in-go-789e175cd2cd  
 https://medium.com/capital-one-tech/closures-are-the-generics-for-go-cb32021fb5b5  
 https://medium.com/capital-one-tech/buffered-channels-in-go-what-are-they-good-for-43703871828  
@@ -61,7 +64,7 @@ https://medium.com/capital-one-tech/in-the-not-too-distant-future-e2d0ad28e91
 https://medium.com/capital-one-tech/learning-to-use-go-reflection-822a0aed74b7  
 https://medium.com/capital-one-tech/learning-to-use-go-reflection-part-2-c91657395066  
 
-## Books
+#### Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
 https://gobyexample.com/  
@@ -75,7 +78,7 @@ http://www.pazams.com/Go-for-Javascript-Developers/
 https://legacy.gitbook.com/book/codegangsta/building-web-apps-with-go/details  
 https://www.openmymind.net/The-Little-Go-Book/  
 
-## Tutorials
+#### Tutorials
 #### Michal tutorials
 https://medium.com/golangspec  
 
@@ -98,15 +101,15 @@ https://medium.com/capital-one-tech/buffered-channels-in-go-what-are-they-good-f
 http://hassansin.github.io/implementing-websocket-protocol-in-go  
 https://thenotexpert.com/simple-server-binary-protocol-golang/  
 
-## Multdimensional slices
+#### Multdimensional slices
 https://stackoverflow.com/questions/39804861/what-is-a-concise-way-to-create-a-2d-slice-in-go  
 
-## Modules tutorials
+#### Modules tutorials
 https://golang.org/doc/code.html  
 https://blog.golang.org/using-go-modules  
 https://medium.com/@adiach3nko/package-management-with-go-modules-the-pragmatic-guide-c831b4eaaf31  
 
-## Web
+#### Web
 https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years  
 https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin  
 https://semaphoreci.com/community/tutorials/building-and-testing-a-rest-api-in-go-with-gorilla-mux-and-postgresql  
@@ -117,45 +120,45 @@ https://www.alexedwards.net/blog/how-to-hash-and-verify-passwords-with-argon2-in
 https://www.alexedwards.net/blog/how-to-rate-limit-http-requests  
 https://www.sohamkamani.com/golang/2019-01-01-jwt-authentication/  
 
-## Redis
+#### Redis
 https://www.alexedwards.net/blog/working-with-redis  
 
-## SQL
+#### SQL
 https://www.sohamkamani.com/blog/2017/10/18/golang-adding-database-to-web-application/  
 https://www.sohamkamani.com/golang/sql-transactions/  
 https://www.alexedwards.net/blog/practical-persistence-sql  
 https://www.alexedwards.net/blog/organising-database-access  
 
-## Tooling
+#### Tooling
 https://golang.org/doc/code.html  
 https://www.alexedwards.net/blog/an-overview-of-go-tooling  
 
-## Mocking
+#### Mocking
 https://techblog.fexcofts.com/2019/09/23/go-and-test-mocking/  
 
-## Design patterns
+#### Design patterns
 https://www.sohamkamani.com/golang/command-pattern/  
 https://www.sohamkamani.com/golang/2018-06-20-golang-factory-patterns/  
 https://www.sohamkamani.com/golang/options-pattern/  
 
-## Interview
+#### Interview
 https://badu.github.io/post/  
 
-## Context
+#### Context
 https://github.com/johanbrandhorst/certify  
 https://github.com/google/inverting-proxy/blob/master/agent/websockets/connection.go  
 https://levelup.gitconnected.com/how-to-use-context-to-manage-your-goroutines-like-a-boss-ef1e478919e6  
 
-## Promises
+#### Promises
 https://github.com/google/ko/blob/master/pkg/publish/future.go  
 
-## Go compiler
+#### Go compiler
 https://github.com/teh-cmc/go-internals  
 https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-1/  
 https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-2/  
 https://getstream.io/blog/how-a-go-program-compiles-down-to-machine-code/  
 
-## Cool go projects
+#### Cool go projects
 https://gary.cool/projects.html  
 https://github.com/fabiokung/cqueue  
 https://github.com/hidez8891/shm  
@@ -166,7 +169,7 @@ https://github.com/tidwall/modern-server
 #### Functional options
 https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis  
 
-## Source code
+#### Source code
 https://github.com/nats-io/stan.go  
 https://github.com/beanstalkd/go-beanstalk  
 https://github.com/twmb/algoimpl/tree/master/go  
