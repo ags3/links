@@ -2,6 +2,7 @@
 https://craftinginterpreters.com/contents.html  
 http://compilerbook.org  
 http://hjemmesider.diku.dk/~torbenm/Basics/basics_lulu2.pdf  
+http://tinf2.vub.ac.be/~dvermeir/courses/compilers/compilers.pdf  
 
 #### Tutorials
 http://www.cse.scu.edu/~mwang2/compiler/TutorialFlexBison.pdf  
