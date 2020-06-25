@@ -1,26 +1,27 @@
-## Course list
+#### Course list
 https://github.com/andrews1022/web-development-2020-course-list
 
-## Mozilla MDN
+#### Mozilla MDN
 https://developer.mozilla.org/en-US/docs/Learn
 
-## HTML & CSS
-https://www.internetingishard.com/
+#### HTML & CSS
+https://www.internetingishard.com/  
+https://github.com/smeriwether/html-and-css-is-hard
 
-## Complete tutorial on ES6 features
+#### Complete tutorial on ES6 features
 https://babeljs.io/docs/en/learn  
 
-## Digitalocean vanilla javascript frontend series
+#### Digitalocean vanilla javascript frontend series
 https://www.digitalocean.com/community/tutorial_series/how-to-code-in-javascript  
 
-## Bootstrap
+#### Bootstrap
 https://websitesetup.org/bootstrap-tutorial-for-beginners/  
 https://www.taniarascia.com/what-is-bootstrap-and-how-do-i-use-it/  
 
-## FreeCodeCamp
+#### FreeCodeCamp
 https://www.freecodecamp.org/news/i-completed-the-entire-freecodecamp-curriculum-in-a-month-while-recording-everything/
 
-## Books
+#### Books
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction  
 https://github.com/thejsway/thejsway   
 https://frontendmasters.com/books/javascript-enlightenment/#1  
@@ -34,7 +35,7 @@ https://github.com/getify/You-Dont-Know-JS
 https://jsbooks.revolunet.com/  
 https://exploringjs.com/es2016-es2017/index.html  
 
-## Tutorials
+#### Tutorials
 #### Modern javascript
 https://javascript.info/  
 https://www.modernjs.com/  
@@ -72,13 +73,13 @@ https://blog.risingstack.com/mastering-async-await-in-nodejs/
 #### Complete example using Flask, React, Material UI  
 https://developer.okta.com/blog/2018/12/20/crud-app-with-python-flask-react  
 
-## Examples
+#### Examples
 #### Vanilla JS
 https://github.com/bradtraversy/modern_js_udemy_projects  
 https://github.com/bradtraversy/vanillawebprojects  
 https://github.com/bogadrian  
 
-## React
+#### React
 #### React philosophy for web designers
 https://www.freecodecamp.org amer.com/blog/posts/react-for-web-designers/  
 #### Very good react from scratch tutorial  
