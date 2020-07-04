@@ -133,8 +133,9 @@ https://www.alexedwards.net/blog/organising-database-access
 https://golang.org/doc/code.html  
 https://www.alexedwards.net/blog/an-overview-of-go-tooling  
 
-#### Mocking
+#### Testing and mocking
 https://techblog.fexcofts.com/2019/09/23/go-and-test-mocking/  
+https://ncona.com/2020/02/using-testify-for-golang-tests/  
 
 #### Design patterns
 https://www.sohamkamani.com/golang/command-pattern/  
