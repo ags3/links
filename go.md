@@ -129,6 +129,9 @@ https://www.sohamkamani.com/golang/sql-transactions/
 https://www.alexedwards.net/blog/practical-persistence-sql  
 https://www.alexedwards.net/blog/organising-database-access  
 
+#### PostgreSQL
+https://www.sohamkamani.com/blog/2017/10/18/golang-adding-database-to-web-application/  
+
 #### Tooling
 https://golang.org/doc/code.html  
 https://www.alexedwards.net/blog/an-overview-of-go-tooling  
