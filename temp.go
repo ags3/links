@@ -125,8 +125,7 @@ func (gb *GraphBuilder) getPeerNodeConfigs(
 			return nil, err
 		}
 		if peerNodeConfig != nil {
-			peerNodeConfigs[peerNodeType] =
-				[]config.NodeConfig{*peerNodeConfig}
+			peerNodeConfigs[peerNodeType] = []config.NodeConfig{*peerNodeConfig}
 		}
 	}
 	return peerNodeConfigs, nil
@@ -282,9 +281,7 @@ func (gb *GraphBuilder) doConnectNodeToPeers(
 	for i := range nodeRanges {
 		for _, peerConnInfo := range nodeConnsInfo.peerConnectionsInfo {
 			err := gb.doConnectNodeRangeToPeer(nodeConnsInfo.nodeType,
-				nodeAgentID, nodeRanges[i], peerMap,
-				peerConnInfo)
-
+				nodeAgentID, nodeRanges[i], peerMap, peerConnInfo)
 			if err != nil {
 				return err
 			}
