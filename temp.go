@@ -161,8 +161,8 @@ func (gb *GraphBuilder) getDUTNodeConfig(nodeType mwapi.LCNodeType) (*config.Nod
 	return nodeConfig, nil
 }
 
-func (gb *GraphBuilder) connectNodeToPeers(nodeConnsInfo *nodeConnectionsInfo) error {
-	nodeConfigs, err := gb.getNodeConfigs(nodeConnsInfo.nodeType)
+func (gb *GraphBuilder) connectNodeToPeers(connsInfo *nodeConnectionsInfo) error {
+	nodeConfigs, err := gb.getNodeConfigs(connsInfo.nodeType)
 	if err != nil {
 		return err
 	}
@@ -177,9 +177,9 @@ func (gb *GraphBuilder) connectNodeToPeers(nodeConnsInfo *nodeConnectionsInfo) e
 		}
 		var err error
 		if helpers.AllEnabledRangesAreDUT(nodeRanges) {
-			err = gb.connectDUTNodeToPeers(nodeConfig.AgentID, nodeRanges, nodeConnsInfo)
+			err = gb.connectDUTNodeToPeers(nodeConfig.AgentID, nodeRanges, connsInfo)
 		} else {
-			err = gb.connectDistributedNodeToPeers(nodeConfig.AgentID, nodeRanges, nodeConnsInfo)
+			err = gb.connectDistribNodeToPeers(nodeConfig.AgentID, nodeRanges, connsInfo)
 		}
 		if err != nil {
 			return err
@@ -188,32 +188,29 @@ func (gb *GraphBuilder) connectNodeToPeers(nodeConnsInfo *nodeConnectionsInfo) e
 	return nil
 }
 
-func (gb *GraphBuilder) connectDistributedNodeToPeers(
+func (gb *GraphBuilder) connectDistribNodeToPeers(
 	nodeAgentID string,
 	nodeRanges []interface{},
-	nodeConnsInfo *nodeConnectionsInfo,
+	connsInfo *nodeConnectionsInfo,
 ) error {
-	peerNodeConfigs, err := gb.getPeerNodeConfigs(
-		nodeAgentID,
-		nodeConnsInfo.nodeType,
-		nodeConnsInfo.getPeerNodeTypes(),
-	)
+	peerNodeTypes := connsInfo.getPeerNodeTypes()
+	peerNodeConfigs, err := gb.getPeerNodeConfigs(nodeAgentID, connsInfo.nodeType, peerNodeTypes)
 	if err != nil {
 		return err
 	}
 	if len(peerNodeConfigs) == 0 {
 		return nil
 	}
-	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerNodeConfigs, nodeConnsInfo)
+	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerNodeConfigs, connsInfo)
 }
 
 func (gb *GraphBuilder) connectDUTNodeToPeers(
 	nodeAgentID string,
 	nodeRanges []interface{},
-	nodeConnsInfo *nodeConnectionsInfo,
+	connsInfo *nodeConnectionsInfo,
 ) error {
 	peerMap := make(map[mwapi.LCNodeType][]config.NodeConfig)
-	peerNodeTypes := nodeConnsInfo.getPeerNodeTypes()
+	peerNodeTypes := connsInfo.getPeerNodeTypes()
 	for _, peerNodeType := range peerNodeTypes {
 		peerNodeConfigs, err := gb.getNodeConfigs(peerNodeType)
 		if err != nil {
@@ -221,19 +218,19 @@ func (gb *GraphBuilder) connectDUTNodeToPeers(
 		}
 		peerMap[peerNodeType] = peerNodeConfigs
 	}
-	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerMap, nodeConnsInfo)
+	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerMap, connsInfo)
 }
 
 func (gb *GraphBuilder) doConnectNodeToPeers(
 	nodeAgentID string,
 	nodeRanges []interface{},
 	peerMap map[mwapi.LCNodeType][]config.NodeConfig,
-	nodeConnsInfo *nodeConnectionsInfo,
+	connsInfo *nodeConnectionsInfo,
 ) error {
 	for i := range nodeRanges {
-		for _, peerConnInfo := range nodeConnsInfo.peerConnectionsInfo {
+		for _, peerConnInfo := range connsInfo.peerConnectionsInfo {
 			err := gb.doConnectNodeRangeToPeer(
-				nodeConnsInfo.nodeType,
+				connsInfo.nodeType,
 				nodeAgentID,
 				nodeRanges[i],
 				peerMap,
@@ -304,12 +301,12 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
 	}
 	peerID := peerIDVal.String()
 
-	agentNodeIntf := &AgentNodeInterface{
+	agentIntf := &AgentNodeInterface{
 		AgentID:       nodeAgentID,
 		NodeType:      nodeType,
 		InterfaceType: peerConnInfo.nodeIntf,
 	}
-	peerAgentNodeIntf := &AgentNodeInterface{
+	peerAgentIntf := &AgentNodeInterface{
 		AgentID:       peerAgentID,
 		NodeType:      peerConnInfo.peerNodeType,
 		InterfaceType: peerConnInfo.peerNodeIntf,
@@ -318,12 +315,7 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
 	switch remotePeerIDVal.Kind() {
 	case reflect.String:
 		if remotePeerIDVal.String() == peerID {
-			err := gb.graph.addConnectionForRanges(
-				agentNodeIntf,
-				nodeRange,
-				peerAgentNodeIntf,
-				peerRange,
-			)
+			err := gb.graph.addConnectionForRanges(agentIntf, nodeRange, peerAgentIntf, peerRange)
 			if err != nil {
 				return false, err
 			}
@@ -338,9 +330,9 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
 			}
 			if remotePeerIDVal.Index(i).String() == peerID {
 				err := gb.graph.addConnectionForRanges(
-					agentNodeIntf,
+					agentIntf,
 					nodeRange,
-					peerAgentNodeIntf,
+					peerAgentIntf,
 					peerRange,
 				)
 				if err != nil {
