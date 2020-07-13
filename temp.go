@@ -33,10 +33,7 @@ type nodeConnectionsInfo struct {
 	peerNodeTypes       []mwapi.LCNodeType
 }
 
-func newNodeConnectionsInfo(
-	nodeType mwapi.LCNodeType,
-	peerConnsInfo []*peerConnectionInfo,
-) *nodeConnectionsInfo {
+func newNodeConnectionsInfo(nodeType mwapi.LCNodeType, peerConnsInfo []*peerConnectionInfo) *nodeConnectionsInfo {
 	peerNodeTypes := make([]mwapi.LCNodeType, 0, len(peerConnsInfo))
 	for _, peerConnInfo := range peerConnsInfo {
 		peerNodeTypes = append(peerNodeTypes, peerConnInfo.peerNodeType)
@@ -70,10 +67,7 @@ func NewGraphBuilder(topology model.WirelessConfigType, logger *logging.Logger) 
 // The 'config' parameter keeps the global configuration and is used to access the DUT nodes.
 // The 'configsProvider' is used to access the agent distributed nodes and
 // their peers.
-func (gb *GraphBuilder) Setup(
-	config interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
-) {
+func (gb *GraphBuilder) Setup(config interface{}, configsProvider config.DistributedNodeConfigsProvider) {
 	gb.config = config
 	gb.configsProvider = configsProvider
 	gb.graph.clear()
