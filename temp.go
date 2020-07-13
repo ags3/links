@@ -33,7 +33,10 @@ type nodeConnectionsInfo struct {
 	peerNodeTypes       []mwapi.LCNodeType
 }
 
-func newNodeConnectionsInfo(nodeType mwapi.LCNodeType, peerConnsInfo []*peerConnectionInfo) *nodeConnectionsInfo {
+func newNodeConnectionsInfo(
+	nodeType mwapi.LCNodeType,
+	peerConnsInfo []*peerConnectionInfo,
+) *nodeConnectionsInfo {
 	peerNodeTypes := make([]mwapi.LCNodeType, 0, len(peerConnsInfo))
 	for _, peerConnInfo := range peerConnsInfo {
 		peerNodeTypes = append(peerNodeTypes, peerConnInfo.peerNodeType)
@@ -67,7 +70,10 @@ func NewGraphBuilder(topology model.WirelessConfigType, logger *logging.Logger) 
 // The 'config' parameter keeps the global configuration and is used to access the DUT nodes.
 // The 'configsProvider' is used to access the agent distributed nodes and
 // their peers.
-func (gb *GraphBuilder) Setup(config interface{}, configsProvider config.DistributedNodeConfigsProvider) {
+func (gb *GraphBuilder) Setup(
+	config interface{},
+	configsProvider config.DistributedNodeConfigsProvider,
+) {
 	gb.config = config
 	gb.configsProvider = configsProvider
 	gb.graph.clear()
@@ -126,7 +132,11 @@ func (gb *GraphBuilder) getPeerNodeConfigs(
 	return peerNodeConfigs, nil
 }
 
-func (gb *GraphBuilder) getPeerNodeConfig(agentID string, nodeType mwapi.LCNodeType, peerNodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
+func (gb *GraphBuilder) getPeerNodeConfig(
+	agentID string,
+	nodeType mwapi.LCNodeType,
+	peerNodeType mwapi.LCNodeType,
+) (*config.NodeConfig, error) {
 	nodeConfig := gb.configsProvider.GetDistributedPeerNodeConfig(agentID, nodeType, peerNodeType)
 	if nodeConfig != nil {
 		return nodeConfig, nil
@@ -233,11 +243,7 @@ func (gb *GraphBuilder) doConnectNodeToPeers(
 	for i := range nodeRanges {
 		for _, peerConnInfo := range connsInfo.peerConnectionsInfo {
 			err := gb.doConnectNodeRangeToPeer(
-				connsInfo.nodeType,
-				nodeAgentID,
-				nodeRanges[i],
-				peerMap,
-				peerConnInfo,
+				connsInfo.nodeType, nodeAgentID, nodeRanges[i], peerMap, peerConnInfo,
 			)
 			if err != nil {
 				return err
@@ -333,10 +339,7 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
 			}
 			if remotePeerIDVal.Index(i).String() == peerID {
 				err := gb.graph.addConnectionForRanges(
-					agentIntf,
-					nodeRange,
-					peerAgentIntf,
-					peerRange,
+					agentIntf, nodeRange, peerAgentIntf, peerRange,
 				)
 				if err != nil {
 					return false, err
