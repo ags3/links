@@ -112,9 +112,7 @@ func (gb *GraphBuilder) getPeerNodeConfigs(
 ) (map[mwapi.LCNodeType][]config.NodeConfig, error) {
 	peerNodeConfigs := make(map[mwapi.LCNodeType][]config.NodeConfig)
 	for _, peerNodeType := range peerNodeTypes {
-		peerNodeConfig, err := gb.getPeerNodeConfig(
-			agentID, nodeType, peerNodeType,
-		)
+		peerNodeConfig, err := gb.getPeerNodeConfig(agentID, nodeType, peerNodeType)
 		if err != nil {
 			return nil, err
 		}
@@ -130,11 +128,9 @@ func (gb *GraphBuilder) getPeerNodeConfig(
 	nodeType mwapi.LCNodeType,
 	peerNodeType mwapi.LCNodeType,
 ) (*config.NodeConfig, error) {
-	distribPeerNodeConfig := gb.configsProvider.GetDistributedPeerNodeConfig(
-		agentID, nodeType, peerNodeType,
-	)
-	if distribPeerNodeConfig != nil {
-		return distribPeerNodeConfig, nil
+	nodeConfig := gb.configsProvider.GetDistributedPeerNodeConfig(agentID, nodeType, peerNodeType)
+	if nodeConfig != nil {
+		return nodeConfig, nil
 	}
 	return gb.getDUTNodeConfig(peerNodeType)
 }
@@ -144,8 +140,7 @@ func (gb *GraphBuilder) getDUTNodeConfig(nodeType mwapi.LCNodeType) (*config.Nod
 	if globalConfigValue.Kind() == reflect.Ptr {
 		globalConfigValue = reflect.Indirect(globalConfigValue)
 	}
-	nodeFieldName := fmt.Sprintf("Nodes.%s",
-		strings.Title(strings.ToLower(string(nodeType))))
+	nodeFieldName := fmt.Sprintf("Nodes.%s", strings.Title(strings.ToLower(string(nodeType))))
 
 	nodeValue := helpers.FieldByName(globalConfigValue, nodeFieldName)
 	if !nodeValue.IsValid() {
@@ -153,13 +148,10 @@ func (gb *GraphBuilder) getDUTNodeConfig(nodeType mwapi.LCNodeType) (*config.Nod
 	}
 	nodeRangesValue := nodeValue.FieldByName("Ranges")
 	if !nodeRangesValue.IsValid() {
-		return nil, fmt.Errorf(
-			"invalid field %s.Ranges in config", nodeFieldName,
-		)
+		return nil, fmt.Errorf("invalid field %s.Ranges in config", nodeFieldName)
 	}
 	nodeRanges := nodeRangesValue.Interface()
-	if !helpers.AtLeastOneRangeEnabled(nodeRanges) ||
-		!helpers.AllEnabledRangesAreDUT(nodeRanges) {
+	if !helpers.AtLeastOneRangeEnabled(nodeRanges) || !helpers.AllEnabledRangesAreDUT(nodeRanges) {
 		return nil, nil
 	}
 	nodeConfig := &config.NodeConfig{
@@ -185,13 +177,9 @@ func (gb *GraphBuilder) connectNodeToPeers(nodeConnsInfo *nodeConnectionsInfo) e
 		}
 		var err error
 		if helpers.AllEnabledRangesAreDUT(nodeRanges) {
-			err = gb.connectDUTNodeToPeers(
-				nodeConfig.AgentID, nodeRanges, nodeConnsInfo,
-			)
+			err = gb.connectDUTNodeToPeers(nodeConfig.AgentID, nodeRanges, nodeConnsInfo)
 		} else {
-			err = gb.connectDistributedNodeToPeers(
-				nodeConfig.AgentID, nodeRanges, nodeConnsInfo,
-			)
+			err = gb.connectDistributedNodeToPeers(nodeConfig.AgentID, nodeRanges, nodeConnsInfo)
 		}
 		if err != nil {
 			return err
@@ -216,9 +204,7 @@ func (gb *GraphBuilder) connectDistributedNodeToPeers(
 	if len(peerNodeConfigs) == 0 {
 		return nil
 	}
-	return gb.doConnectNodeToPeers(
-		nodeAgentID, nodeRanges, peerNodeConfigs, nodeConnsInfo,
-	)
+	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerNodeConfigs, nodeConnsInfo)
 }
 
 func (gb *GraphBuilder) connectDUTNodeToPeers(
@@ -235,9 +221,7 @@ func (gb *GraphBuilder) connectDUTNodeToPeers(
 		}
 		peerMap[peerNodeType] = peerNodeConfigs
 	}
-	return gb.doConnectNodeToPeers(
-		nodeAgentID, nodeRanges, peerMap, nodeConnsInfo,
-	)
+	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerMap, nodeConnsInfo)
 }
 
 func (gb *GraphBuilder) doConnectNodeToPeers(
@@ -321,14 +305,14 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
 	peerID := peerIDVal.String()
 
 	agentNodeIntf := &AgentNodeInterface{
-		nodeAgentID,
-		nodeType,
-		peerConnInfo.nodeIntf,
+		AgentID:       nodeAgentID,
+		NodeType:      nodeType,
+		InterfaceType: peerConnInfo.nodeIntf,
 	}
 	peerAgentNodeIntf := &AgentNodeInterface{
-		peerAgentID,
-		peerConnInfo.peerNodeType,
-		peerConnInfo.peerNodeIntf,
+		AgentID:       peerAgentID,
+		NodeType:      peerConnInfo.peerNodeType,
+		InterfaceType: peerConnInfo.peerNodeIntf,
 	}
 
 	switch remotePeerIDVal.Kind() {
@@ -366,9 +350,7 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
 			}
 		}
 	default:
-		return false, fmt.Errorf(
-			"invalid field %s", peerConnInfo.nodeRangePeerIDPath,
-		)
+		return false, fmt.Errorf("invalid field %s", peerConnInfo.nodeRangePeerIDPath)
 	}
 	return false, nil
 }
