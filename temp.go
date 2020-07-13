@@ -165,14 +165,16 @@ func (gb *GraphBuilder) getDUTNodeConfig(
 	nodeValue := helpers.FieldByName(globalConfigValue, nodeFieldName)
 
 	if !nodeValue.IsValid() {
-		return nil, fmt.Errorf(
-			"invalid field %s in global config", nodeFieldName)
+		return nil,
+			fmt.Errorf(
+				"graph_builder: invalid field %s in config", nodeFieldName)
 	}
 
 	nodeRangesValue := nodeValue.FieldByName("Ranges")
 	if !nodeRangesValue.IsValid() {
-		return nil, fmt.Errorf(
-			"invalid field %s.Ranges in global config", nodeFieldName)
+		return nil,
+			fmt.Errorf(
+				"graph_builder: invalid field %s.Ranges in config", nodeFieldName)
 	}
 
 	nodeRanges := nodeRangesValue.Interface()
@@ -211,7 +213,7 @@ func (gb *GraphBuilder) connectNodeToPeers(
 			continue
 		}
 		var err error
-		if helpers.AllRangesAreDUT(nodeRanges) {
+		if helpers.AllEnabledRangesAreDUT(nodeRanges) {
 			err = gb.connectDUTNodeToPeers(
 				nodeConfig.AgentID,
 				nodeRanges,
@@ -256,8 +258,9 @@ func (gb *GraphBuilder) connectDistributedNodeToPeers(
 	if len(peerNodeConfigs) == 0 {
 		return nil
 	}
-	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges,
-		peerNodeConfigs, nodeConnsInfo)
+	return gb.doConnectNodeToPeers(
+		nodeAgentID, nodeRanges, peerNodeConfigs, nodeConnsInfo,
+	)
 }
 
 // Connect a DUT node to its peers.
@@ -279,9 +282,9 @@ func (gb *GraphBuilder) connectDUTNodeToPeers(
 		}
 		peerMap[peerNodeType] = peerNodeConfigs
 	}
-
-	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerMap,
-		nodeConnsInfo)
+	return gb.doConnectNodeToPeers(
+		nodeAgentID, nodeRanges, peerMap, nodeConnsInfo,
+	)
 }
 
 func (gb *GraphBuilder) doConnectNodeToPeers(
@@ -353,14 +356,18 @@ func (gb *GraphBuilder) tryConnectNodeRangeToPeerRange(
 		peerConnInfo.nodeRangePeerIDPath)
 
 	if !remotePeerIDVal.IsValid() {
-		return false, fmt.Errorf("invalid field %s",
-			peerConnInfo.nodeRangePeerIDPath)
+		return false,
+			fmt.Errorf(
+				"graph_builder: invalid field %s",
+				peerConnInfo.nodeRangePeerIDPath,
+			)
 	}
 
 	peerIDVal := helpers.FieldByName(reflect.ValueOf(peerRange), rangeIDPath)
 
 	if !peerIDVal.IsValid() || peerIDVal.Kind() != reflect.String {
-		return false, fmt.Errorf("invalid field %s", rangeIDPath)
+		return false,
+			fmt.Errorf("graph_builder: invalid field %s", rangeIDPath)
 	}
 
 	peerID := peerIDVal.String()
@@ -387,8 +394,10 @@ func (gb *GraphBuilder) tryConnectNodeRangeToPeerRange(
 		for i := 0; i < remotePeerIDVal.Len(); i++ {
 			if remotePeerIDVal.Index(i).Kind() != reflect.String {
 				return false,
-					fmt.Errorf("invalid value at index %d for field %s",
-						i, peerConnInfo.nodeRangePeerIDPath)
+					fmt.Errorf(
+						"graph_builder: invalid value at index %d for field %s",
+						i, peerConnInfo.nodeRangePeerIDPath,
+					)
 			}
 			if remotePeerIDVal.Index(i).String() == peerID {
 				err := gb.graph.addConnectionForRanges(
@@ -408,8 +417,10 @@ func (gb *GraphBuilder) tryConnectNodeRangeToPeerRange(
 			}
 		}
 	default:
-		return false, fmt.Errorf("invalid field %s",
-			peerConnInfo.nodeRangePeerIDPath)
+		return false,
+			fmt.Errorf("graph_builder: invalid field %s",
+				peerConnInfo.nodeRangePeerIDPath,
+			)
 	}
 
 	return false, nil
