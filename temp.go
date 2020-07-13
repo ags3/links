@@ -367,17 +367,25 @@ func (gb *GraphBuilder) tryConnectNodeRangeToPeerRange(
 
 	peerID := peerIDVal.String()
 
+	agentNodeIntf := &AgentNodeInterface{
+		nodeAgentID,
+		nodeType,
+		peerConnInfo.nodeIntf,
+	}
+
+	peerAgentNodeIntf := &AgentNodeInterface{
+		peerAgentID,
+		peerConnInfo.peerNodeType,
+		peerConnInfo.peerNodeIntf,
+	}
+
 	switch remotePeerIDVal.Kind() {
 	case reflect.String:
 		if remotePeerIDVal.String() == peerID {
 			err := gb.graph.addConnectionForRanges(
-				nodeAgentID,
-				nodeType,
-				peerConnInfo.nodeIntf,
+				agentNodeIntf,
 				nodeRange,
-				peerAgentID,
-				peerConnInfo.peerNodeType,
-				peerConnInfo.peerNodeIntf,
+				peerAgentNodeIntf,
 				peerRange,
 			)
 			if err != nil {
@@ -394,13 +402,9 @@ func (gb *GraphBuilder) tryConnectNodeRangeToPeerRange(
 			}
 			if remotePeerIDVal.Index(i).String() == peerID {
 				err := gb.graph.addConnectionForRanges(
-					nodeAgentID,
-					nodeType,
-					peerConnInfo.nodeIntf,
+					agentNodeIntf,
 					nodeRange,
-					peerAgentID,
-					peerConnInfo.peerNodeType,
-					peerConnInfo.peerNodeIntf,
+					peerAgentNodeIntf,
 					peerRange,
 				)
 				if err != nil {
