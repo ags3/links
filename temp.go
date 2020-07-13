@@ -41,8 +41,10 @@ func (nc *nodeConnectionsInfo) getPeerNodeTypes() []mwapi.LCNodeType {
 
 // A GraphBuilder is used to build a connectivity graph.
 type GraphBuilder struct {
-	logger *logging.Logger
-	graph  *Graph
+	logger          *logging.Logger
+	globalConfig    interface{}
+	configsProvider config.DistributedNodeConfigsProvider
+	graph           *Graph
 }
 
 // NewGraphBuilder creates a new connectivity graph builder.
@@ -53,6 +55,21 @@ func NewGraphBuilder(logger *logging.Logger) *GraphBuilder {
 	}
 }
 
+// Setup prepare the graph builder for usage.
+// The 'globalConfig' parameter keeps the global configuration
+// (mwapi.Config/mwapi.SbaConfig/mwapi.UpfIsolationConfig) and is used to
+// access the DUT nodes.
+// The 'configsProvider' is used to access the agent distributed nodes and
+// their peers.
+func (gb *GraphBuilder) Setup(
+	globalConfig interface{},
+	configsProvider config.DistributedNodeConfigsProvider,
+) {
+	gb.globalConfig = globalConfig
+	gb.configsProvider = configsProvider
+	gb.graph.clear()
+}
+
 // GetGraph is used to get the constructed connectivity graph.
 func (gb *GraphBuilder) GetGraph() *Graph {
 	return gb.graph
@@ -60,45 +77,25 @@ func (gb *GraphBuilder) GetGraph() *Graph {
 
 // BuildGraph is used to build the connectivity graph given a topology
 // node type.
-// The 'globalConfig' parameter keeps the global configuration
-// (mwapi.Config/mwapi.SbaConfig/mwapi.UpfIsolationConfig) and is used to
-// access the DUT nodes.
-// The 'configsProvider' is used to access the agent distributed nodes and
-// their peers.
-func (gb *GraphBuilder) BuildGraph(
-	topologyNodeType mwapi.LCNodeType,
-	globalConfig interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
-) error {
-	switch topologyNodeType {
+func (gb *GraphBuilder) BuildGraph(nodeType mwapi.LCNodeType) error {
+	switch nodeType {
 	case mwapi.AMF:
-		return gb.buildAMFGraph(globalConfig, configsProvider)
+		return gb.buildAMFGraph()
 	case mwapi.AUSF:
-		return gb.buildAUSFGraph(globalConfig, configsProvider)
+		return gb.buildAUSFGraph()
 	case mwapi.PCF:
-		return gb.buildPCFGraph(globalConfig, configsProvider)
+		return gb.buildPCFGraph()
 	case mwapi.RAN:
-		return gb.buildRANGraph(globalConfig, configsProvider)
+		return gb.buildRANGraph()
 	case mwapi.SMF:
-		return gb.buildSMFGraph(globalConfig, configsProvider)
+		return gb.buildSMFGraph()
 	}
 	return nil
 }
 
-// ClearGraph clears the content of the constructed connectivity graph.
-func (gb *GraphBuilder) ClearGraph() {
-	gb.graph.clear()
-}
-
-// Get the configs for nodes of a given type (both the distributed and the
-// DUT node configs).
-func (gb *GraphBuilder) getNodeConfigs(
-	nodeType mwapi.LCNodeType,
-	globalConfig interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
-) ([]config.NodeConfig, error) {
-	nodeConfigs := configsProvider.GetDistributedNodeConfigs(nodeType)
-	dutNodeConfig, err := gb.getDUTNodeConfig(nodeType, globalConfig)
+func (gb *GraphBuilder) getNodeConfigs(nodeType mwapi.LCNodeType) ([]config.NodeConfig, error) {
+	nodeConfigs := gb.configsProvider.GetDistributedNodeConfigs(nodeType)
+	dutNodeConfig, err := gb.getDUTNodeConfig(nodeType)
 	if err != nil {
 		return nil, err
 	}
@@ -108,19 +105,15 @@ func (gb *GraphBuilder) getNodeConfigs(
 	return nodeConfigs, nil
 }
 
-// Get the peer configs of a distributed node.
-// Both distributed and DUT peers are returned.
 func (gb *GraphBuilder) getPeerNodeConfigs(
 	agentID string,
 	nodeType mwapi.LCNodeType,
 	peerNodeTypes []mwapi.LCNodeType,
-	globalConfig interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
 ) (map[mwapi.LCNodeType][]config.NodeConfig, error) {
 	peerNodeConfigs := make(map[mwapi.LCNodeType][]config.NodeConfig)
 	for _, peerNodeType := range peerNodeTypes {
 		peerNodeConfig, err := gb.getPeerNodeConfig(
-			agentID, nodeType, peerNodeType, globalConfig, configsProvider,
+			agentID, nodeType, peerNodeType,
 		)
 		if err != nil {
 			return nil, err
@@ -132,30 +125,22 @@ func (gb *GraphBuilder) getPeerNodeConfigs(
 	return peerNodeConfigs, nil
 }
 
-// Get the config of a peer node (either using the config provider or the
-// global config).
 func (gb *GraphBuilder) getPeerNodeConfig(
 	agentID string,
 	nodeType mwapi.LCNodeType,
 	peerNodeType mwapi.LCNodeType,
-	globalConfig interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
 ) (*config.NodeConfig, error) {
-	distribPeerNodeConfig := configsProvider.GetDistributedPeerNodeConfig(
+	distribPeerNodeConfig := gb.configsProvider.GetDistributedPeerNodeConfig(
 		agentID, nodeType, peerNodeType,
 	)
 	if distribPeerNodeConfig != nil {
 		return distribPeerNodeConfig, nil
 	}
-	return gb.getDUTNodeConfig(peerNodeType, globalConfig)
+	return gb.getDUTNodeConfig(peerNodeType)
 }
 
-// Get the config of a DUT node from global config.
-func (gb *GraphBuilder) getDUTNodeConfig(
-	nodeType mwapi.LCNodeType,
-	globalConfig interface{},
-) (*config.NodeConfig, error) {
-	globalConfigValue := reflect.ValueOf(globalConfig)
+func (gb *GraphBuilder) getDUTNodeConfig(nodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
+	globalConfigValue := reflect.ValueOf(gb.globalConfig)
 	if globalConfigValue.Kind() == reflect.Ptr {
 		globalConfigValue = reflect.Indirect(globalConfigValue)
 	}
@@ -184,15 +169,8 @@ func (gb *GraphBuilder) getDUTNodeConfig(
 	return nodeConfig, nil
 }
 
-// Connect a node to its peers.
-func (gb *GraphBuilder) connectNodeToPeers(
-	globalConfig interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
-	nodeConnsInfo *nodeConnectionsInfo,
-) error {
-	nodeConfigs, err := gb.getNodeConfigs(
-		nodeConnsInfo.nodeType, globalConfig, configsProvider,
-	)
+func (gb *GraphBuilder) connectNodeToPeers(nodeConnsInfo *nodeConnectionsInfo) error {
+	nodeConfigs, err := gb.getNodeConfigs(nodeConnsInfo.nodeType)
 	if err != nil {
 		return err
 	}
@@ -208,19 +186,11 @@ func (gb *GraphBuilder) connectNodeToPeers(
 		var err error
 		if helpers.AllEnabledRangesAreDUT(nodeRanges) {
 			err = gb.connectDUTNodeToPeers(
-				nodeConfig.AgentID,
-				nodeRanges,
-				globalConfig,
-				configsProvider,
-				nodeConnsInfo,
+				nodeConfig.AgentID, nodeRanges, nodeConnsInfo,
 			)
 		} else {
 			err = gb.connectDistributedNodeToPeers(
-				nodeConfig.AgentID,
-				nodeRanges,
-				globalConfig,
-				configsProvider,
-				nodeConnsInfo,
+				nodeConfig.AgentID, nodeRanges, nodeConnsInfo,
 			)
 		}
 		if err != nil {
@@ -230,20 +200,15 @@ func (gb *GraphBuilder) connectNodeToPeers(
 	return nil
 }
 
-// Connect a distributed node to its peers.
 func (gb *GraphBuilder) connectDistributedNodeToPeers(
 	nodeAgentID string,
 	nodeRanges []interface{},
-	globalConfig interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
 	nodeConnsInfo *nodeConnectionsInfo,
 ) error {
 	peerNodeConfigs, err := gb.getPeerNodeConfigs(
 		nodeAgentID,
 		nodeConnsInfo.nodeType,
 		nodeConnsInfo.getPeerNodeTypes(),
-		globalConfig,
-		configsProvider,
 	)
 	if err != nil {
 		return err
@@ -256,20 +221,15 @@ func (gb *GraphBuilder) connectDistributedNodeToPeers(
 	)
 }
 
-// Connect a DUT node to its peers.
 func (gb *GraphBuilder) connectDUTNodeToPeers(
 	nodeAgentID string,
 	nodeRanges []interface{},
-	globalConfig interface{},
-	configsProvider config.DistributedNodeConfigsProvider,
 	nodeConnsInfo *nodeConnectionsInfo,
 ) error {
 	peerMap := make(map[mwapi.LCNodeType][]config.NodeConfig)
 	peerNodeTypes := nodeConnsInfo.getPeerNodeTypes()
 	for _, peerNodeType := range peerNodeTypes {
-		peerNodeConfigs, err := gb.getNodeConfigs(
-			peerNodeType, globalConfig, configsProvider,
-		)
+		peerNodeConfigs, err := gb.getNodeConfigs(peerNodeType)
 		if err != nil {
 			return err
 		}
@@ -317,7 +277,7 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeer(
 		}
 		peerRanges := helpers.GetEnabledNodeRanges(peerDistribNode.Config)
 		for i := range peerRanges {
-			connected, err := gb.tryConnectNodeRangeToPeerRange(
+			connected, err := gb.doConnectNodeRangeToPeerRange(
 				nodeType,
 				nodeAgentID,
 				nodeRange,
@@ -336,7 +296,7 @@ func (gb *GraphBuilder) doConnectNodeRangeToPeer(
 	return nil
 }
 
-func (gb *GraphBuilder) tryConnectNodeRangeToPeerRange(
+func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
 	nodeType mwapi.LCNodeType,
 	nodeAgentID string,
 	nodeRange interface{},
