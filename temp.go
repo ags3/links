@@ -204,8 +204,7 @@ func (gb *GraphBuilder) connectNodeToPeers(connsInfo *nodeConnectionsInfo) error
 func (gb *GraphBuilder) connectDistribNodeToPeers(
 	nodeAgentID string,
 	nodeRanges []interface{},
-	connsInfo *nodeConnectionsInfo,
-) error {
+	connsInfo *nodeConnectionsInfo) error {
 	peerNodeConfigs, err := gb.getPeerNodeConfigs(nodeAgentID, connsInfo.nodeType,
 		connsInfo.peerNodeTypes)
 	if err != nil {
