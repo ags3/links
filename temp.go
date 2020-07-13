@@ -126,11 +126,7 @@ func (gb *GraphBuilder) getPeerNodeConfigs(
 	return peerNodeConfigs, nil
 }
 
-func (gb *GraphBuilder) getPeerNodeConfig(
-	agentID string,
-	nodeType mwapi.LCNodeType,
-	peerNodeType mwapi.LCNodeType,
-) (*config.NodeConfig, error) {
+func (gb *GraphBuilder) getPeerNodeConfig(agentID string, nodeType mwapi.LCNodeType, peerNodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
 	nodeConfig := gb.configsProvider.GetDistributedPeerNodeConfig(agentID, nodeType, peerNodeType)
 	if nodeConfig != nil {
 		return nodeConfig, nil
