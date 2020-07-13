@@ -8,6 +8,7 @@ import (
 	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/generated/mwapi"
 	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/helpers"
 	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/nodes/config"
+	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/rest/model"
 	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/lib/logging"
 )
 
@@ -29,43 +30,51 @@ type peerConnectionInfo struct {
 type nodeConnectionsInfo struct {
 	nodeType            mwapi.LCNodeType
 	peerConnectionsInfo []*peerConnectionInfo
+	peerNodeTypes       []mwapi.LCNodeType
 }
 
-func (nc *nodeConnectionsInfo) getPeerNodeTypes() []mwapi.LCNodeType {
-	peerNodeTypes := make([]mwapi.LCNodeType, 0, len(nc.peerConnectionsInfo))
-	for _, peerConnInfo := range nc.peerConnectionsInfo {
+func newNodeConnectionsInfo(
+	nodeType mwapi.LCNodeType,
+	peerConnsInfo []*peerConnectionInfo,
+) *nodeConnectionsInfo {
+	peerNodeTypes := make([]mwapi.LCNodeType, 0, len(peerConnsInfo))
+	for _, peerConnInfo := range peerConnsInfo {
 		peerNodeTypes = append(peerNodeTypes, peerConnInfo.peerNodeType)
 	}
-	return peerNodeTypes
+	return &nodeConnectionsInfo{
+		nodeType:            nodeType,
+		peerConnectionsInfo: peerConnsInfo,
+		peerNodeTypes:       peerNodeTypes,
+	}
 }
 
 // A GraphBuilder is used to build a connectivity graph.
 type GraphBuilder struct {
+	topology        model.WirelessConfigType
 	logger          *logging.Logger
-	globalConfig    interface{}
+	config          interface{}
 	configsProvider config.DistributedNodeConfigsProvider
 	graph           *Graph
 }
 
 // NewGraphBuilder creates a new connectivity graph builder.
-func NewGraphBuilder(logger *logging.Logger) *GraphBuilder {
+func NewGraphBuilder(topology model.WirelessConfigType, logger *logging.Logger) *GraphBuilder {
 	return &GraphBuilder{
-		logger: logger,
-		graph:  newGraph(logger),
+		topology: topology,
+		logger:   logger,
+		graph:    newGraph(logger),
 	}
 }
 
 // Setup prepare the graph builder for usage.
-// The 'globalConfig' parameter keeps the global configuration
-// (mwapi.Config/mwapi.SbaConfig/mwapi.UpfIsolationConfig) and is used to
-// access the DUT nodes.
+// The 'config' parameter keeps the global configuration and is used to access the DUT nodes.
 // The 'configsProvider' is used to access the agent distributed nodes and
 // their peers.
 func (gb *GraphBuilder) Setup(
-	globalConfig interface{},
+	config interface{},
 	configsProvider config.DistributedNodeConfigsProvider,
 ) {
-	gb.globalConfig = globalConfig
+	gb.config = config
 	gb.configsProvider = configsProvider
 	gb.graph.clear()
 }
@@ -132,31 +141,35 @@ func (gb *GraphBuilder) getPeerNodeConfig(
 	if nodeConfig != nil {
 		return nodeConfig, nil
 	}
-	return gb.getDUTNodeConfig(peerNodeType)
+	return gb.getNodeFromConfig(peerNodeType)
 }
 
-func (gb *GraphBuilder) getDUTNodeConfig(nodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
-	globalConfigValue := reflect.ValueOf(gb.globalConfig)
-	if globalConfigValue.Kind() == reflect.Ptr {
-		globalConfigValue = reflect.Indirect(globalConfigValue)
+func (gb *GraphBuilder) getNodeFromConfig(nodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
+	configVal := reflect.ValueOf(gb.config)
+	if configVal.Kind() == reflect.Ptr {
+		configVal = reflect.Indirect(configVal)
 	}
 	nodeFieldName := fmt.Sprintf("Nodes.%s", strings.Title(strings.ToLower(string(nodeType))))
 
-	nodeValue := helpers.FieldByName(globalConfigValue, nodeFieldName)
-	if !nodeValue.IsValid() {
+	nodeVal := helpers.FieldByName(configVal, nodeFieldName)
+	if !nodeVal.IsValid() {
 		return nil, fmt.Errorf("invalid field %s in config", nodeFieldName)
-	}
-	nodeRangesValue := nodeValue.FieldByName("Ranges")
-	if !nodeRangesValue.IsValid() {
-		return nil, fmt.Errorf("invalid field %s.Ranges in config", nodeFieldName)
-	}
-	nodeRanges := nodeRangesValue.Interface()
-	if !helpers.AtLeastOneRangeEnabled(nodeRanges) || !helpers.AllEnabledRangesAreDUT(nodeRanges) {
-		return nil, nil
 	}
 	nodeConfig := &config.NodeConfig{
 		AgentID: dutKey,
-		Config:  nodeValue.Interface(),
+		Config:  nodeVal.Interface(),
+	}
+	return nodeConfig, nil
+}
+
+func (gb *GraphBuilder) getDUTNodeConfig(nodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
+	nodeConfig, err := gb.getNodeFromConfig(nodeType)
+	if err != nil {
+		return nil, err
+	}
+	nodeRanges := helpers.GetEnabledNodeRanges(nodeConfig.Config)
+	if !helpers.AllEnabledRangesAreDUT(nodeRanges) {
+		return nil, nil
 	}
 	return nodeConfig, nil
 }
@@ -193,8 +206,9 @@ func (gb *GraphBuilder) connectDistribNodeToPeers(
 	nodeRanges []interface{},
 	connsInfo *nodeConnectionsInfo,
 ) error {
-	peerNodeTypes := connsInfo.getPeerNodeTypes()
-	peerNodeConfigs, err := gb.getPeerNodeConfigs(nodeAgentID, connsInfo.nodeType, peerNodeTypes)
+	peerNodeConfigs, err := gb.getPeerNodeConfigs(
+		nodeAgentID, connsInfo.nodeType, connsInfo.peerNodeTypes,
+	)
 	if err != nil {
 		return err
 	}
@@ -210,8 +224,7 @@ func (gb *GraphBuilder) connectDUTNodeToPeers(
 	connsInfo *nodeConnectionsInfo,
 ) error {
 	peerMap := make(map[mwapi.LCNodeType][]config.NodeConfig)
-	peerNodeTypes := connsInfo.getPeerNodeTypes()
-	for _, peerNodeType := range peerNodeTypes {
+	for _, peerNodeType := range connsInfo.peerNodeTypes {
 		peerNodeConfigs, err := gb.getNodeConfigs(peerNodeType)
 		if err != nil {
 			return err
