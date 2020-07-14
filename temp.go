@@ -1,340 +1,344 @@
 package connectivity
 
 import (
+	"encoding/json"
+	"errors"
 	"fmt"
+	"net"
 	"reflect"
 	"strings"
 
+	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/data"
 	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/generated/mwapi"
+	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/generated/networkapi"
 	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/helpers"
-	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/nodes/config"
-	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/cmd/wireless-data-model/rest/model"
 	"bitbucket.it.keysight.com/isgappsec/mantisshrimp/go/lib/logging"
 )
 
 const (
-	dutKey      = "DUT"
-	rangeIDPath = "Id"
+	emptyGateway = "0.0.0.0"
 )
 
-// Keeps information about a node connection to a specific peer.
-type peerConnectionInfo struct {
-	nodeIntf            string
-	nodeRangePeerIDPath string
-	peerNodeType        mwapi.LCNodeType
-	peerNodeIntf        string
+// Uniquely identifies a node interface in the connectivity graph.
+type nodeInterfaceID string
+
+// Keeps node interface related data in the connectivity graph.
+type nodeInterface struct {
+	AgentID       string
+	NodeType      mwapi.LCNodeType
+	RangeID       string
+	InterfaceType string
+	IPAddr        string
+	Gateway       *string
+	IPPrefix      int32
+	IsDUT         bool
 }
 
-// Keeps information about all possible connections a node can have to
-// its peers.
-type nodeConnectionsInfo struct {
-	nodeType            mwapi.LCNodeType
-	peerConnectionsInfo []*peerConnectionInfo
-	peerNodeTypes       []mwapi.LCNodeType
+// AgentNodeInterface keeps information about node interface types associated
+// to an agent.
+type AgentNodeInterface struct {
+	AgentID       string
+	NodeType      mwapi.LCNodeType
+	InterfaceType string
 }
 
-func newNodeConnectionsInfo(nodeType mwapi.LCNodeType, peerConnsInfo []*peerConnectionInfo) *nodeConnectionsInfo {
-	peerNodeTypes := make([]mwapi.LCNodeType, 0, len(peerConnsInfo))
-	for _, peerConnInfo := range peerConnsInfo {
-		peerNodeTypes = append(peerNodeTypes, peerConnInfo.peerNodeType)
-	}
-	return &nodeConnectionsInfo{
-		nodeType:            nodeType,
-		peerConnectionsInfo: peerConnsInfo,
-		peerNodeTypes:       peerNodeTypes,
-	}
+// Graph is a directed graph keeping the connection information between
+// node interfaces.
+// Its is used for routing purposes: knowing the entire topology connectivity
+// graph allows to build route structures which can be further used by callers
+// to set up routes using the lizard REST API.
+type Graph struct {
+	logger                  *logging.Logger
+	nodeInterfaces          map[nodeInterfaceID]*nodeInterface
+	agentNodeInterfaces     map[AgentNodeInterface]map[nodeInterfaceID]struct{}
+	connectedNodeInterfaces map[nodeInterfaceID]map[nodeInterfaceID]struct{}
 }
 
-// A GraphBuilder is used to build a connectivity graph.
-type GraphBuilder struct {
-	topology        model.WirelessConfigType
-	logger          *logging.Logger
-	config          interface{}
-	configsProvider config.DistributedNodeConfigsProvider
-	graph           *Graph
-}
-
-// NewGraphBuilder creates a new connectivity graph builder.
-func NewGraphBuilder(topology model.WirelessConfigType, logger *logging.Logger) *GraphBuilder {
-	return &GraphBuilder{
-		topology: topology,
-		logger:   logger,
-		graph:    newGraph(logger),
-	}
-}
-
-// Setup prepare the graph builder for usage.
-// The 'config' parameter keeps the global configuration and is used to access the DUT nodes.
-// The 'configsProvider' is used to access the agent distributed nodes and
-// their peers.
-func (gb *GraphBuilder) Setup(config interface{}, configsProvider config.DistributedNodeConfigsProvider) {
-	gb.config = config
-	gb.configsProvider = configsProvider
-	gb.graph.clear()
-}
-
-// GetGraph is used to get the constructed connectivity graph.
-func (gb *GraphBuilder) GetGraph() *Graph {
-	return gb.graph
-}
-
-// BuildGraph is used to build the connectivity graph given a topology
-// node type.
-func (gb *GraphBuilder) BuildGraph(nodeType mwapi.LCNodeType) error {
-	switch nodeType {
-	case mwapi.AMF:
-		return gb.buildAMFGraph()
-	case mwapi.AUSF:
-		return gb.buildAUSFGraph()
-	case mwapi.PCF:
-		return gb.buildPCFGraph()
-	case mwapi.RAN:
-		return gb.buildRANGraph()
-	case mwapi.SMF:
-		return gb.buildSMFGraph()
-	}
-	return nil
-}
-
-func (gb *GraphBuilder) getNodeConfigs(nodeType mwapi.LCNodeType) ([]config.NodeConfig, error) {
-	nodeConfigs := gb.configsProvider.GetDistributedNodeConfigs(nodeType)
-	dutNodeConfig, err := gb.getDUTNodeConfig(nodeType)
-	if err != nil {
-		return nil, err
-	}
-	if dutNodeConfig != nil {
-		nodeConfigs = append(nodeConfigs, *dutNodeConfig)
-	}
-	return nodeConfigs, nil
-}
-
-func (gb *GraphBuilder) getPeerNodeConfigs(
-	agentID string,
-	nodeType mwapi.LCNodeType,
-	peerNodeTypes []mwapi.LCNodeType,
-) (map[mwapi.LCNodeType][]config.NodeConfig, error) {
-	peerNodeConfigs := make(map[mwapi.LCNodeType][]config.NodeConfig)
-	for _, peerNodeType := range peerNodeTypes {
-		peerNodeConfig, err := gb.getPeerNodeConfig(agentID, nodeType, peerNodeType)
-		if err != nil {
-			return nil, err
+func newNodeInterface(agentNodeIntf *AgentNodeInterface, nodeRange interface{}) (*nodeInterface, error) {
+	nodeRangeValue := reflect.ValueOf(nodeRange)
+	if nodeRangeValue.Kind() == reflect.Ptr {
+		if nodeRangeValue.IsNil() {
+			return nil, errors.New("invalid value for node range")
 		}
-		if peerNodeConfig != nil {
-			peerNodeConfigs[peerNodeType] = []config.NodeConfig{*peerNodeConfig}
+		nodeRangeValue = reflect.Indirect(nodeRangeValue)
+	}
+
+	intfValue := nodeRangeValue.FieldByName("Interfaces").
+		FieldByName(strings.Title(agentNodeIntf.InterfaceType))
+
+	if intfValue.Kind() == reflect.Ptr {
+		if intfValue.IsNil() {
+			return nil, errors.New("invalid value for Interfaces field")
 		}
+		intfValue = reflect.Indirect(intfValue)
 	}
-	return peerNodeConfigs, nil
+
+	rangeID := nodeRangeValue.FieldByName("Id").String()
+	isDUT := nodeRangeValue.FieldByName("IsDut").Bool()
+
+	ipAddr := intfValue.FieldByName("ConnectivitySettings").FieldByName("LocalIPAddress").String()
+	ipPrefix := intfValue.FieldByName("ConnectivitySettings").FieldByName("IpPrefix").Int()
+
+	gateway, ok := intfValue.FieldByName("ConnectivitySettings").
+		FieldByName("GwStart").Interface().(*string)
+	if !ok {
+		return nil, errors.New("invalid value for GwStart field (not string)")
+	}
+
+	nodeIntf := &nodeInterface{
+		AgentID:       agentNodeIntf.AgentID,
+		NodeType:      agentNodeIntf.NodeType,
+		RangeID:       rangeID,
+		InterfaceType: strings.ToLower(agentNodeIntf.InterfaceType),
+		IPAddr:        ipAddr,
+		Gateway:       gateway,
+		IPPrefix:      int32(ipPrefix),
+		IsDUT:         isDUT,
+	}
+
+	return nodeIntf, nil
 }
 
-func (gb *GraphBuilder) getPeerNodeConfig(
-	agentID string,
-	nodeType mwapi.LCNodeType,
-	peerNodeType mwapi.LCNodeType,
-) (*config.NodeConfig, error) {
-	nodeConfig := gb.configsProvider.GetDistributedPeerNodeConfig(agentID, nodeType, peerNodeType)
-	if nodeConfig != nil {
-		return nodeConfig, nil
-	}
-	return gb.getNodeFromConfig(peerNodeType)
+func (n *nodeInterface) id() nodeInterfaceID {
+	id := []string{n.AgentID, string(n.NodeType), n.RangeID, n.InterfaceType}
+	return nodeInterfaceID(strings.Join(id, "/"))
 }
 
-func (gb *GraphBuilder) getNodeFromConfig(nodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
-	configVal := reflect.ValueOf(gb.config)
-	if configVal.Kind() == reflect.Ptr {
-		configVal = reflect.Indirect(configVal)
+// String returns a textual representation of a node interface.
+func (n *nodeInterface) String() string {
+	gateway := emptyGateway
+	if n.Gateway != nil {
+		gateway = *n.Gateway
 	}
-	nodeFieldName := fmt.Sprintf("Nodes.%s", strings.Title(strings.ToLower(string(nodeType))))
-
-	nodeVal := helpers.FieldByName(configVal, nodeFieldName)
-	if !nodeVal.IsValid() {
-		return nil, fmt.Errorf("invalid field %s in config", nodeFieldName)
-	}
-	nodeConfig := &config.NodeConfig{
-		AgentID: dutKey,
-		Config:  nodeVal.Interface(),
-	}
-	return nodeConfig, nil
+	return fmt.Sprintf(
+		"Agent=%s,Node=%s,Range=%s,Interface=%s,IP=%s,IPPrefix=%d,GW=%s,DUT=%t",
+		n.AgentID, n.NodeType, n.RangeID, n.InterfaceType,
+		n.IPAddr, n.IPPrefix, gateway, n.IsDUT)
 }
 
-func (gb *GraphBuilder) getDUTNodeConfig(nodeType mwapi.LCNodeType) (*config.NodeConfig, error) {
-	nodeConfig, err := gb.getNodeFromConfig(nodeType)
-	if err != nil {
-		return nil, err
+func newGraph(logger *logging.Logger) *Graph {
+	return &Graph{
+		logger:                  logger,
+		nodeInterfaces:          make(map[nodeInterfaceID]*nodeInterface),
+		agentNodeInterfaces:     make(map[AgentNodeInterface]map[nodeInterfaceID]struct{}),
+		connectedNodeInterfaces: make(map[nodeInterfaceID]map[nodeInterfaceID]struct{}),
 	}
-	nodeRanges := helpers.GetEnabledNodeRanges(nodeConfig.Config)
-	if !helpers.AllEnabledRangesAreDUT(nodeRanges) {
-		return nil, nil
-	}
-	return nodeConfig, nil
 }
 
-func (gb *GraphBuilder) connectNodeToPeers(connsInfo *nodeConnectionsInfo) error {
-	nodeConfigs, err := gb.getNodeConfigs(connsInfo.nodeType)
+func (g *Graph) clear() {
+	g.nodeInterfaces = make(map[nodeInterfaceID]*nodeInterface)
+	g.agentNodeInterfaces = make(map[AgentNodeInterface]map[nodeInterfaceID]struct{})
+	g.connectedNodeInterfaces = make(map[nodeInterfaceID]map[nodeInterfaceID]struct{})
+}
+
+func (g *Graph) addNodeInterface(id nodeInterfaceID, intf *nodeInterface) {
+	if _, ok := g.nodeInterfaces[id]; !ok {
+		g.nodeInterfaces[id] = intf
+	}
+	agentNodeIntf := AgentNodeInterface{
+		AgentID:       intf.AgentID,
+		NodeType:      intf.NodeType,
+		InterfaceType: intf.InterfaceType,
+	}
+	if _, ok := g.agentNodeInterfaces[agentNodeIntf]; !ok {
+		g.agentNodeInterfaces[agentNodeIntf] = make(map[nodeInterfaceID]struct{})
+	}
+	g.agentNodeInterfaces[agentNodeIntf][id] = struct{}{}
+}
+
+func (g *Graph) addDirectedConnection(srcID, destID nodeInterfaceID) {
+	if _, ok := g.connectedNodeInterfaces[srcID]; !ok {
+		g.connectedNodeInterfaces[srcID] = make(map[nodeInterfaceID]struct{})
+	}
+	g.connectedNodeInterfaces[srcID][destID] = struct{}{}
+}
+
+func (g *Graph) addConnection(srcIntf, destIntf *nodeInterface) error {
+	srcID := srcIntf.id()
+	destID := destIntf.id()
+
+	needSrcDestRoute, err := g.needsRoute(srcIntf, destIntf)
 	if err != nil {
 		return err
 	}
-	for i := range nodeConfigs {
-		nodeConfig := &nodeConfigs[i]
-		if !helpers.NodeEnabled(nodeConfig.Config) {
-			continue
-		}
-		nodeRanges := helpers.GetEnabledNodeRanges(nodeConfig.Config)
-		if len(nodeRanges) == 0 {
-			continue
-		}
-		var err error
-		if helpers.AllEnabledRangesAreDUT(nodeRanges) {
-			err = gb.connectDUTNodeToPeers(nodeConfig.AgentID, nodeRanges, connsInfo)
-		} else {
-			err = gb.connectDistribNodeToPeers(nodeConfig.AgentID, nodeRanges, connsInfo)
-		}
-		if err != nil {
-			return err
-		}
-	}
-	return nil
-}
 
-func (gb *GraphBuilder) connectDistribNodeToPeers(
-	nodeAgentID string,
-	nodeRanges []interface{},
-	connsInfo *nodeConnectionsInfo,
-) error {
-	peerNodeConfigs, err := gb.getPeerNodeConfigs(nodeAgentID, connsInfo.nodeType,
-		connsInfo.peerNodeTypes)
+	needDestSrcRoute, err := g.needsRoute(destIntf, srcIntf)
 	if err != nil {
 		return err
 	}
-	if len(peerNodeConfigs) == 0 {
+
+	if !needSrcDestRoute && !needDestSrcRoute {
 		return nil
 	}
-	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerNodeConfigs, connsInfo)
-}
 
-func (gb *GraphBuilder) connectDUTNodeToPeers(
-	nodeAgentID string,
-	nodeRanges []interface{},
-	connsInfo *nodeConnectionsInfo,
-) error {
-	peerMap := make(map[mwapi.LCNodeType][]config.NodeConfig)
-	for _, peerNodeType := range connsInfo.peerNodeTypes {
-		peerNodeConfigs, err := gb.getNodeConfigs(peerNodeType)
-		if err != nil {
-			return err
-		}
-		peerMap[peerNodeType] = peerNodeConfigs
-	}
-	return gb.doConnectNodeToPeers(nodeAgentID, nodeRanges, peerMap, connsInfo)
-}
+	g.addNodeInterface(srcID, srcIntf)
+	g.addNodeInterface(destID, destIntf)
 
-func (gb *GraphBuilder) doConnectNodeToPeers(
-	nodeAgentID string,
-	nodeRanges []interface{},
-	peerMap map[mwapi.LCNodeType][]config.NodeConfig,
-	connsInfo *nodeConnectionsInfo,
-) error {
-	for i := range nodeRanges {
-		for _, peerConnInfo := range connsInfo.peerConnectionsInfo {
-			err := gb.doConnectNodeRangeToPeer(connsInfo.nodeType, nodeAgentID, nodeRanges[i],
-				peerMap, peerConnInfo)
-			if err != nil {
-				return err
-			}
-		}
+	if needSrcDestRoute && !g.hasConnection(srcID, destID) {
+		g.logger.Debug(
+			fmt.Sprintf("connectivity.Graph: connection: [%s] -> [%s]", srcIntf, destIntf),
+		)
+		g.addDirectedConnection(srcID, destID)
 	}
+
+	if needDestSrcRoute && !g.hasConnection(destID, srcID) {
+		g.logger.Debug(fmt.Sprintf(
+			"connectivity.Graph: connection: [%s] -> [%s]", destIntf, srcIntf))
+		g.addDirectedConnection(destID, srcID)
+	}
+
 	return nil
 }
 
-func (gb *GraphBuilder) doConnectNodeRangeToPeer(
-	nodeType mwapi.LCNodeType,
-	nodeAgentID string,
-	nodeRange interface{},
-	peerMap map[mwapi.LCNodeType][]config.NodeConfig,
-	peerConnInfo *peerConnectionInfo,
+func (g *Graph) addConnectionForRanges(
+	srcAgentNodeIntf *AgentNodeInterface,
+	srcNodeRange interface{},
+	destAgentNodeIntf *AgentNodeInterface,
+	destNodeRange interface{},
 ) error {
-	peerDistribNodes := peerMap[peerConnInfo.peerNodeType]
-	for _, peerDistribNode := range peerDistribNodes {
-		if !helpers.NodeEnabled(peerDistribNode.Config) {
+	srcNodeIntf, err := newNodeInterface(srcAgentNodeIntf, srcNodeRange)
+	if err != nil {
+		return err
+	}
+	destNodeIntf, err := newNodeInterface(destAgentNodeIntf, destNodeRange)
+	if err != nil {
+		return err
+	}
+	return g.addConnection(srcNodeIntf, destNodeIntf)
+}
+
+func (g *Graph) hasConnection(srcIntfID, destIntfID nodeInterfaceID) bool {
+	if _, ok := g.connectedNodeInterfaces[srcIntfID]; !ok {
+		return false
+	}
+	_, ok := g.connectedNodeInterfaces[srcIntfID][destIntfID]
+	return ok
+}
+
+func (g *Graph) numConnections() int {
+	num := 0
+	for id := range g.connectedNodeInterfaces {
+		num += len(g.connectedNodeInterfaces[id])
+	}
+	return num
+}
+
+// Check if a route needs to be added between two node interfaces.
+// In order for a route to be needed, the two node interfaces must satisfy
+// the below conditions:
+// - the source node should not be DUT.
+// - the source and destination nodes should not have been distributed on the
+//   same agent.
+// - the IP addresses of the source and destination node interfaces should not
+//   be in the same subnet.
+func (g *Graph) needsRoute(srcIntf, destIntf *nodeInterface) (bool, error) {
+	if srcIntf.IsDUT || srcIntf.AgentID == destIntf.AgentID {
+		return false, nil
+	}
+	sameSubnet, err := helpers.SameSubnet(
+		srcIntf.IPAddr, srcIntf.IPPrefix, destIntf.IPAddr, destIntf.IPPrefix,
+	)
+	if err != nil {
+		return false, err
+	}
+	return !sameSubnet, nil
+}
+
+// GetRoutes returns the routes for a node belonging to a given agent node
+// interface.
+func (g *Graph) GetRoutes(
+	agentNodeIntf *AgentNodeInterface,
+	agentDevice string,
+	networkConfig data.NetworkConfig,
+) ([]*networkapi.Route, error) {
+	addrDevices, err := getAddrDeviceMap(networkConfig)
+	if err != nil {
+		return nil, err
+	}
+
+	var routes []*networkapi.Route
+
+	intfIDs, ok := g.agentNodeInterfaces[*agentNodeIntf]
+	if !ok {
+		return routes, nil
+	}
+
+	// Traverse the edges of the connections graph and construct the necessary
+	// routes.
+	for intfID := range intfIDs {
+		peerIntfIDs, ok := g.connectedNodeInterfaces[intfID]
+		if !ok {
 			continue
 		}
-		peerRanges := helpers.GetEnabledNodeRanges(peerDistribNode.Config)
-		for i := range peerRanges {
-			connected, err := gb.doConnectNodeRangeToPeerRange(nodeType, nodeAgentID, nodeRange,
-				peerDistribNode.AgentID, peerRanges[i], peerConnInfo)
+
+		intf := g.nodeInterfaces[intfID]
+
+		for peerIntfID := range peerIntfIDs {
+			peerIntf := g.nodeInterfaces[peerIntfID]
+
+			// Try to identify the device to which the source node address is
+			// bound to in order to use it as route output device.
+			// If we fail to do this, fallback to the agent device.
+			device, ok := addrDevices[intf.IPAddr]
+			if !ok {
+				device = agentDevice
+			}
+
+			route, err := g.getRoute(intf, peerIntf, device)
 			if err != nil {
-				return err
+				return nil, err
 			}
-			if connected {
-				break
-			}
+
+			routes = append(routes, route)
 		}
 	}
-	return nil
+	g.logger.Debug(fmt.Sprintf("connectivity.Graph: constructed %d routes", len(routes)))
+	return routes, nil
 }
 
-func (gb *GraphBuilder) doConnectNodeRangeToPeerRange(
-	nodeType mwapi.LCNodeType,
-	nodeAgentID string,
-	nodeRange interface{},
-	peerAgentID string,
-	peerRange interface{},
-	peerConnInfo *peerConnectionInfo,
-) (bool, error) {
-	remotePeerIDVal := helpers.FieldByName(
-		reflect.ValueOf(nodeRange),
-		peerConnInfo.nodeRangePeerIDPath,
-	)
-	if !remotePeerIDVal.IsValid() {
-		return false, fmt.Errorf(
-			"invalid field %s", peerConnInfo.nodeRangePeerIDPath,
-		)
+func (g *Graph) getRoute(srcIntf, destIntf *nodeInterface, device string) (*networkapi.Route, error) {
+	fullDestIP := fmt.Sprintf("%s/%d", destIntf.IPAddr, destIntf.IPPrefix)
+	_, destNetAddr, err := net.ParseCIDR(fullDestIP)
+
+	if err != nil {
+		return nil, err
 	}
 
-	peerIDVal := helpers.FieldByName(reflect.ValueOf(peerRange), rangeIDPath)
-	if !peerIDVal.IsValid() || peerIDVal.Kind() != reflect.String {
-		return false, fmt.Errorf("invalid field %s", rangeIDPath)
-	}
-	peerID := peerIDVal.String()
+	destIPNetPrefix, _ := destNetAddr.Mask.Size()
+	defaultScope := networkapi.UNIVERSE
 
-	agentIntf := &AgentNodeInterface{
-		AgentID:       nodeAgentID,
-		NodeType:      nodeType,
-		InterfaceType: peerConnInfo.nodeIntf,
-	}
-	peerAgentIntf := &AgentNodeInterface{
-		AgentID:       peerAgentID,
-		NodeType:      peerConnInfo.peerNodeType,
-		InterfaceType: peerConnInfo.peerNodeIntf,
+	route := &networkapi.Route{
+		Dev:       device,
+		Dst:       destNetAddr.IP.String(),
+		DstPrefix: int32(destIPNetPrefix),
+		Gateway:   srcIntf.Gateway,
+		Scope:     &defaultScope,
 	}
 
-	switch remotePeerIDVal.Kind() {
-	case reflect.String:
-		if remotePeerIDVal.String() == peerID {
-			err := gb.graph.addConnectionForRanges(agentIntf, nodeRange, peerAgentIntf, peerRange)
-			if err != nil {
-				return false, err
+	return route, nil
+}
+
+// Parse the network configuration and return a map from IP addresses to their
+// associated device.
+// The network configuration has the following format:
+// map[intf/device][type: data.VLAN, data.IP, data.ROUTE, data.DPDK][][]byte
+func getAddrDeviceMap(networkConfig data.NetworkConfig) (map[string]string, error) {
+	addrDevices := make(map[string]string)
+	for device, configTypeMap := range networkConfig {
+		for configType, configBlobs := range configTypeMap {
+			if configType != data.IP {
+				continue
 			}
-			return true, nil
-		}
-	case reflect.Slice:
-		for i := 0; i < remotePeerIDVal.Len(); i++ {
-			if remotePeerIDVal.Index(i).Kind() != reflect.String {
-				return false, fmt.Errorf(
-					"invalid field %s[%d]", peerConnInfo.nodeRangePeerIDPath, i,
-				)
-			}
-			if remotePeerIDVal.Index(i).String() == peerID {
-				err := gb.graph.addConnectionForRanges(
-					agentIntf, nodeRange, peerAgentIntf, peerRange,
-				)
+			for _, configBlob := range configBlobs {
+				var addr networkapi.Address
+
+				err := json.Unmarshal(configBlob, &addr)
 				if err != nil {
-					return false, err
+					return nil, err
 				}
-				return true, nil
+				addrDevices[addr.Addr] = device
 			}
 		}
-	default:
-		return false, fmt.Errorf("invalid field %s", peerConnInfo.nodeRangePeerIDPath)
 	}
-	return false, nil
+	return addrDevices, nil
 }
