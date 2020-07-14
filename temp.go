@@ -34,19 +34,17 @@ type nodeInterface struct {
 	IsDUT         bool
 }
 
-// AgentNodeInterface keeps information about node interface types associated
-// to an agent.
+// AgentNodeInterface keeps information about node interface types associated to an agent.
 type AgentNodeInterface struct {
 	AgentID       string
 	NodeType      mwapi.LCNodeType
 	InterfaceType string
 }
 
-// Graph is a directed graph keeping the connection information between
-// node interfaces.
-// Its is used for routing purposes: knowing the entire topology connectivity
-// graph allows to build route structures which can be further used by callers
-// to set up routes using the lizard REST API.
+// Graph is a directed graph keeping the connection information between node interfaces.
+// Its is used for routing purposes: knowing the entire topology connectivity graph allows to
+// build route structures which can be further used by callers to set up routes using the lizard
+// REST API.
 type Graph struct {
 	logger                  *logging.Logger
 	nodeInterfaces          map[nodeInterfaceID]*nodeInterface
@@ -55,32 +53,17 @@ type Graph struct {
 }
 
 func newNodeInterface(agentNodeIntf *AgentNodeInterface, nodeRange interface{}) (*nodeInterface, error) {
-	nodeRangeValue := reflect.ValueOf(nodeRange)
-	if nodeRangeValue.Kind() == reflect.Ptr {
-		if nodeRangeValue.IsNil() {
-			return nil, errors.New("invalid value for node range")
-		}
-		nodeRangeValue = reflect.Indirect(nodeRangeValue)
-	}
+	nodeRangeVal := reflect.ValueOf(nodeRange)
+	intfField := "Interfaces." + strings.Title(agentNodeIntf.InterfaceType)
+	intfVal := helpers.FieldByName(nodeRangeVal, intfField)
 
-	intfValue := nodeRangeValue.FieldByName("Interfaces").
-		FieldByName(strings.Title(agentNodeIntf.InterfaceType))
+	rangeID := helpers.FieldByName(nodeRangeVal, "Id").String()
+	isDUT := helpers.FieldByName(nodeRangeVal, "IsDut").Bool()
+	ipAddr := helpers.FieldByName(intfVal, "ConnectivitySettings.LocalIPAddress").String()
+	ipPrefix := helpers.FieldByName(intfVal, "ConnectivitySettings.IpPrefix").Int()
 
-	if intfValue.Kind() == reflect.Ptr {
-		if intfValue.IsNil() {
-			return nil, errors.New("invalid value for Interfaces field")
-		}
-		intfValue = reflect.Indirect(intfValue)
-	}
-
-	rangeID := nodeRangeValue.FieldByName("Id").String()
-	isDUT := nodeRangeValue.FieldByName("IsDut").Bool()
-
-	ipAddr := intfValue.FieldByName("ConnectivitySettings").FieldByName("LocalIPAddress").String()
-	ipPrefix := intfValue.FieldByName("ConnectivitySettings").FieldByName("IpPrefix").Int()
-
-	gateway, ok := intfValue.FieldByName("ConnectivitySettings").
-		FieldByName("GwStart").Interface().(*string)
+	gatewayVal := helpers.FieldByName(intfVal, "ConnectivitySettings.GwStart")
+	gateway, ok := gatewayVal.Interface().(*string)
 	if !ok {
 		return nil, errors.New("invalid value for GwStart field (not string)")
 	}
@@ -156,30 +139,36 @@ func (g *Graph) addDirectedConnection(srcID, destID nodeInterfaceID) {
 func (g *Graph) addConnection(srcIntf, destIntf *nodeInterface) error {
 	srcID := srcIntf.id()
 	destID := destIntf.id()
+
 	needSrcDestRoute, err := g.needsRoute(srcIntf, destIntf)
 	if err != nil {
 		return err
 	}
+
 	needDestSrcRoute, err := g.needsRoute(destIntf, srcIntf)
 	if err != nil {
 		return err
 	}
+
 	if !needSrcDestRoute && !needDestSrcRoute {
 		return nil
 	}
+
 	g.addNodeInterface(srcID, srcIntf)
 	g.addNodeInterface(destID, destIntf)
+
 	if needSrcDestRoute && !g.hasConnection(srcID, destID) {
-		g.logger.Debug(
-			fmt.Sprintf("connectivity.Graph: connection: [%s] -> [%s]", srcIntf, destIntf),
-		)
+		g.logger.Debug(fmt.Sprintf(
+			"connectivity.Graph: connection: [%s] -> [%s]", srcIntf, destIntf))
 		g.addDirectedConnection(srcID, destID)
 	}
+
 	if needDestSrcRoute && !g.hasConnection(destID, srcID) {
 		g.logger.Debug(fmt.Sprintf(
 			"connectivity.Graph: connection: [%s] -> [%s]", destIntf, srcIntf))
 		g.addDirectedConnection(destID, srcID)
 	}
+
 	return nil
 }
 
@@ -217,13 +206,11 @@ func (g *Graph) numConnections() int {
 }
 
 // Check if a route needs to be added between two node interfaces.
-// In order for a route to be needed, the two node interfaces must satisfy
-// the below conditions:
+// In order for a route to be needed, the two node interfaces must satisfy the below conditions:
 // - the source node should not be DUT.
-// - the source and destination nodes should not have been distributed on the
-//   same agent.
-// - the IP addresses of the source and destination node interfaces should not
-//   be in the same subnet.
+// - the source and destination nodes should not have been distributed on the same agent.
+// - the IP addresses of the source and destination node interfaces should not be in the
+//   same subnet.
 func (g *Graph) needsRoute(srcIntf, destIntf *nodeInterface) (bool, error) {
 	if srcIntf.IsDUT || srcIntf.AgentID == destIntf.AgentID {
 		return false, nil
@@ -237,8 +224,7 @@ func (g *Graph) needsRoute(srcIntf, destIntf *nodeInterface) (bool, error) {
 	return !sameSubnet, nil
 }
 
-// GetRoutes returns the routes for a node belonging to a given agent node
-// interface.
+// GetRoutes returns the routes for a node belonging to a given agent node interface.
 func (g *Graph) GetRoutes(
 	agentNodeIntf *AgentNodeInterface,
 	agentDevice string,
@@ -256,8 +242,7 @@ func (g *Graph) GetRoutes(
 		return routes, nil
 	}
 
-	// Traverse the edges of the connections graph and construct the necessary
-	// routes.
+	// Traverse the edges of the connections graph and construct the necessary routes.
 	for intfID := range intfIDs {
 		peerIntfIDs, ok := g.connectedNodeInterfaces[intfID]
 		if !ok {
@@ -269,8 +254,8 @@ func (g *Graph) GetRoutes(
 		for peerIntfID := range peerIntfIDs {
 			peerIntf := g.nodeInterfaces[peerIntfID]
 
-			// Try to identify the device to which the source node address is
-			// bound to in order to use it as route output device.
+			// Try to identify the device to which the source node address is bound to in order to
+			// use it as route output device.
 			// If we fail to do this, fallback to the agent device.
 			device, ok := addrDevices[intf.IPAddr]
 			if !ok {
@@ -311,8 +296,7 @@ func (g *Graph) getRoute(srcIntf, destIntf *nodeInterface, device string) (*netw
 	return route, nil
 }
 
-// Parse the network configuration and return a map from IP addresses to their
-// associated device.
+// Parse the network configuration and return a map from IP addresses to their associated device.
 // The network configuration has the following format:
 // map[intf/device][type: data.VLAN, data.IP, data.ROUTE, data.DPDK][][]byte
 func getAddrDeviceMap(networkConfig data.NetworkConfig) (map[string]string, error) {
