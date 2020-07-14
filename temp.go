@@ -156,37 +156,30 @@ func (g *Graph) addDirectedConnection(srcID, destID nodeInterfaceID) {
 func (g *Graph) addConnection(srcIntf, destIntf *nodeInterface) error {
 	srcID := srcIntf.id()
 	destID := destIntf.id()
-
 	needSrcDestRoute, err := g.needsRoute(srcIntf, destIntf)
 	if err != nil {
 		return err
 	}
-
 	needDestSrcRoute, err := g.needsRoute(destIntf, srcIntf)
 	if err != nil {
 		return err
 	}
-
 	if !needSrcDestRoute && !needDestSrcRoute {
 		return nil
 	}
-
 	g.addNodeInterface(srcID, srcIntf)
 	g.addNodeInterface(destID, destIntf)
-
 	if needSrcDestRoute && !g.hasConnection(srcID, destID) {
 		g.logger.Debug(
 			fmt.Sprintf("connectivity.Graph: connection: [%s] -> [%s]", srcIntf, destIntf),
 		)
 		g.addDirectedConnection(srcID, destID)
 	}
-
 	if needDestSrcRoute && !g.hasConnection(destID, srcID) {
 		g.logger.Debug(fmt.Sprintf(
 			"connectivity.Graph: connection: [%s] -> [%s]", destIntf, srcIntf))
 		g.addDirectedConnection(destID, srcID)
 	}
-
 	return nil
 }
 
