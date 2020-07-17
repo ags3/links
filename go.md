@@ -137,6 +137,7 @@ https://golang.org/doc/code.html
 https://www.alexedwards.net/blog/an-overview-of-go-tooling  
 
 #### Testing and mocking
+http://hassansin.github.io/Unit-Testing-http-client-in-Go  
 https://techblog.fexcofts.com/2019/09/23/go-and-test-mocking/  
 https://ncona.com/2020/02/using-testify-for-golang-tests/  
 
