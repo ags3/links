@@ -1,16 +1,19 @@
-## General tutorials
+#### General tutorials
 https://thomas-cokelaer.info/tutorials/python/index.html  
 
-## Variable annotations PEP (typing)
+#### Hypermodern Python
+https://cjolowicz.github.io/posts/hypermodern-python-01-setup/  
+
+#### Variable annotations PEP (typing)
 https://www.python.org/dev/peps/pep-0526/  
 
-## Python Sheets
+#### Python Sheets
 https://www.pythonsheets.com/  
 
-## Python cheatsheet
+#### Python cheatsheet
 https://gto76.github.io/python-cheatsheet/  
 
-## RealPython
+#### RealPython
 https://realpython.com/  
 https://realpython.com/emacs-the-best-python-editor/  
 https://realpython.com/vim-and-python-a-match-made-in-heaven/  
@@ -37,14 +40,14 @@ https://realpython.com/python-redis/
 https://realpython.com/oop-in-python-vs-java/  
 https://realpython.com/flask-blueprint/  
 
-## Zetcode
+#### Zetcode
 http://zetcode.com/all/#python  
 
-## Fred Baptiste's courses
+#### Fred Baptiste's courses
 https://github.com/fbaptiste/python-deepdive  
 https://github.com/fbaptiste/python-primer  
 
-## Flask
+#### Flask
 https://flask.palletsprojects.com/en/1.1.x/tutorial/  
 https://flask-sqlalchemy.palletsprojects.com/en/2.x/  
 https://github.com/pallets/flask-sqlalchemy/tree/master/examples/flaskr  
@@ -53,19 +56,19 @@ http://www.patricksoftwareblog.com/flask-tutorial/
 https://www.youtube.com/watch?v=MwZwr5Tvyxo  
 (https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)  
 
-## Asyncio
+#### Asyncio
 https://medium.com/velotio-perspectives/an-introduction-to-asynchronous-programming-in-python-af0189a88bbb  
 
-## Scientific
+#### Scientific
 https://github.com/ageron/handson-ml2/blob/master/tools_numpy.ipynb  
 https://github.com/ageron/handson-ml2/blob/master/tools_matplotlib.ipynb  
 https://github.com/ageron/handson-ml2/blob/master/tools_pandas.ipynb  
 
-## Video
+#### Video
 https://www.youtube.com/user/schafer5/videos  
 https://www.youtube.com/user/schafer5/playlists  
 
-## Code
+#### Code
 https://github.com/samuelcolvin/aioaws  
 https://github.com/samuelcolvin/pydantic  
 https://github.com/neuromation/platform-client-python  
