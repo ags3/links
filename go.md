@@ -52,6 +52,9 @@ https://github.com/mccutchen/go-httpbin/blob/master/httpbin/handlers.go
 https://github.com/nats-io/nats.go/blob/master/nats.go  
 https://github.com/rsc/letsencrypt/blob/v0.0.2/lets.go  
 
+#### Options pattern
+https://www.sohamkamani.com/golang/options-pattern/  
+
 #### Parsing the Redis protocol
 https://www.redisgreen.net/blog/beginners-guide-to-redis-protocol/  
 https://www.redisgreen.net/blog/reading-and-writing-redis-protocol/  
