@@ -112,6 +112,9 @@ https://golang.org/doc/code.html
 https://blog.golang.org/using-go-modules  
 https://medium.com/@adiach3nko/package-management-with-go-modules-the-pragmatic-guide-c831b4eaaf31  
 
+#### JWT with go
+https://www.sohamkamani.com/golang/2019-01-01-jwt-authentication/  
+
 #### Web
 https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years  
 https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin  
