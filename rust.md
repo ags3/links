@@ -6,6 +6,9 @@ https://gitlab.com/steveazz/rust-book/-/tree/master/
 #### A gentle intoduction to rust
 https://stevedonovan.github.io/rust-gentle-intro/  
 
+#### Rust 101
+https://www.ralfj.de/projects/rust-101/main.html  
+
 #### Tour for rust
 https://tourofrust.com/  
 
@@ -23,6 +26,9 @@ https://rust-unofficial.github.io/too-many-lists/
 
 #### Rust for cpp programmers
 https://github.com/nrc/r4cppp  
+
+#### Resources
+https://github.com/inancgumus/learnrust/blob/master/notes/resources.md  
 
 #### Examples
 https://rust.graystorm.com/2020/07/16/next-algorithm-backtracking-into-the-n-queens-problem/  
