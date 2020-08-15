@@ -18,6 +18,7 @@ https://www.feabhas.com/sites/default/files/2016-06/Rule%20of%20the%20Big%20Five
 ## Templates
 https://jguegant.github.io/blogs/tech/sfinae-introduction.html#sfinae-introduction  
 https://jguegant.github.io/blogs/tech/thread-safe-multi-type-map.html#thread-safe-multi-type-map  
+https://jguegant.github.io/blogs/tech/meta-crush-saga.html#meta-crush-saga  
 http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming.html  
 http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming_2.html  
 http://www.jot.fm/issues/issue_2008_02/article2/  
