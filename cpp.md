@@ -16,6 +16,7 @@ https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content
 https://www.feabhas.com/sites/default/files/2016-06/Rule%20of%20the%20Big%20Five.pdf  
 
 ## Templates
+https://jguegant.github.io/blogs/tech/sfinae-introduction.html#sfinae-introduction  
 https://jguegant.github.io/blogs/tech/thread-safe-multi-type-map.html#thread-safe-multi-type-map  
 http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming.html  
 http://www.pdimov.com/cpp2/simple_cxx11_metaprogramming_2.html  
