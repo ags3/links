@@ -11,6 +11,9 @@ https://tourofrust.com/
 #### Rust by example
 https://doc.rust-lang.org/rust-by-example/
 
+#### Rust cookbook
+https://rust-lang-nursery.github.io/rust-cookbook/intro.html  
+
 #### University of Pensylvannia course
 http://cis198-2016s.github.io/schedule/  
 
