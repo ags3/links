@@ -24,6 +24,7 @@ https://rust-unofficial.github.io/too-many-lists/
 https://github.com/nrc/r4cppp
 
 #### Examples
+https://rust.graystorm.com/2020/07/16/next-algorithm-backtracking-into-the-n-queens-problem/  
 https://rolisz.ro/2020/06/10/playing-codenames-with-rust/  
   
 
