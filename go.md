@@ -81,6 +81,9 @@ http://www.pazams.com/Go-for-Javascript-Developers/
 https://legacy.gitbook.com/book/codegangsta/building-web-apps-with-go/details  
 https://www.openmymind.net/The-Little-Go-Book/  
 
+#### Go in 5 minutes screencasts
+https://www.goin5minutes.com/  
+
 #### Tutorials
 #### Michal tutorials
 https://medium.com/golangspec  
