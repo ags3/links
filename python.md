@@ -1,6 +1,12 @@
 #### General tutorials
 https://thomas-cokelaer.info/tutorials/python/index.html  
 
+#### Video tutorials
+https://www.youtube.com/watch?v=8DvywoWv6fI  
+https://www.youtube.com/watch?v=HGOBQPFzWKo  
+https://www.youtube.com/watch?v=rfscVS0vtbw  
+https://www.youtube.com/watch?v=LHBE6Q9XlzI  
+
 #### Hypermodern Python
 https://cjolowicz.github.io/posts/hypermodern-python-01-setup/  
 
@@ -61,6 +67,13 @@ https://hackersandslackers.com/your-first-flask-application
 http://www.patricksoftwareblog.com/flask-tutorial/  
 https://www.youtube.com/watch?v=MwZwr5Tvyxo  
 (https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)  
+
+#### Django
+https://github.com/leifos/tango_with_django_2  
+https://www.youtube.com/watch?v=JT80XhYJdBw  
+https://www.youtube.com/watch?v=OTmQOjsl0eg  
+https://www.youtube.com/watch?v=HRLIEgwYSHc  
+https://www.youtube.com/watch?v=D6esTdOLXh4  
 
 #### Asyncio
 https://www.educative.io/blog/python-concurrency-making-sense-of-asyncio   
