@@ -187,9 +187,12 @@ https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
 https://cheppers.com/hashicorps-go-plugin-extensive-tutorial  
 
 #### Source code
+https://github.com/VictoriaMetrics/fastcache   
 https://github.com/drone/drone  
+https://github.com/elliotchance/sshtunnel  
 https://gitlab.com/gitlab-org/gitlab-runner/-/tree/master  
 https://github.com/nats-io/stan.go  
+https://github.com/elliotchance/ok  
 https://github.com/beanstalkd/go-beanstalk  
 https://github.com/twmb/algoimpl/tree/master/go  
 https://github.com/ahmetb/go-httpbin  
