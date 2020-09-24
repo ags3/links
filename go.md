@@ -193,6 +193,7 @@ https://github.com/elliotchance/sshtunnel
 https://gitlab.com/gitlab-org/gitlab-runner/-/tree/master  
 https://github.com/nats-io/stan.go  
 https://github.com/elliotchance/ok  
+https://github.com/itchyny/gojq  
 https://github.com/beanstalkd/go-beanstalk  
 https://github.com/twmb/algoimpl/tree/master/go  
 https://github.com/ahmetb/go-httpbin  
