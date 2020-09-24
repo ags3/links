@@ -195,6 +195,7 @@ https://github.com/twmb/algoimpl/tree/master/go
 https://github.com/ahmetb/go-httpbin  
 https://github.com/mccutchen/go-httpbin  
 https://github.com/hoisie/redis  
+https://github.com/aergoio/aergo  
 https://github.com/restic/restic  
 https://github.com/martinr92/goftp  
 https://github.com/golang/net  
