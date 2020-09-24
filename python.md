@@ -63,7 +63,7 @@ https://www.youtube.com/watch?v=MwZwr5Tvyxo
 (https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)  
 
 #### Asyncio
-https://www.educative.io/blog/python-concurrency-making-sense-of-asyncio?utm_source=Google%20AdWords&aid=5082902844932096&utm_source=google&utm_medium=cpc&utm_campaign=blog-dynamic&gclid=CjwKCAjw5Kv7BRBSEiwAXGDElUaej_vNUUxNc90mZSEMK8BznNkkISrounohEoZDai80jHilrrPvaxoCIZkQAvD_BwE  
+https://www.educative.io/blog/python-concurrency-making-sense-of-asyncio
 https://medium.com/velotio-perspectives/an-introduction-to-asynchronous-programming-in-python-af0189a88bbb  
 
 #### Scientific
