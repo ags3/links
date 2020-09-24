@@ -188,6 +188,7 @@ https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
 https://cheppers.com/hashicorps-go-plugin-extensive-tutorial  
 
 #### Source code
+https://github.com/segmentio/chamber  
 https://github.com/VictoriaMetrics/fastcache   
 https://github.com/drone/drone  
 https://github.com/elliotchance/sshtunnel  
