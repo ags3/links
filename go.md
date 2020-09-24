@@ -120,6 +120,7 @@ https://www.sohamkamani.com/golang/2019-01-01-jwt-authentication/
 
 #### Web
 https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years  
+https://benhoyt.com/writings/go-routing/  
 https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin  
 https://semaphoreci.com/community/tutorials/building-and-testing-a-rest-api-in-go-with-gorilla-mux-and-postgresql  
 https://scene-si.org/2018/03/12/handling-http-requests-with-go-chi/  
