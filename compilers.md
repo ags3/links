@@ -13,11 +13,14 @@ https://www.booleanworld.com/building-recursive-descent-parsers-definitive-guide
 https://github.com/DoctorWkt/acwj  
 
 #### Implementations
+https://github.com/akshayrajput/compiler  
 https://github.com/wren-lang/wren  
 https://github.com/benhoyt/littlelang  
 https://github.com/benhoyt/goawk  
+https://github.com/elliotchance/ok  
 https://github.com/rui314/8cc  
 https://github.com/rui314/minilisp  
 https://github.com/LuaDist/tcc  
 https://github.com/tmikov/scheme2020  
 https://github.com/facebook/hermes  
+https://github.com/itchyny/gojq  
