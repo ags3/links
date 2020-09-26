@@ -47,6 +47,9 @@ https://yourbasic.org/golang/create-error/
 #### Concurrency patterns
 https://blog.golang.org/pipelines  
 
+#### State machines
+https://venilnoronha.io/a-simple-state-machine-framework-in-go  
+
 #### Example of good style
 https://github.com/mccutchen/go-httpbin/blob/master/httpbin/handlers.go  
 https://github.com/nats-io/nats.go/blob/master/nats.go  
