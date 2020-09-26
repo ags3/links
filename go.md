@@ -188,6 +188,7 @@ https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
 https://cheppers.com/hashicorps-go-plugin-extensive-tutorial  
 
 #### Source code
+https://github.com/ardanlabs/kit  
 https://github.com/rapidloop/rtop  
 https://github.com/rapidloop/skv  
 https://github.com/rapidloop/pgmetrics  
