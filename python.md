@@ -23,7 +23,10 @@ https://github.com/psf/black
 https://www.pythonsheets.com/  
 
 #### Python cheatsheet
-https://gto76.github.io/python-cheatsheet/  
+https://gto76.github.io/python-cheatsheet/ 
+
+#### SQL
+https://www.freecodecamp.org/news/connect-python-with-sql/  
 
 #### RealPython
 https://realpython.com/  
