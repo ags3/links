@@ -4,7 +4,7 @@ https://walkccc.github.io/CLRS/
 https://github.com/walkccc/CLRS-cpp  (C++ implementations)  
 
 #### Courses
-http://web.stanford.edu/class/cs161/schedule.html  
+http://web.stanford.edu/class/cs161   
 https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/
 
 #### General articles
