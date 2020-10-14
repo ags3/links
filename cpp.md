@@ -76,4 +76,8 @@ https://github.com/google/tink
 https://github.com/google/lmctfy  
 https://github.com/google/marl  
 https://github.com/google/riegeli  
+https://github.com/google/orbit  
+https://github.com/ipkn/crow  
+https://github.com/matt-42/lithium  
+https://github.com/oktal/pistache  
 
