@@ -66,6 +66,7 @@ https://github.com/machinezone/IXWebSocket
 https://github.com/facebook/folly  
 https://github.com/osquery/osquery  
 https://github.com/facebook/fatal  
+https://github.com/rsocket/rsocket-cpp  
 https://github.com/facebook/rocksdb  
 https://github.com/google/leveldb  
 https://github.com/facebookincubator/mvfst  
