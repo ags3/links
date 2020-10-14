@@ -114,6 +114,8 @@ https://thenotexpert.com/simple-server-binary-protocol-golang/
 https://stackoverflow.com/questions/39804861/what-is-a-concise-way-to-create-a-2d-slice-in-go  
 
 #### Modules tutorials
+https://dev.to/zaracooper/18-essential-go-module-tidbits-for-a-newbie-4455  
+https://dev.to/zaracooper/how-to-easily-upgrade-downgrade-and-migrate-go-modules-389f  
 https://golang.org/doc/code.html  
 https://blog.golang.org/using-go-modules  
 https://medium.com/@adiach3nko/package-management-with-go-modules-the-pragmatic-guide-c831b4eaaf31  
