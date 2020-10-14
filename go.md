@@ -203,6 +203,8 @@ https://opensource.com/article/20/6/debug-go-delve
 https://golang.org/doc/diagnostics.html  
 
 #### Source code
+https://github.com/statsd/client  
+https://github.com/alexcesaro/statsd  
 https://github.com/ardanlabs/kit  
 https://github.com/rapidloop/rtop  
 https://github.com/rapidloop/skv  
