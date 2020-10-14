@@ -63,6 +63,7 @@ https://terrainformatica.com/2015/04/19/moderntemplatemetaprogramming/
 #### How to use sockets, threads, HTTP clients
 https://github.com/machinezone/IXWebSocket  
 
+https://github.com/nekipelov/redisclient  
 https://github.com/facebook/folly  
 https://github.com/osquery/osquery  
 https://github.com/facebook/fatal  
