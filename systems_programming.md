@@ -75,5 +75,6 @@ https://github.com/dcreager/libcork
 https://github.com/recoilme/okdbc  
 https://github.com/fredrikwidlund/libdynamic  
 https://github.com/fredrikwidlund/libreactor  
+https://github.com/canonical/dqlite/  
 
 
