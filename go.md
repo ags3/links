@@ -138,6 +138,9 @@ https://www.sohamkamani.com/golang/2019-01-01-jwt-authentication/
 #### Redis
 https://www.alexedwards.net/blog/working-with-redis  
 
+#### MongoDB
+https://www.digitalocean.com/community/tutorials/how-to-use-go-with-mongodb-using-the-mongodb-go-driver  
+
 #### SQL
 https://www.sohamkamani.com/blog/2017/10/18/golang-adding-database-to-web-application/  
 https://www.sohamkamani.com/golang/sql-transactions/  
@@ -191,6 +194,13 @@ https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
 
 #### Go hashicorp plugin  
 https://cheppers.com/hashicorps-go-plugin-extensive-tutorial  
+
+#### Delve
+https://hustcat.github.io/getting-started-with-delve/  
+https://stackoverflow.com/questions/53621853/golang-dlv-unable-to-see-source-no-such-file-or-directory  
+https://www.jamessturtevant.com/posts/Using-the-Go-Delve-Debugger-from-the-command-line/  
+https://opensource.com/article/20/6/debug-go-delve  
+https://golang.org/doc/diagnostics.html  
 
 #### Source code
 https://github.com/ardanlabs/kit  
