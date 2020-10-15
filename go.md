@@ -70,6 +70,11 @@ https://medium.com/capital-one-tech/in-the-not-too-distant-future-e2d0ad28e91
 https://medium.com/capital-one-tech/learning-to-use-go-reflection-822a0aed74b7  
 https://medium.com/capital-one-tech/learning-to-use-go-reflection-part-2-c91657395066  
 
+#### Design
+#### Clean Architecture
+https://medium.com/@vidhyanshujain97/implementing-clean-architecture-in-go-56aca59311b3  
+https://github.com/vidu171/clean-architecture-go/tree/main/src  
+
 #### Books
 https://golang.org/doc/effective_go.html  
 https://miek.nl/go/  
