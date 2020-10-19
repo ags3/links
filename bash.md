@@ -15,3 +15,6 @@ http://mywiki.wooledge.org/BashPitfalls
 
 #### Cheatsheet
 https://devhints.io/bash  
+
+#### Books
+https://tldp.org/LDP/abs/html/index.html  
