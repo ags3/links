@@ -1,5 +1,6 @@
 #### Tutorials
 http://mywiki.wooledge.org/BashGuide  
+http://mywiki.wooledge.org/BashProgramming  
 https://learnxinyminutes.com/docs/bash/  
 https://ryanstutorials.net/bash-scripting-tutorial/  
 https://linuxconfig.org/bash-scripting-tutorial-for-beginners  
