@@ -1,4 +1,5 @@
-## Tutorials
+#### Tutorials
+http://mywiki.wooledge.org/BashGuide  
 https://learnxinyminutes.com/docs/bash/  
 https://ryanstutorials.net/bash-scripting-tutorial/  
 https://linuxconfig.org/bash-scripting-tutorial-for-beginners  
@@ -8,5 +9,8 @@ https://itnext.io/bash-scripting-everything-you-need-to-know-about-bash-shell-pr
 https://medium.com/pranav-kulshrestha/introduction-to-shell-scripting-39d4fe7c2b49  
 http://redsymbol.net/articles/unofficial-bash-strict-mode/  
 
-## Cheatsheet
+#### Pitfals
+http://mywiki.wooledge.org/BashPitfalls  
+
+#### Cheatsheet
 https://devhints.io/bash  
