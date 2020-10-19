@@ -1,3 +1,6 @@
+#### Awesome bash
+https://github.com/awesome-lists/awesome-bash  
+
 #### Tutorials
 http://mywiki.wooledge.org/BashGuide  
 http://mywiki.wooledge.org/BashProgramming  
@@ -11,6 +14,7 @@ https://medium.com/pranav-kulshrestha/introduction-to-shell-scripting-39d4fe7c2b
 http://redsymbol.net/articles/unofficial-bash-strict-mode/  
 
 #### Pitfals
+https://web.archive.org/web/20180917174959/http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming  
 http://mywiki.wooledge.org/BashPitfalls  
 
 #### Cheatsheet
@@ -21,3 +25,6 @@ https://tldp.org/LDP/abs/html/index.html
 
 #### Style Guide
 https://google.github.io/styleguide/shellguide.html  
+
+#### Examples
+https://github.com/p8952/bocker  
