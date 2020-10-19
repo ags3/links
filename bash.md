@@ -18,3 +18,6 @@ https://devhints.io/bash
 
 #### Books
 https://tldp.org/LDP/abs/html/index.html  
+
+#### Style Guide
+https://google.github.io/styleguide/shellguide.html  
