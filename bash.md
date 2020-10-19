@@ -2,6 +2,7 @@
 https://github.com/awesome-lists/awesome-bash  
 
 #### Tutorials
+https://github.com/denysdovhan/bash-handbook  
 http://mywiki.wooledge.org/BashGuide  
 http://mywiki.wooledge.org/BashProgramming  
 https://learnxinyminutes.com/docs/bash/  
