@@ -28,6 +28,9 @@ https://gto76.github.io/python-cheatsheet/
 #### SQL
 https://www.freecodecamp.org/news/connect-python-with-sql/  
 
+#### Rest client with aiohttp
+https://us-pycon-2019-tutorial.readthedocs.io/aiohttp_client_full.html  
+
 #### RealPython
 https://realpython.com/  
 https://realpython.com/emacs-the-best-python-editor/  
@@ -92,6 +95,7 @@ https://www.youtube.com/user/schafer5/videos
 https://www.youtube.com/user/schafer5/playlists  
 
 #### Code
+https://github.com/encode/starlette  
 https://github.com/TankerHQ/tsrc  
 https://github.com/dmerejkowsky/zpov  
 https://github.com/samuelcolvin/aioaws  
