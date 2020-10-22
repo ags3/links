@@ -80,6 +80,8 @@ https://github.com/bradtraversy/vanillawebprojects
 https://github.com/bogadrian  
 
 #### React
+#### React in 10 hours free course
+https://www.youtube.com/watch?v=4UZrsTqkcW4  
 #### React philosophy for web designers
 https://www.freecodecamp.org amer.com/blog/posts/react-for-web-designers/  
 #### Very good react from scratch tutorial  
