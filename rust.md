@@ -21,11 +21,17 @@ https://rust-lang-nursery.github.io/rust-cookbook/intro.html
 #### University of Pensylvannia course
 http://cis198-2016s.github.io/schedule/  
 
+#### Rust ownership by example
+https://depth-first.com/articles/2020/01/27/rust-ownership-by-example/  
+
 #### Learning Rust with lists (important skills) 
 https://rust-unofficial.github.io/too-many-lists/  
 
 #### Rust for cpp programmers
 https://github.com/nrc/r4cppp  
+
+#### Rust for Java programmers
+https://blog.codecentric.de/en/2020/09/rust-for-java-developers/  
 
 #### Resources
 https://github.com/inancgumus/learnrust/blob/master/notes/resources.md  
