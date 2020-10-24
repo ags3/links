@@ -12,6 +12,7 @@ https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
 
 #### Variable annotations PEP (typing)
 https://www.python.org/dev/peps/pep-0526/  
+https://realpython.com/python-type-checking/#duck-types-and-protocols  
 https://www.pythonsheets.com/notes/python-typing.html  
 https://dmerej.info/blog/post/giving-mypy-a-go/  
 http://pyparis.org/static/slides/Philippe%20Fremy-31b0239a.pdf  
