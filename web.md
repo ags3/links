@@ -21,6 +21,9 @@ https://www.taniarascia.com/what-is-bootstrap-and-how-do-i-use-it/
 #### FreeCodeCamp
 https://www.freecodecamp.org/news/i-completed-the-entire-freecodecamp-curriculum-in-a-month-while-recording-everything/
 
+#### Full social network app
+https://www.southdevondigital.com/blog/using-react-react-router-to-make-a-social-network-frontend/  
+
 #### Books
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction  
 https://github.com/thejsway/thejsway   
