@@ -96,6 +96,7 @@ https://www.youtube.com/user/schafer5/videos
 https://www.youtube.com/user/schafer5/playlists  
 
 #### Code
+https://github.com/apache/incubator-superset  
 https://github.com/python/mypy  
 https://github.com/encode/starlette  
 https://github.com/aio-libs/janus  
