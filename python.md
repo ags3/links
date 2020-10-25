@@ -96,6 +96,7 @@ https://www.youtube.com/user/schafer5/videos
 https://www.youtube.com/user/schafer5/playlists  
 
 #### Code
+https://github.com/pallets/werkzeug  
 https://github.com/aaugustin/websockets  
 https://github.com/apache/incubator-superset  
 https://github.com/wemake-services/wemake-python-styleguide  
