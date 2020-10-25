@@ -98,6 +98,7 @@ https://www.youtube.com/user/schafer5/playlists
 #### Code
 https://github.com/aaugustin/websockets  
 https://github.com/apache/incubator-superset  
+https://github.com/wemake-services/wemake-python-styleguide  
 https://github.com/python/mypy  
 https://github.com/encode/starlette  
 https://github.com/aio-libs/janus  
