@@ -1,4 +1,4 @@
-## Docker
+#### Docker
 #### Video introduction
 https://m.youtube.com/watch?v=fqMOX6JJhGo  
 
@@ -8,7 +8,10 @@ https://docker-curriculum.com/
 #### Docker course repo examples
 https://github.com/bretfisher/udemy-docker-mastery  
 
-## Kubernetes
+#### Kubernetes
+
+#### Cheatsheet (important)  
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/  
 
 #### Investigating POD issues
 https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/  
