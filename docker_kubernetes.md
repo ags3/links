@@ -10,6 +10,10 @@ https://github.com/bretfisher/udemy-docker-mastery
 
 ## Kubernetes
 
+#### Investigating POD issues
+https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/  
+https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-2/  
+
 #### Hello minikube
 https://kubernetes.io/docs/tutorials/hello-minikube/  
 
