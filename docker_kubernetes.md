@@ -10,6 +10,9 @@ https://github.com/bretfisher/udemy-docker-mastery
 
 #### Kubernetes
 
+#### Concepts (important)
+https://kubernetes.io/docs/concepts/  
+
 #### Cheatsheet (important)  
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/  
 
