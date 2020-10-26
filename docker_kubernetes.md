@@ -25,6 +25,7 @@ https://computingforgeeks.com/how-to-run-minikube-on-kvm/
 
 #### Install Kubernetes on centos 8
 https://upcloud.com/community/tutorials/install-kubernetes-cluster-centos-8/  
+https://gist.github.com/rkaramandi/44c7cea91501e735ea99e356e9ae7883  
 
 #### Courses
 https://www.edx.org/course/introduction-to-kubernetes#  
