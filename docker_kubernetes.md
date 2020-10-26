@@ -23,6 +23,9 @@ https://kubernetes.io/docs/tasks/tools/install-minikube/
 https://kubernetes.io/blog/2019/03/28/running-kubernetes-locally-on-linux-with-minikube-now-with-kubernetes-1.14-support/  
 https://computingforgeeks.com/how-to-run-minikube-on-kvm/  
 
+#### Install Kubernetes on centos 8
+https://upcloud.com/community/tutorials/install-kubernetes-cluster-centos-8/  
+
 #### Courses
 https://www.edx.org/course/introduction-to-kubernetes#  
 
