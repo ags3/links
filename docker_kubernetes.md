@@ -16,6 +16,9 @@ https://learnk8s.io/kubernetes-long-lived-connections
 https://kubernetesbyexample.com/  
 https://medium.com/swlh/zero-to-kubernetes-in-5-mins-dcff81b4508  
 
+#### Tutorials
+https://learnk8s.io/blog  
+
 #### Cheatsheet (important)  
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/  
 
