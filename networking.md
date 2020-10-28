@@ -18,6 +18,7 @@ https://www.brianstorti.com/tcp-flow-control/
 https://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp/  
 
 #### NAT
+https://www.karlrupp.net/en/computer/nat_tutorial  
 https://scalingo.com/blog/iptables  
 
 #### Code
