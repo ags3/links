@@ -10,6 +10,12 @@ https://github.com/bretfisher/udemy-docker-mastery
 
 #### Kubernetes
 
+#### Very goof tutorial
+https://medium.com/@almas.hilman/simple-kubernetes-deployment-using-kops-273fc7990006  
+https://levelup.gitconnected.com/deploying-simple-golang-webapp-to-kubernetes-25dc1736dcc4  
+https://levelup.gitconnected.com/make-your-own-helm-chart-590622a50c14  
+https://github.com/lmnzr/simpleapp
+
 #### Concepts (important)
 https://kubernetes.io/docs/concepts/  
 https://learnk8s.io/kubernetes-long-lived-connections  
