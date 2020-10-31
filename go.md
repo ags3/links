@@ -212,6 +212,7 @@ https://golang.org/doc/diagnostics.html
 
 #### CLI (spf13/cobra, urfave/cli2)
 https://ordina-jworks.github.io/development/2018/10/20/make-your-own-cli-with-golang-and-cobra.html  
+https://github.com/nickgeudens/hello-cli  
 https://www.digitalocean.com/community/tutorials/how-to-use-go-with-mongodb-using-the-mongodb-go-driver   
 
 #### Source code
