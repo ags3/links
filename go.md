@@ -210,6 +210,10 @@ https://www.jamessturtevant.com/posts/Using-the-Go-Delve-Debugger-from-the-comma
 https://opensource.com/article/20/6/debug-go-delve  
 https://golang.org/doc/diagnostics.html  
 
+#### CLI (spf13/cobra, urfave/cli2)
+https://ordina-jworks.github.io/development/2018/10/20/make-your-own-cli-with-golang-and-cobra.html  
+https://www.digitalocean.com/community/tutorials/how-to-use-go-with-mongodb-using-the-mongodb-go-driver   
+
 #### Source code
 https://github.com/statsd/client  
 https://github.com/alexcesaro/statsd  
