@@ -10,7 +10,7 @@ https://github.com/bretfisher/udemy-docker-mastery
 
 #### Kubernetes
 
-#### Very goof tutorial
+#### Very good tutorial
 https://medium.com/@almas.hilman/simple-kubernetes-deployment-using-kops-273fc7990006  
 https://levelup.gitconnected.com/deploying-simple-golang-webapp-to-kubernetes-25dc1736dcc4  
 https://levelup.gitconnected.com/make-your-own-helm-chart-590622a50c14  
@@ -21,6 +21,15 @@ https://kubernetes.io/docs/concepts/
 https://learnk8s.io/kubernetes-long-lived-connections  
 https://kubernetesbyexample.com/  
 https://medium.com/swlh/zero-to-kubernetes-in-5-mins-dcff81b4508  
+
+#### Magalix series (excellent, A to Z)
+https://www.magalix.com/blog/kubernetes-101-concepts-and-why-it-matters  
+https://www.magalix.com/blog/kubernetes-pods-101-the-cluster-sailors  
+https://www.magalix.com/blog/kubernetes-replicaset-101  
+https://www.magalix.com/blog/kubernetes-deployments-101  
+https://www.magalix.com/blog/kubernetes-storage-101  
+https://www.magalix.com/blog/kubernetes-services-101-the-pods-interfaces  
+https://www.magalix.com/blog/deploying-an-application-on-kubernetes-from-a-to-z 
 
 #### Tutorials
 https://learnk8s.io/blog  
