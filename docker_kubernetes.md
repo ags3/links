@@ -1,4 +1,11 @@
 #### Docker
+
+#### Handbook
+https://www.freecodecamp.org/news/the-docker-handbook/  
+
+#### Courses
+https://devopswithdocker.com/  
+
 #### Video introduction
 https://m.youtube.com/watch?v=fqMOX6JJhGo  
 
@@ -9,6 +16,12 @@ https://docker-curriculum.com/
 https://github.com/bretfisher/udemy-docker-mastery  
 
 #### Kubernetes
+
+#### Courses
+https://devopswithkubernetes.com/part-0  
+
+#### Handbook
+https://www.freecodecamp.org/news/the-kubernetes-handbook/  
 
 #### Very good tutorial
 https://medium.com/@almas.hilman/simple-kubernetes-deployment-using-kops-273fc7990006  
