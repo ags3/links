@@ -1,5 +1,9 @@
 #### Docker
 
+#### Install
+#### Install kubeadm on single node
+https://medium.com/@vivek_syngh/setup-a-single-node-kubernetes-cluster-on-ubuntu-16-04-6412373d837a
+
 #### Handbook
 https://www.freecodecamp.org/news/the-docker-handbook/  
 
