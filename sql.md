@@ -1,5 +1,6 @@
 ## Tutorials
 https://www.postgresqltutorial.com/  
+https://www.enterprisedb.com/postgres-tutorials/postgresql-query-introduction-explanation-and-50-examples?utm_campaign=Oktopost-Tutorial#  
 https://sqlzoo.net/  
 http://zetcode.com/python/psycopg2/  
 http://zetcode.com/python/sqlite/  
