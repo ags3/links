@@ -55,6 +55,9 @@ https://www.magalix.com/blog/deploying-an-application-on-kubernetes-from-a-to-z
 #### Tutorials
 https://learnk8s.io/blog  
 
+#### Config maps
+https://matthewpalmer.net/kubernetes-app-developer/articles/ultimate-configmap-guide-kubernetes.html  
+
 #### Cheatsheet (important)  
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/  
 
