@@ -7,6 +7,9 @@ https://medium.com/@vivek_syngh/setup-a-single-node-kubernetes-cluster-on-ubuntu
 #### Handbook
 https://www.freecodecamp.org/news/the-docker-handbook/  
 
+#### Permissions
+https://vsupalov.com/docker-shared-permissions/  
+
 #### Network policies
 https://www.stackrox.com/post/2019/04/setting-up-kubernetes-network-policies-a-detailed-guide/  
 https://www.stackrox.com/post/2020/01/kubernetes-egress-network-policies/  
