@@ -4,8 +4,9 @@ https://design.jboss.org/redhatdeveloper/marketing/openshift_cheatsheet/cheatshe
 #### Investigating POD issues
 https://docs.openshift.com/container-platform/4.5/support/troubleshooting/investigating-pod-issues.html  
 
-#### Rules for creating images
+#### Rules for creating images and rights for non-root users
 https://docs.openshift.com/container-platform/4.5/openshift_images/create-images.html
+https://blog.christophersmart.com/2019/09/20/running-a-non-root-container-on-fedora-with-podman-and-systemd/
 
 #### Openshift networking
 https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html-single/networking/index  
