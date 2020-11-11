@@ -1,5 +1,8 @@
 #### Docker
 
+#### Dockerizing a complex app (important) 
+https://levelup.gitconnected.com/dockerized-crud-restful-api-with-go-gorm-jwt-postgresql-mysql-and-testing-61d731430bd8
+
 #### Install
 #### Install kubeadm on single node
 https://medium.com/@vivek_syngh/setup-a-single-node-kubernetes-cluster-on-ubuntu-16-04-6412373d837a
