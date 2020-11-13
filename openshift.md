@@ -4,6 +4,9 @@ https://design.jboss.org/redhatdeveloper/marketing/openshift_cheatsheet/cheatshe
 #### Investigating POD issues
 https://docs.openshift.com/container-platform/4.5/support/troubleshooting/investigating-pod-issues.html  
 
+#### Adding root rights to containers for tcpdump
+https://rcarrata.com/openshift/ocp4-analyse_traffic_and_debug_network_traffic_in_Openshift/
+
 #### Rules for creating images and rights for non-root users
 https://docs.openshift.com/container-platform/4.5/openshift_images/create-images.html
 https://blog.christophersmart.com/2019/09/20/running-a-non-root-container-on-fedora-with-podman-and-systemd/
