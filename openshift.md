@@ -4,6 +4,9 @@ https://design.jboss.org/redhatdeveloper/marketing/openshift_cheatsheet/cheatshe
 #### Investigating POD issues
 https://docs.openshift.com/container-platform/4.5/support/troubleshooting/investigating-pod-issues.html  
 
+### Setting up internal registry for image
+https://cloud.ibm.com/docs/openshift?topic=openshift-registry
+
 #### Openshift rights
 https://rcarrata.com/openshift/ocp4-analyse_traffic_and_debug_network_traffic_in_Openshift/  
 https://github.com/openshift/origin/issues/3326
