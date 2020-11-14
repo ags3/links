@@ -57,6 +57,7 @@ https://www.sitepoint.com/debugging-javascript-projects-vs-code-chrome-debugger/
 
 #### Javascript for react (great, must read) 
 https://www.robinwieruch.de/javascript-fundamentals-react-requirements  
+https://kentcdodds.com/blog/javascript-to-know-for-react?ck_subscriber_id=950128633  
 
 #### Complete basic React tutorial
 https://www.modernjs.com/react-tutorial.html  
