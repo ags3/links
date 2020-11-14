@@ -44,6 +44,9 @@ https://freshman.tech/web-development-with-go/
 #### Errors 
 https://yourbasic.org/golang/create-error/  
 
+#### Executing external commands
+http://craigwickesser.com/2015/02/golang-cmd-with-custom-environment/  
+
 #### Concurrency patterns
 https://blog.golang.org/pipelines  
 
