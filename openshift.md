@@ -1,3 +1,6 @@
+#### Complete guide to CRC
+https://egallen.com/red-hat-codeready-containers-gpu/
+
 #### Cheatsheet
 https://design.jboss.org/redhatdeveloper/marketing/openshift_cheatsheet/cheatsheet/images/openshift_cheat_sheet_r1v1.pdf  
 
