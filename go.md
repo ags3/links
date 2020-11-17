@@ -50,6 +50,9 @@ http://craigwickesser.com/2015/02/golang-cmd-with-custom-environment/
 #### Concurrency patterns
 https://blog.golang.org/pipelines  
 
+#### Working with syscalls and low level sockets
+https://github.com/valyala/tcplisten/blob/master/tcplisten.go  
+
 #### State machines
 https://venilnoronha.io/a-simple-state-machine-framework-in-go  
 
