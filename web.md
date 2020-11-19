@@ -84,15 +84,22 @@ https://github.com/bradtraversy/vanillawebprojects
 https://github.com/bogadrian  
 
 #### React
+#### React movie list tutorial
+https://www.freecodecamp.org/news/react-movie-app-tutorial/  
+
 #### React in 10 hours free course
 https://www.youtube.com/watch?v=4UZrsTqkcW4  
+
 #### React philosophy for web designers
 https://www.freecodecamp.org amer.com/blog/posts/react-for-web-designers/  
+
 #### Very good react from scratch tutorial  
 https://www.taniarascia.com/getting-started-with-react/  
 https://github.com/taniarascia/react-tutorial  
+
 #### How to setup babel and webpack for react
 https://www.valentinog.com/blog/babel/  
+
 #### Very simple react app
 https://github.com/when-i-code/quiz?files=1  
 
