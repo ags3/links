@@ -7,6 +7,9 @@ https://levelup.gitconnected.com/dockerized-crud-restful-api-with-go-gorm-jwt-po
 #### Install kubeadm on single node
 https://medium.com/@vivek_syngh/setup-a-single-node-kubernetes-cluster-on-ubuntu-16-04-6412373d837a
 
+#### Install kudeadm on multiple nodes
+https://loves.cloud/setting-up-a-kubernetes-cluster-on-ubuntu-18-04/  
+
 #### Handbook
 https://www.freecodecamp.org/news/the-docker-handbook/  
 
