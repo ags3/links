@@ -9,6 +9,7 @@ https://medium.com/@vivek_syngh/setup-a-single-node-kubernetes-cluster-on-ubuntu
 
 #### Install kudeadm on multiple nodes
 https://loves.cloud/setting-up-a-kubernetes-cluster-on-ubuntu-18-04/  
+https://computingforgeeks.com/deploy-kubernetes-cluster-on-ubuntu-with-kubeadm/?amp  
 
 #### Handbook
 https://www.freecodecamp.org/news/the-docker-handbook/  
