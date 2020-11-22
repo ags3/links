@@ -14,6 +14,11 @@ https://phoenixnap.com/kb/install-kubernetes-on-ubuntu
 https://loves.cloud/setting-up-a-kubernetes-cluster-on-ubuntu-18-04/  
 https://computingforgeeks.com/deploy-kubernetes-cluster-on-ubuntu-with-kubeadm/?amp  
 
+#### Work with minikube
+https://minikube.sigs.k8s.io/docs/start/  
+https://yzhong-cs.medium.com/getting-started-with-kubernetes-and-docker-with-minikube-b413d4deeb92  
+https://medium.com/bb-tutorials-and-thoughts/how-to-use-own-local-doker-images-with-minikube-2c1ed0b0968  
+
 #### Handbook
 https://www.freecodecamp.org/news/the-docker-handbook/  
 
