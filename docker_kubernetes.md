@@ -49,6 +49,9 @@ https://devopswithkubernetes.com/part-0
 #### Handbook
 https://www.freecodecamp.org/news/the-kubernetes-handbook/  
 
+#### Kubernetes networking 101
+https://www.kentik.com/blog/kubernetes-networking-101/
+
 #### Very good tutorial
 https://medium.com/@almas.hilman/simple-kubernetes-deployment-using-kops-273fc7990006  
 https://levelup.gitconnected.com/deploying-simple-golang-webapp-to-kubernetes-25dc1736dcc4  
