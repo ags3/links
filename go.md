@@ -94,6 +94,7 @@ https://github.com/quii/learn-go-with-tests
 http://www.pazams.com/Go-for-Javascript-Developers/  
 https://legacy.gitbook.com/book/codegangsta/building-web-apps-with-go/details  
 https://www.openmymind.net/The-Little-Go-Book/  
+https://yourbasic.org/golang/go-java-tutorial/  
 
 #### Go in 5 minutes screencasts
 https://www.goin5minutes.com/  
