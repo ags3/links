@@ -1,6 +1,9 @@
 #### Awesome bash
 https://github.com/awesome-lists/awesome-bash  
 
+#### Best introduction (mooc.fi)
+https://scicomp.aalto.fi/training/linux-shell-tutorial/  
+
 #### Tutorials
 https://en.wikibooks.org/wiki/Bash_Shell_Scripting  
 https://github.com/denysdovhan/bash-handbook  
