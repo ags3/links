@@ -27,6 +27,9 @@ https://depth-first.com/articles/2020/01/27/rust-ownership-by-example/
 #### Learning Rust with lists (important skills) 
 https://rust-unofficial.github.io/too-many-lists/  
 
+#### Binary tree
+https://gist.github.com/aidanhs/5ac9088ca0f6bdd4a370  
+
 #### Rust for cpp programmers
 https://github.com/nrc/r4cppp  
 
