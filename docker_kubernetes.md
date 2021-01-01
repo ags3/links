@@ -105,3 +105,6 @@ https://www.edx.org/course/introduction-to-kubernetes#
 
 #### Practice
 https://www.katacoda.com/  
+
+#### Helm tutorial
+https://www.freecodecamp.org/news/helm-charts-tutorial-the-kubernetes-package-manager-explained/  
