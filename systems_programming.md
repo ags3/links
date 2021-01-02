@@ -1,4 +1,4 @@
-## General
+#### General
 http://suckless.org/  
 http://cs241.cs.illinois.edu/coursebook/index.html  
 https://github.com/angrave/SystemProgramming/wiki  
@@ -8,7 +8,10 @@ https://pauladamsmith.com/articles/redis-under-the-hood.html
 https://hellokangning.github.io/categories/redis/  
 http://software.schmorp.de/pkg/libev.html  
 
-## Memory
+#### Pointers
+https://www.freecodecamp.org/news/demystifying-pointers-in-c-and-cpp/  
+
+#### Memory
 http://troydhanson.github.io/virtual_memory.pdf  
 https://www.akkadia.org/drepper/cpumemory.pdf  
 https://danluu.com/malloc-tutorial/  
@@ -18,10 +21,10 @@ http://dmitrysoshnikov.com/compilers/writing-a-mark-sweep-garbage-collector/
 https://sourceware.org/glibc/wiki/MallocInternals  
 https://jamesgolick.com/2013/5/15/memory-allocators-101.html  
 
-## Producer-consumer in shared memory
+#### Producer-consumer in shared memory
 https://stackoverflow.com/questions/16283517/single-producer-consumer-ring-buffer-in-shared-memory  
 
-## Software
+#### Software
 https://github.com/kozross/awesome-c  
 https://github.com/aleksandar-todorovic/awesome-c  
 https://github.com/uhub/awesome-c  
