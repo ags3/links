@@ -8,8 +8,11 @@ https://medium.com/@germandiagogomez/getting-started-with-meson-in-c-part-2-5815
 https://medium.com/@germandiagogomez/getting-started-with-meson-in-c-part-3-70b9bc419957  
 https://medium.com/@germandiagogomez/getting-started-with-meson-part-4-8bceec6149e1  
 
-#### CMake
+#### CMake tutorials
 https://cliutils.gitlab.io/modern-cmake/  
 https://levelup.gitconnected.com/simple-modern-cmake-tutorial-b0c1c362cd2c  
 https://levelup.gitconnected.com/simple-modern-cmake-tutorial-part-2-285614d6a0ce  
 https://levelup.gitconnected.com/cmake-variable-scope-f062833581b7  
+
+#### CMake template
+https://mjmorse.com/blog/cmake-template/  
