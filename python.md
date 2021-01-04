@@ -26,6 +26,9 @@ https://www.pythonsheets.com/
 #### Python cheatsheet
 https://gto76.github.io/python-cheatsheet/ 
 
+#### Design patterns
+https://python-patterns.guide/  
+
 #### SQL
 https://www.freecodecamp.org/news/connect-python-with-sql/  
 
