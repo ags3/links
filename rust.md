@@ -21,6 +21,9 @@ https://rust-lang-nursery.github.io/rust-cookbook/intro.html
 #### University of Pensylvannia course
 http://cis198-2016s.github.io/schedule/  
 
+#### Rust TODO application (good tutorial)
+https://www.freecodecamp.org/news/how-to-build-a-to-do-app-with-rust/  
+
 #### Rust ownership by example
 https://depth-first.com/articles/2020/01/27/rust-ownership-by-example/  
 
