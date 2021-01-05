@@ -89,6 +89,7 @@ https://www.freecodecamp.org/news/react-movie-app-tutorial/
 
 #### React in 10 hours free course
 https://www.youtube.com/watch?v=4UZrsTqkcW4  
+https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/  
 
 #### React philosophy for web designers
 https://www.freecodecamp.org amer.com/blog/posts/react-for-web-designers/  
