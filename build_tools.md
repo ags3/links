@@ -17,5 +17,9 @@ https://levelup.gitconnected.com/cmake-variable-scope-f062833581b7
 #### CMake template
 https://mjmorse.com/blog/cmake-template/  
 
+#### CMake examples
+https://github.com/facebookincubator/fizz/blob/master/fizz/CMakeLists.txt  
+https://github.com/rsocket/rsocket-cpp/blob/master/CMakeLists.txt  
+
 #### Maven examples
 https://github.com/zalando/riptide  
