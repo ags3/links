@@ -6,7 +6,8 @@ https://developer.mozilla.org/en-US/docs/Learn
 
 #### HTML & CSS
 https://www.internetingishard.com/  
-https://github.com/smeriwether/html-and-css-is-hard
+https://github.com/smeriwether/html-and-css-is-hard  
+https://github.com/shubhamnishad97/Interneting-is-hard  
 
 #### Complete tutorial on ES6 features
 https://babeljs.io/docs/en/learn  
