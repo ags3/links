@@ -3,6 +3,9 @@ https://doc.rust-lang.org/book/
 https://github.com/inancgumus/learnrust  
 https://gitlab.com/steveazz/rust-book/-/tree/master/  
 
+#### Rust in plain english
+https://github.com/Dhghomon/easy_rust  
+
 #### A gentle intoduction to rust
 https://stevedonovan.github.io/rust-gentle-intro/  
 
