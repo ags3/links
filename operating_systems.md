@@ -1,3 +1,6 @@
+#### Write your own operating system
+https://www.youtube.com/playlist?list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M  
+
 #### Linux setup
 https://github.com/cirosantilli/linux-kernel-module-cheat
 
