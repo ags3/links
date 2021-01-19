@@ -9,10 +9,15 @@ https://raaaimund.github.io/tech/2018/10/23/create-single-node-k8s-cluster/
 https://medium.com/@vivek_syngh/setup-a-single-node-kubernetes-cluster-on-ubuntu-16-04-6412373d837a
 
 #### Install kudeadm on multiple nodes
+https://www.liquidweb.com/kb/how-to-install-kubernetes-using-kubeadm-on-ubuntu-18/  
 https://linuxconfig.org/how-to-install-kubernetes-on-ubuntu-18-04-bionic-beaver-linux  
 https://phoenixnap.com/kb/install-kubernetes-on-ubuntu  
 https://loves.cloud/setting-up-a-kubernetes-cluster-on-ubuntu-18-04/  
 https://computingforgeeks.com/deploy-kubernetes-cluster-on-ubuntu-with-kubeadm/?amp  
+
+#### Install kubeadm an set a private docker registry for it
+https://dradoaica.blogspot.com/2019/01/kubernetes-cluster-with-docker-private.html  
+https://stackoverflow.com/questions/52973242/deploy-inhouse-docker-image-with-kubeadm  
 
 #### Work with minikube
 https://minikube.sigs.k8s.io/docs/start/  
