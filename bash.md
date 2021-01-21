@@ -38,3 +38,6 @@ https://google.github.io/styleguide/shellguide.html
 https://github.com/p8952/bocker  
 https://github.com/tests-always-included/mo/blob/master/mo  
 https://github.com/alpinelinux/alpine-make-vm-image  
+https://github.com/avleen/bashttpd  
+https://github.com/cfenollosa/bashblog/blob/master/bb.sh  
+https://github.com/todotxt/todo.txt-cli/blob/master/todo.sh  
