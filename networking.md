@@ -21,5 +21,8 @@ https://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp/
 https://www.karlrupp.net/en/computer/nat_tutorial  
 https://scalingo.com/blog/iptables  
 
+#### VLAN, MACVLAN, BRIDGE
+https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/  
+
 #### Code
 https://github.com/vsergeev/tinytaptunnel  
