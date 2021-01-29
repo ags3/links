@@ -114,6 +114,9 @@ https://www.katacoda.com/
 #### Helm tutorial
 https://www.freecodecamp.org/news/helm-charts-tutorial-the-kubernetes-package-manager-explained/  
 
+#### Ingress controller
+https://docs.gitlab.com/charts/advanced/external-nginx/
+
 #### Examples
 https://github.com/lmnzr/simpleapp  
 https://github.com/lmnzr/go-triviapp  
