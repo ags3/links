@@ -114,6 +114,9 @@ https://www.katacoda.com/
 #### Helm tutorial
 https://www.freecodecamp.org/news/helm-charts-tutorial-the-kubernetes-package-manager-explained/  
 
+#### Ingress
+https://www.alibabacloud.com/help/doc-detail/151524.htm  
+
 #### Ingress controller
 https://docs.gitlab.com/charts/advanced/external-nginx/
 
