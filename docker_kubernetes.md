@@ -118,6 +118,7 @@ https://www.freecodecamp.org/news/helm-charts-tutorial-the-kubernetes-package-ma
 https://www.alibabacloud.com/help/doc-detail/151524.htm  
 
 #### Ingress controller
+https://minikube.sigs.k8s.io/docs/tutorials/nginx_tcp_udp_ingress/  
 https://docs.gitlab.com/charts/advanced/external-nginx/
 
 #### Examples
