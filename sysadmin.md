@@ -1,3 +1,6 @@
+#### Linux/Unix toolbox
+http://cb.vu/unixtoolbox.xhtml  
+
 #### Installing Ubuntu from scratch (without installer)
 https://help.ubuntu.com/lts/installation-guide/i386/apds04.html
 
