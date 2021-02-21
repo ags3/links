@@ -24,6 +24,7 @@ https://github.com/psf/black
 https://www.pythonsheets.com/  
 
 #### Python cheatsheet
+https://www.pythoncheatsheet.org/  
 https://gto76.github.io/python-cheatsheet/ 
 
 #### Design patterns
