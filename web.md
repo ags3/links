@@ -90,6 +90,7 @@ https://github.com/bogadrian
 https://www.freecodecamp.org/news/react-movie-app-tutorial/  
 
 #### React in 10 hours free course
+https://www.freecodecamp.org/news/react-10-hour-course/  
 https://www.youtube.com/watch?v=4UZrsTqkcW4  
 https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/  
 
