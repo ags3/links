@@ -11,3 +11,6 @@ http://www.dmi.usherb.ca/~larocheh/neural_networks/content.html
 
 #### Neural networks and deep learning
 http://neuralnetworksanddeeplearning.com/index.html  
+
+#### CS231
+https://cs231n.github.io/  
