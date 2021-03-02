@@ -115,3 +115,6 @@ https://www.valentinog.com/blog/redux/
 
 #### Svelte tutorial
 https://scotch.io/tutorials/building-my-first-svelte-app-thoughts-and-impressions  
+
+#### React examples  
+https://github.com/aademirci/pics  
