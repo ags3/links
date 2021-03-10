@@ -17,6 +17,10 @@ https://www.brianstorti.com/tcp-flow-control/
 ## Write your own TCPIP stack
 https://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp/  
 
+#### Routes
+http://www.linuxhorizon.ro/iproute2.html  
+http://www.allgoodbits.org/articles/view/24
+
 #### NAT
 https://www.karlrupp.net/en/computer/nat_tutorial  
 https://scalingo.com/blog/iptables  
