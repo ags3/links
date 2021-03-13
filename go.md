@@ -184,6 +184,7 @@ https://www.sohamkamani.com/golang/options-pattern/
 https://badu.github.io/post/  
 
 #### Context
+https://essential-go.programming-books.io/writing-cancellable-functions-8cc69d742351447980b3a547a37741c0  
 https://golangbyexample.com/using-context-in-golang-complete-guide/  
 https://www.ardanlabs.com/blog/2019/09/context-package-semantics-in-go.html  
 https://github.com/johanbrandhorst/certify  
