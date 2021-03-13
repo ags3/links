@@ -29,7 +29,7 @@ https://dev.to/pauljlucas/go-tcha-when-nil--nil-hic
 https://blog.cloudflare.com/exposing-go-on-the-internet/  
 https://nanxiao.gitbooks.io/golang-101-hacks/content/  
 https://medium.com/@betable/3-go-gotchas-590b8c014e0a  
-https://www.ardanlabs.com/blog/2013/09/iterating-over-slices-in-go.html  
+https://www.labs.com/blog/2013/09/iterating-over-slices-in-go.html  
 
 #### Study plans
 https://github.com/hoanhan101/ultimate-go  
@@ -49,6 +49,8 @@ http://craigwickesser.com/2015/02/golang-cmd-with-custom-environment/
 
 #### Concurrency patterns
 https://blog.golang.org/pipelines  
+https://www.ardanlabs.com/blog/2017/10/the-behavior-of-channels.html  
+https://callistaenterprise.se/blogg/teknik/2019/10/05/go-worker-cancellation/  
 
 #### Working with syscalls and low level sockets
 https://github.com/valyala/tcplisten/blob/master/tcplisten.go  
@@ -57,6 +59,7 @@ https://github.com/valyala/tcplisten/blob/master/tcplisten.go
 https://venilnoronha.io/a-simple-state-machine-framework-in-go  
 
 #### Example of good style
+https://github.com/ardanlabs/service  
 https://github.com/mccutchen/go-httpbin/blob/master/httpbin/handlers.go  
 https://github.com/nats-io/nats.go/blob/master/nats.go  
 https://github.com/rsc/letsencrypt/blob/v0.0.2/lets.go  
@@ -181,11 +184,13 @@ https://www.sohamkamani.com/golang/options-pattern/
 https://badu.github.io/post/  
 
 #### Context
+https://golangbyexample.com/using-context-in-golang-complete-guide/  
 https://www.ardanlabs.com/blog/2019/09/context-package-semantics-in-go.html  
 https://github.com/johanbrandhorst/certify  
 https://github.com/google/inverting-proxy/blob/master/agent/websockets/connection.go  
 https://levelup.gitconnected.com/how-to-use-context-to-manage-your-goroutines-like-a-boss-ef1e478919e6  
 https://www.linode.com/docs/guides/go-context/  
+https://essential-go.programming-books.io/context-b58d13145f924c11afcf00aa10d71364  
 
 #### Promises
 https://github.com/google/ko/blob/master/pkg/publish/future.go  
