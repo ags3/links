@@ -46,6 +46,7 @@ https://blog.codecentric.de/en/2020/09/rust-for-java-developers/
 https://github.com/inancgumus/learnrust/blob/master/notes/resources.md  
 
 #### Examples
+https://github.com/mihneagogu  
 https://rust.graystorm.com/2020/07/16/next-algorithm-backtracking-into-the-n-queens-problem/  
 https://rolisz.ro/2020/06/10/playing-codenames-with-rust/  
   
