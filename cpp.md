@@ -62,7 +62,10 @@ https://terrainformatica.com/2015/04/19/moderntemplatemetaprogramming/
 ## Code
 #### How to use sockets, threads, HTTP clients
 https://github.com/machinezone/IXWebSocket  
-
+# Lithium (metaprogramming):
+https://github.com/matt-42/lithium/tree/master/single_headers  
+# Drogon (HTTP):
+https://github.com/an-tao/drogon  
 https://github.com/nekipelov/redisclient  
 https://github.com/facebook/folly  
 https://github.com/osquery/osquery  
