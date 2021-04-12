@@ -6,6 +6,7 @@ https://levelup.gitconnected.com/dockerized-crud-restful-api-with-go-gorm-jwt-po
 #### Install
 
 #### Install your own private docker registry
+http://www.mtitek.com/tutorials/docker/set_up_a_private_docker_registry.php  
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-18-04  
 
 #### Install kubeadm on single node
@@ -20,6 +21,7 @@ https://loves.cloud/setting-up-a-kubernetes-cluster-on-ubuntu-18-04/
 https://computingforgeeks.com/deploy-kubernetes-cluster-on-ubuntu-with-kubeadm/?amp  
 
 #### Install kubeadm and set a private docker registry for it
+http://www.mtitek.com/tutorials/docker/set_up_a_private_docker_registry.php  
 https://dradoaica.blogspot.com/2019/01/kubernetes-cluster-with-docker-private.html  
 https://stackoverflow.com/questions/52973242/deploy-inhouse-docker-image-with-kubeadm  
 
