@@ -21,5 +21,8 @@ https://mjmorse.com/blog/cmake-template/
 https://github.com/facebookincubator/fizz/blob/master/fizz/CMakeLists.txt  
 https://github.com/rsocket/rsocket-cpp/blob/master/CMakeLists.txt  
 
-#### Maven examples
+#### Maven
+https://itnext.io/writing-a-full-featured-maven-pom-f5b874eef312  
 https://github.com/zalando/riptide  
+https://github.com/square/keywhiz  
+https://github.com/square/retrofit/tree/parent-2.7.1  
