@@ -7,6 +7,8 @@ https://levelup.gitconnected.com/dockerized-crud-restful-api-with-go-gorm-jwt-po
 
 #### Install your own private docker registry
 http://www.mtitek.com/tutorials/docker/set_up_a_private_docker_registry.php  
+https://docs.docker.com/registry/deploying/  
+https://dev.to/asizikov/using-github-container-registry-with-kubernetes-38fb  
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-18-04  
 
 #### Install kubeadm on single node
