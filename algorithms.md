@@ -30,10 +30,10 @@ http://www.ardendertat.com/2012/01/09/programming-interview-questions/
 
 #### Solved problems
 #### Dynamic programming
-https://www.freecodecamp.org/news/learn-dynamic-programing-to-solve-coding-challenges/
-https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RM1BDv71V60 
-https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/3j64vRY6JnR  
-https://www.techiedelight.com/dynamic-programming-interview-questions
+https://www.freecodecamp.org/news/learn-dynamic-programing-to-solve-coding-challenges/  
+https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/RM1BDv71V60   
+https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/3j64vRY6JnR   
+https://www.techiedelight.com/dynamic-programming-interview-questions   
 
 #### Sliding window technique
 https://www.youtube.com/watch?v=MK-NZ4hN7rs  
