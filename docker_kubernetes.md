@@ -130,6 +130,9 @@ https://www.alibabacloud.com/help/doc-detail/151524.htm
 https://minikube.sigs.k8s.io/docs/tutorials/nginx_tcp_udp_ingress/  
 https://docs.gitlab.com/charts/advanced/external-nginx/
 
+#### Affinity
+https://thenewstack.io/implement-node-and-pod-affinity-anti-affinity-in-kubernetes-a-practical-example/  
+
 #### Examples
 https://github.com/lmnzr/simpleapp  
 https://github.com/lmnzr/go-triviapp  
