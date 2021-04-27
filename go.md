@@ -71,6 +71,9 @@ https://www.sohamkamani.com/golang/options-pattern/
 https://www.redisgreen.net/blog/beginners-guide-to-redis-protocol/  
 https://www.redisgreen.net/blog/reading-and-writing-redis-protocol/  
 
+#### Reflection
+https://github.com/jinzhu/copier/blob/master/copier.go  
+
 #### Capital One medium series
 https://medium.com/capital-one-tech/building-an-unbounded-channel-in-go-789e175cd2cd  
 https://medium.com/capital-one-tech/closures-are-the-generics-for-go-cb32021fb5b5  
