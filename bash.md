@@ -7,6 +7,9 @@ https://scicomp.aalto.fi/training/linux-shell-tutorial/
 #### Bash bible
 https://github.com/dylanaraps/pure-bash-bible  
 
+#### Linode series
+https://www.linode.com/docs/guides/development/bash/  
+
 #### Tutorials
 https://en.wikibooks.org/wiki/Bash_Shell_Scripting  
 https://github.com/denysdovhan/bash-handbook  
