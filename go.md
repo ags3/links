@@ -82,6 +82,9 @@ https://medium.com/capital-one-tech/in-the-not-too-distant-future-e2d0ad28e91
 https://medium.com/capital-one-tech/learning-to-use-go-reflection-822a0aed74b7  
 https://medium.com/capital-one-tech/learning-to-use-go-reflection-part-2-c91657395066  
 
+#### Linode series
+https://www.linode.com/docs/guides/development/go/  
+
 #### Design
 #### Clean Architecture
 https://medium.com/@vidhyanshujain97/implementing-clean-architecture-in-go-56aca59311b3  
@@ -173,7 +176,6 @@ https://golang.org/doc/code.html
 
 #### File I/O
 https://www.linode.com/docs/guides/creating-reading-and-writing-files-in-go-a-tutorial/  
-
 https://www.alexedwards.net/blog/an-overview-of-go-tooling  
 
 #### Testing and mocking
