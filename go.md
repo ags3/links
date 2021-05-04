@@ -170,6 +170,10 @@ https://www.sohamkamani.com/blog/2017/10/18/golang-adding-database-to-web-applic
 
 #### Tooling
 https://golang.org/doc/code.html  
+
+#### File I/O
+https://www.linode.com/docs/guides/creating-reading-and-writing-files-in-go-a-tutorial/  
+
 https://www.alexedwards.net/blog/an-overview-of-go-tooling  
 
 #### Testing and mocking
