@@ -4,5 +4,5 @@ https://www.freecodecamp.org/news/node-js-async-await-tutorial-with-asynchronous
 #### Node.js streams tutorial
 https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/amp/  
 
-#### Lohn Smilga node.js and express course
+#### John Smilga node.js and express course
 https://www.freecodecamp.org/news/free-8-hour-node-express-course/  
