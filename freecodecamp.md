@@ -6,3 +6,6 @@ https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9
 
 #### John Smilga node.js and express course
 https://www.freecodecamp.org/news/free-8-hour-node-express-course/  
+
+#### Learn docker, node and express
+https://www.freecodecamp.org/news/learn-docker-by-building-a-node-express-app/  
