@@ -9,3 +9,9 @@ https://www.freecodecamp.org/news/free-8-hour-node-express-course/
 
 #### Learn docker, node and express
 https://www.freecodecamp.org/news/learn-docker-by-building-a-node-express-app/  
+
+#### Learn react basics
+https://www.freecodecamp.org/news/learn-react-basics/
+
+#### Learn AWS basics
+https://www.freecodecamp.org/news/learn-the-basics-of-amazon-web-services/  
