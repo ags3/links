@@ -16,6 +16,9 @@ https://blog.golang.org/strings
 https://blog.golang.org/package-names  
 https://blog.golang.org/constants  
 
+#### Profiling go web apps
+https://artem.krylysov.com/blog/2017/03/13/profiling-and-optimizing-go-web-applications/  
+
 #### Practical go. Writing maintainable code
 https://dave.cheney.net/practical-go/presentations/gophercon-israel.html  
 https://dave.cheney.net/practical-go  
