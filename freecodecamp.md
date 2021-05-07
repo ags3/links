@@ -1,3 +1,6 @@
+#### React in 10 hours (John Smilga)
+https://www.youtube.com/watch?v=4UZrsTqkcW4  
+
 #### CSS tutorial
 https://www.youtube.com/watch?v=ieTHC78giGQ  
 
