@@ -71,13 +71,16 @@ https://github.com/fbaptiste/python-deepdive
 https://github.com/fbaptiste/python-primer  
 
 #### Flask
+https://soshace.com/how-to-create-a-personal-blogging-website-part-1/  
+https://github.com/Bviveksingh/Personal-blog-flask  
 https://flask.palletsprojects.com/en/1.1.x/tutorial/  
 https://flask-sqlalchemy.palletsprojects.com/en/2.x/  
 https://github.com/pallets/flask-sqlalchemy/tree/master/examples/flaskr  
 https://hackersandslackers.com/your-first-flask-application  
 http://www.patricksoftwareblog.com/flask-tutorial/  
 https://www.youtube.com/watch?v=MwZwr5Tvyxo  
-(https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)  
+https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog  
+https://github.com/2KAbhishek/Byteblog  
 
 #### Django
 https://github.com/leifos/tango_with_django_2  
