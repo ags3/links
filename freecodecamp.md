@@ -1,3 +1,6 @@
+#### CSS tutorial
+https://www.youtube.com/watch?v=ieTHC78giGQ  
+
 #### Vue3 and DRF full tutorial
 https://www.freecodecamp.org/news/create-an-e-commerce-site-with-django-and-vue/
 https://github.com/SteinOveHelset/djackets_django
