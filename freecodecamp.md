@@ -1,3 +1,8 @@
+#### Vue3 and DRF full tutorial
+https://www.freecodecamp.org/news/create-an-e-commerce-site-with-django-and-vue/
+https://github.com/SteinOveHelset/djackets_django
+https://github.com/SteinOveHelset/djackets_vue
+
 #### Async-Await javascript tutorial
 https://www.freecodecamp.org/news/node-js-async-await-tutorial-with-asynchronous-javascript-examples/  
 
