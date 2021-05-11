@@ -1,10 +1,10 @@
-## Core guidelines
+#### Core guidelines
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md   
 
-## Synthesis
+#### Synthesis
 https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/README.md#concepts  
 
-## General
+#### General
 https://berthub.eu/articles/posts/cpp-intro/  
 https://web.archive.org/web/20140113221447/http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/  
 http://thbecker.net/articles/rvalue_references/section_01.html  
@@ -12,10 +12,13 @@ http://thbecker.net/articles/auto_and_decltype/section_01.html
 https://foonathan.net/2019/02/special-member-functions/#content  
 https://foonathan.net/2018/03/rvalue-references-api-guidelines/#content  
 
-## Essential
+#### Essential
 https://www.feabhas.com/sites/default/files/2016-06/Rule%20of%20the%20Big%20Five.pdf  
 
-## Templates
+#### Memeory model:
+https://www.arangodb.com/2021/02/cpp-memory-model-migrating-from-x86-to-arm/  
+
+#### Templates
 https://jguegant.github.io/blogs/tech/sfinae-introduction.html#sfinae-introduction  
 https://jguegant.github.io/blogs/tech/thread-safe-multi-type-map.html#thread-safe-multi-type-map  
 https://jguegant.github.io/blogs/tech/meta-crush-saga.html#meta-crush-saga  
@@ -35,34 +38,34 @@ https://www.fluentcpp.com/2018/05/18/make-sfinae-pretty-2-hidden-beauty-sfinae/
 https://www.fluentcpp.com/2019/03/08/stl-algorithms-on-tuples/  
 https://www.boost.org/doc/libs/1_71_0/libs/hana/doc/html/index.html  
 
-## Type erasure
+#### Type erasure
 https://foonathan.net/2020/01/type-erasure/#more  
 
-## Threads
+#### Threads
 https://medium.com/hackernoon/learn-c-multi-threading-in-5-minutes-8b881c92941f  
 https://www.acodersjourney.com/top-20-cplusplus-multithreading-mistakes/  
 
-## Design patterns
+#### Design patterns
 https://en.wikibooks.org/wiki/C%2B%2B_Programming/Code/Design_Patterns
 
-## Testing and mocking
+#### Testing and mocking
 #### How to use catch2
 https://github.com/catchorg/Catch2/blob/master/docs/tutorial.md#top  
 
 #### How to use trompeloiel
 https://speakerdeck.com/rollbear/using-trompeloeil-a-mocking-framework-for-modern-c-plus-plus  
 
-## Modules
+#### Modules
 https://meetingcpp.com/mcpp/slides/2019/modules-the-beginners-guide-meetingcpp2019.pdf  
 
-## Videos
+#### Videos
 #### Template metaprogramming
 https://terrainformatica.com/2015/04/19/moderntemplatemetaprogramming/  
 
-## Code
+#### Code
 #### How to use sockets, threads, HTTP clients
 https://github.com/machinezone/IXWebSocket  
-#### Lithium (metaprogramming):
+#### Lithium (HTTP) (metaprogramming):
 https://github.com/matt-42/lithium/tree/master/single_headers  
 #### Drogon (HTTP):
 https://github.com/an-tao/drogon  
