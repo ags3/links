@@ -20,6 +20,10 @@ https://blog.golang.org/constants
 https://artem.krylysov.com/blog/2017/03/13/profiling-and-optimizing-go-web-applications/  
 https://dev.to/agamm/how-to-profile-go-with-pprof-in-30-seconds-592a  
 
+#### Performance
+https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/  
+https://docs.google.com/document/d/1CxgUBPlx9iJzkz9JWkb6tIpTe5q32QDmz8l0BouG0Cw/view  
+
 #### Practical go. Writing maintainable code
 https://dave.cheney.net/practical-go/presentations/gophercon-israel.html  
 https://dave.cheney.net/practical-go  
