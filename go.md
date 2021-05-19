@@ -22,6 +22,7 @@ https://dev.to/agamm/how-to-profile-go-with-pprof-in-30-seconds-592a
 
 #### Performance
 https://dave.cheney.net/high-performance-go-workshop/dotgo-paris.html  
+https://dave.cheney.net/2021/01/05/a-few-bytes-here-a-few-there-pretty-soon-youre-talking-real-memory  
 https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/  
 https://docs.google.com/document/d/1CxgUBPlx9iJzkz9JWkb6tIpTe5q32QDmz8l0BouG0Cw/view  
 https://itnext.io/the-top-10-most-common-mistakes-ive-seen-in-go-projects-4b79d4f6cd65  
