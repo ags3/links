@@ -18,6 +18,7 @@ https://blog.golang.org/constants
 
 #### Profiling go web apps
 https://artem.krylysov.com/blog/2017/03/13/profiling-and-optimizing-go-web-applications/  
+https://dev.to/agamm/how-to-profile-go-with-pprof-in-30-seconds-592a  
 
 #### Practical go. Writing maintainable code
 https://dave.cheney.net/practical-go/presentations/gophercon-israel.html  
