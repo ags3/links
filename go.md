@@ -21,8 +21,11 @@ https://artem.krylysov.com/blog/2017/03/13/profiling-and-optimizing-go-web-appli
 https://dev.to/agamm/how-to-profile-go-with-pprof-in-30-seconds-592a  
 
 #### Performance
+https://dave.cheney.net/high-performance-go-workshop/dotgo-paris.html  
 https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/  
 https://docs.google.com/document/d/1CxgUBPlx9iJzkz9JWkb6tIpTe5q32QDmz8l0BouG0Cw/view  
+https://itnext.io/the-top-10-most-common-mistakes-ive-seen-in-go-projects-4b79d4f6cd65  
+https://www.ardanlabs.com/blog/2017/05/language-mechanics-on-stacks-and-pointers.html  
 
 #### Practical go. Writing maintainable code
 https://dave.cheney.net/practical-go/presentations/gophercon-israel.html  
