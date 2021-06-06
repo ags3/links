@@ -103,6 +103,8 @@ https://www.youtube.com/user/schafer5/videos
 https://www.youtube.com/user/schafer5/playlists  
 
 #### Code
+https://github.com/neuro-inc/platform-client-python  
+https://github.com/neuro-inc/neuro-flow  
 https://github.com/aio-libs/aiohttp/tree/master/aiohttp  
 https://github.com/pre-commit/pre-commit  
 https://github.com/pallets/werkzeug  
