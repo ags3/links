@@ -63,6 +63,8 @@ https://meetingcpp.com/mcpp/slides/2019/modules-the-beginners-guide-meetingcpp20
 https://terrainformatica.com/2015/04/19/moderntemplatemetaprogramming/  
 
 #### Code
+#### Modern libuv c++ wrapper:
+https://github.com/larroy/uvpp/tree/master/include/uvpp  
 #### How to use sockets, threads, HTTP clients
 https://github.com/machinezone/IXWebSocket  
 #### Lithium (HTTP) (metaprogramming):
