@@ -35,3 +35,6 @@ https://www.freecodecamp.org/news/learn-the-basics-of-amazon-web-services/
 
 #### HTML basics for beginners
 https://www.freecodecamp.org/news/html-basics-for-beginners/  
+
+#### Complete python backend course (with django)
+https://www.youtube.com/watch?v=jBzwzrDvZ18  
