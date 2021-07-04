@@ -33,6 +33,9 @@ https://www.freecodecamp.org/news/learn-react-basics/
 #### Learn AWS basics
 https://www.freecodecamp.org/news/learn-the-basics-of-amazon-web-services/  
 
+#### Full flask course
+https://www.youtube.com/watch?v=Qr4QMBUPxWo  
+
 #### HTML basics for beginners
 https://www.freecodecamp.org/news/html-basics-for-beginners/  
 
