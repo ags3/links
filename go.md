@@ -22,6 +22,7 @@ https://research.swtch.com/interfaces
 #### Profiling go web apps
 https://artem.krylysov.com/blog/2017/03/13/profiling-and-optimizing-go-web-applications/  
 https://dev.to/agamm/how-to-profile-go-with-pprof-in-30-seconds-592a  
+https://golangforall.com/en/post/profiling.html  
 
 #### Performance
 https://dave.cheney.net/high-performance-go-workshop/gophercon-2019.html  
