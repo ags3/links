@@ -241,6 +241,7 @@ https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
 https://cheppers.com/hashicorps-go-plugin-extensive-tutorial  
 
 #### Delve
+https://golangforall.com/en/post/go-docker-delve-remote-debug.html  
 https://www.digitalocean.com/community/tutorials/debugging-go-code-with-visual-studio-code  
 https://hustcat.github.io/getting-started-with-delve/  
 https://stackoverflow.com/questions/53621853/golang-dlv-unable-to-see-source-no-such-file-or-directory  
