@@ -64,7 +64,9 @@ https://devopswithkubernetes.com/part-0
 https://www.freecodecamp.org/news/the-kubernetes-handbook/  
 
 #### Kubernetes networking 101
-https://www.kentik.com/blog/kubernetes-networking-101/
+https://www.kentik.com/blog/kubernetes-networking-101/  
+https://www.stackrox.com/post/2020/01/kubernetes-networking-demystified/  
+https://www.tigera.io/blog/kubernetes-networking-with-calico/  
 
 #### Very good tutorial
 https://medium.com/@almas.hilman/simple-kubernetes-deployment-using-kops-273fc7990006  
