@@ -255,6 +255,9 @@ https://ordina-jworks.github.io/development/2018/10/20/make-your-own-cli-with-go
 https://github.com/nickgeudens/hello-cli  
 https://www.digitalocean.com/community/tutorials/how-to-use-go-with-mongodb-using-the-mongodb-go-driver   
 
+#### Adding app version
+https://www.digitalocean.com/community/tutorials/using-ldflags-to-set-version-information-for-go-applications  
+
 #### Source code
 https://github.com/prologic/monkey-lang  
 https://github.com/akrylysov/pogreb  
